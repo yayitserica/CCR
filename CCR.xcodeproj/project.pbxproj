@@ -12,6 +12,7 @@
 		450F1A311E4E209D00FAFBB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 450F1A301E4E209D00FAFBB9 /* Assets.xcassets */; };
 		450F1A341E4E209D00FAFBB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 450F1A321E4E209D00FAFBB9 /* LaunchScreen.storyboard */; };
 		450F1A3C1E4E74A800FAFBB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 450F1A3B1E4E74A800FAFBB9 /* Main.storyboard */; };
+		450F1A3E1E4E776B00FAFBB9 /* CountdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450F1A3D1E4E776B00FAFBB9 /* CountdownViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		450F1A331E4E209D00FAFBB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		450F1A351E4E209D00FAFBB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		450F1A3B1E4E74A800FAFBB9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		450F1A3D1E4E776B00FAFBB9 /* CountdownViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				450F1A291E4E209D00FAFBB9 /* AppDelegate.swift */,
 				450F1A2B1E4E209D00FAFBB9 /* ViewController.swift */,
 				450F1A3B1E4E74A800FAFBB9 /* Main.storyboard */,
+				450F1A3D1E4E776B00FAFBB9 /* CountdownViewController.swift */,
 				450F1A301E4E209D00FAFBB9 /* Assets.xcassets */,
 				450F1A321E4E209D00FAFBB9 /* LaunchScreen.storyboard */,
 				450F1A351E4E209D00FAFBB9 /* Info.plist */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				450F1A3E1E4E776B00FAFBB9 /* CountdownViewController.swift in Sources */,
 				450F1A2C1E4E209D00FAFBB9 /* ViewController.swift in Sources */,
 				450F1A2A1E4E209D00FAFBB9 /* AppDelegate.swift in Sources */,
 			);
