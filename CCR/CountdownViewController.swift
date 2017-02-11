@@ -10,35 +10,49 @@ import UIKit
 
 class CountdownViewController: UIViewController {
     
-    var numOfMin = 25
-//    var numOfSec = 25 * 60
-    var numOfSec = 1500
+    var timeRemaining = 1500
     var timer = Timer()
-
+    var timerIsOn = false
+    
     @IBOutlet weak var timeLabel: UILabel!
     
     @IBAction func clearBtnTapped(_ sender: Any) {
-        
+        timer.invalidate()
+        timeRemaining = 1500
+        let minutesLeft = Int(timeRemaining) / 60 % 60
+        let secondsLeft = Int(timeRemaining) % 60
+        timeLabel.text = "25:00"
     }
     
     @IBAction func playBtnTapped(_ sender: Any) {
-        if(numOfSec > 0){
-            let minutes = String(numOfSec / 60)
-            let seconds = String(numOfSec % 60)
-            timeLabel.text = minutes + ":" + seconds
-            numOfSec -= 1
-        }
+        
+        timeRemaining = 1500
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerRunning), userInfo: nil, repeats: true)
+        
     }
     
     
     @IBAction func pauseBtnTapped(_ sender: Any) {
+        timer.invalidate()
+    }
+    
+    func timerRunning() {
+        timeRemaining -= 1
         
+        let minutesLeft = Int(timeRemaining) / 60 % 60
+        let secondsLeft = Int(timeRemaining) % 60
+//        timeLabel.text = "Time Left: \(timeRemaining)"
+        timeLabel.text = "\(minutesLeft):\(secondsLeft)"
+        
+        if timeRemaining == 0 {
+            timer.invalidate()
+            timeLabel.text = "Time's Up!"
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(playBtnTapped), userInfo: nil, repeats: true)
-        
+
     }
 
     /*
