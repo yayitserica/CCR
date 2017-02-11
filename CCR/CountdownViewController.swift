@@ -19,21 +19,24 @@ class CountdownViewController: UIViewController {
     @IBAction func clearBtnTapped(_ sender: Any) {
         timer.invalidate()
         timeRemaining = 1500
-        let minutesLeft = Int(timeRemaining) / 60 % 60
-        let secondsLeft = Int(timeRemaining) % 60
         timeLabel.text = "25:00"
+        timerIsOn = false
     }
     
     @IBAction func playBtnTapped(_ sender: Any) {
         
-        timeRemaining = 1500
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerRunning), userInfo: nil, repeats: true)
+        if !timerIsOn {
+//            timeRemaining = 1500
+            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerRunning), userInfo: nil, repeats: true)
+            timerIsOn = true
+        }
         
     }
     
     
     @IBAction func pauseBtnTapped(_ sender: Any) {
         timer.invalidate()
+        timerIsOn = false
     }
     
     func timerRunning() {
@@ -41,7 +44,6 @@ class CountdownViewController: UIViewController {
         
         let minutesLeft = Int(timeRemaining) / 60 % 60
         let secondsLeft = Int(timeRemaining) % 60
-//        timeLabel.text = "Time Left: \(timeRemaining)"
         timeLabel.text = "\(minutesLeft):\(secondsLeft)"
         
         if timeRemaining == 0 {
