@@ -13,6 +13,8 @@
 		450F1A341E4E209D00FAFBB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 450F1A321E4E209D00FAFBB9 /* LaunchScreen.storyboard */; };
 		450F1A3C1E4E74A800FAFBB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 450F1A3B1E4E74A800FAFBB9 /* Main.storyboard */; };
 		450F1A3E1E4E776B00FAFBB9 /* CountdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450F1A3D1E4E776B00FAFBB9 /* CountdownViewController.swift */; };
+		4544836A1E4EC80F00FA2ECB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 454483691E4EC80F00FA2ECB /* AVFoundation.framework */; };
+		4544836D1E4EC8BD00FA2ECB /* double_ring_from_desk_bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4544836C1E4EC8BD00FA2ECB /* double_ring_from_desk_bell.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		450F1A351E4E209D00FAFBB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		450F1A3B1E4E74A800FAFBB9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		450F1A3D1E4E776B00FAFBB9 /* CountdownViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownViewController.swift; sourceTree = "<group>"; };
+		454483691E4EC80F00FA2ECB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		4544836C1E4EC8BD00FA2ECB /* double_ring_from_desk_bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = double_ring_from_desk_bell.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4544836A1E4EC80F00FA2ECB /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,7 @@
 			children = (
 				450F1A281E4E209D00FAFBB9 /* CCR */,
 				450F1A271E4E209D00FAFBB9 /* Products */,
+				454483681E4EC80E00FA2ECB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +62,7 @@
 		450F1A281E4E209D00FAFBB9 /* CCR */ = {
 			isa = PBXGroup;
 			children = (
+				4544836B1E4EC83000FA2ECB /* Supporting Files */,
 				450F1A291E4E209D00FAFBB9 /* AppDelegate.swift */,
 				450F1A3B1E4E74A800FAFBB9 /* Main.storyboard */,
 				450F1A2B1E4E209D00FAFBB9 /* ViewController.swift */,
@@ -65,6 +72,22 @@
 				450F1A351E4E209D00FAFBB9 /* Info.plist */,
 			);
 			path = CCR;
+			sourceTree = "<group>";
+		};
+		454483681E4EC80E00FA2ECB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4544836B1E4EC83000FA2ECB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4544836C1E4EC8BD00FA2ECB /* double_ring_from_desk_bell.mp3 */,
+				454483691E4EC80F00FA2ECB /* AVFoundation.framework */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				450F1A3C1E4E74A800FAFBB9 /* Main.storyboard in Resources */,
+				4544836D1E4EC8BD00FA2ECB /* double_ring_from_desk_bell.mp3 in Resources */,
 				450F1A341E4E209D00FAFBB9 /* LaunchScreen.storyboard in Resources */,
 				450F1A311E4E209D00FAFBB9 /* Assets.xcassets in Resources */,
 			);
@@ -298,6 +322,7 @@
 				450F1A3A1E4E209D00FAFBB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
