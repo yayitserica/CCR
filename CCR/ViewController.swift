@@ -19,10 +19,10 @@ class ViewController: UIViewController {
     
     @IBAction func playBtnPressed(_ sender: Any) {
         
-//        if !timerIsOn {
-            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.updateCounter), userInfo: nil, repeats: true)
-//            timerIsOn = true
-//        }
+        if !timerIsOn {
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
+            timerIsOn = true
+        }
         
     }
 
@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         timer.invalidate()
         counter = 0
         countingLabel.text = "\(counter)"
-//        timerIsOn = false
+        timerIsOn = false
     }
     
     func updateCounter() {
@@ -44,6 +44,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
     }
 
 

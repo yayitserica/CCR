@@ -16,6 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let appearance = UITabBarItem.appearance()
+        let attributes: [String: AnyObject] = [NSFontAttributeName:UIFont(name: "AmericanTypewriter", size: 14)!, NSForegroundColorAttributeName: Constants.red]
+        UITabBar.appearance().tintColor = Constants.red
+        appearance.setTitleTextAttributes(attributes, for: .normal)
+        
         return true
     }
 

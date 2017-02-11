@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 1-->
+        <!--Timer-->
         <scene sceneID="5zO-yU-AIP">
             <objects>
                 <viewController id="axF-ZI-INX" customClass="CountdownViewController" customModule="CCR" customModuleProvider="target" sceneMemberID="viewController">
@@ -62,7 +62,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="yy9-tE-hnS"/>
+                    <tabBarItem key="tabBarItem" title="Timer" image="Timer Filled-25" selectedImage="Timer Filled-25" id="yy9-tE-hnS"/>
                     <connections>
                         <outlet property="timeLabel" destination="sOt-kN-qa6" id="SDP-MN-fKT"/>
                     </connections>
@@ -148,4 +148,7 @@
             <point key="canvasLocation" x="-450" y="167"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Timer Filled-25" width="25" height="25"/>
+    </resources>
 </document>

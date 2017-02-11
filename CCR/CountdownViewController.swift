@@ -11,8 +11,7 @@ import AVFoundation
 
 class CountdownViewController: UIViewController {
     
-//    var timeRemaining = 1500
-    var timeRemaining = 60
+    var timeRemaining = 1500
     var timer = Timer()
     var timerIsOn = false
     var buttonSound = AVAudioPlayer()
