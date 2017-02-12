@@ -11,12 +11,15 @@ import AVFoundation
 
 class CountdownViewController: UIViewController {
     
-    var timeRemaining = 1500
+    var timeRemaining = 1500.0
+    var totalTime = 1500.0
     var timer = Timer()
     var timerIsOn = false
     var buttonSound = AVAudioPlayer()
     
     @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var progressView: UIProgressView!
+    @IBOutlet weak var progressLabel: UILabel!
     
     @IBAction func clearBtnTapped(_ sender: Any) {
         timer.invalidate()
@@ -28,11 +31,9 @@ class CountdownViewController: UIViewController {
     @IBAction func playBtnTapped(_ sender: Any) {
         
         if !timerIsOn {
-
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerRunning), userInfo: nil, repeats: true)
             timerIsOn = true
         }
-        
     }
     
     
@@ -43,7 +44,8 @@ class CountdownViewController: UIViewController {
     
     func timerRunning() {
         timeRemaining -= 1
-        
+        let completionPercentage = Int((Float(timeRemaining)/Float(totalTime)) * 100)
+        progressLabel.text = "\(completionPercentage)%"
         let minutesLeft = Int(timeRemaining) / 60 % 60
         let secondsLeft = Int(timeRemaining) % 60
         timeLabel.text = "\(minutesLeft):\(secondsLeft)"
@@ -63,9 +65,10 @@ class CountdownViewController: UIViewController {
             print(error.localizedDescription)
             print("Error: There's an error with the audio file named double_ring_from_desk_bell.mp3")
         }
-
     }
 
+    
+    
     /*
     // MARK: - Navigation
 
