@@ -47,7 +47,8 @@ class CountdownViewController: UIViewController {
     
     func timerRunning() {
         timeRemaining -= 1
-        let completionPercentage = Int((Float(timeRemaining)/Float(totalTime)) * 100)
+//        let completionPercentage = Int((Float(timeRemaining)/Float(totalTime)) * 100)
+        let completionPercentage = Int(((Float(totalTime) - Float(timeRemaining))/Float(totalTime)) * 100)
         progressView.setProgress(Float(timeRemaining)/Float(totalTime), animated: false)
         progressLabel.text = "\(completionPercentage)%"
         let minutesLeft = Int(timeRemaining) / 60 % 60
