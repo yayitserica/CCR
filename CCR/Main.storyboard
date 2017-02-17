@@ -28,6 +28,7 @@
                                 <items>
                                     <navigationItem title="Time - Countdown" id="sYh-Em-Or5">
                                         <barButtonItem key="rightBarButtonItem" title="Clear" id="4SG-oC-Rmh">
+                                            <color key="tintColor" red="0.29411764705882354" green="0.21176470588235294" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="clearBtnTapped:" destination="axF-ZI-INX" id="RpA-9w-KCP"/>
                                             </connections>
@@ -42,6 +43,7 @@
                                 </constraints>
                                 <items>
                                     <barButtonItem systemItem="play" id="Wb0-aK-xwe">
+                                        <color key="tintColor" red="0.29411764705882354" green="0.21176470588235294" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="playBtnTapped:" destination="axF-ZI-INX" id="4Vh-zm-I4c"/>
                                         </connections>
@@ -49,6 +51,7 @@
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="sTb-5d-3If"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="6aE-o3-SiP"/>
                                     <barButtonItem systemItem="pause" id="GOo-rJ-7We">
+                                        <color key="tintColor" red="0.29411764705882354" green="0.21176470588235294" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="pauseBtnTapped:" destination="axF-ZI-INX" id="Up2-49-oiz"/>
                                         </connections>
@@ -57,8 +60,8 @@
                             </toolbar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOt-kN-qa6">
                                 <rect key="frame" x="0.0" y="264" width="375" height="66.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="50"/>
+                                <color key="textColor" red="0.29411764705882354" green="0.21176470588235294" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SGb-TY-Ixa">
@@ -73,8 +76,15 @@
                                 </userDefinedRuntimeAttributes>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOD-wO-8gF">
-                                <rect key="frame" x="160.5" y="487" width="54.5" height="3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <rect key="frame" x="152" y="487" width="72" height="3"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="50"/>
+                                <color key="textColor" red="0.29411764709999999" green="0.21176470589999999" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quote Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="Xbp-ft-ITq">
+                                <rect key="frame" x="8" y="100" width="351" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -104,6 +114,7 @@
                     <connections>
                         <outlet property="progressLabel" destination="mOD-wO-8gF" id="8fd-Of-C39"/>
                         <outlet property="progressView" destination="SGb-TY-Ixa" id="4DK-LH-E8T"/>
+                        <outlet property="quoteLabel" destination="Xbp-ft-ITq" id="kNZ-9q-5Kq"/>
                         <outlet property="timeLabel" destination="sOt-kN-qa6" id="SDP-MN-fKT"/>
                     </connections>
                 </viewController>
@@ -119,6 +130,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.96862745098039216" green="0.14901960784313725" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                <color key="value" red="0.29411764705882354" green="0.21176470588235294" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="axF-ZI-INX" kind="relationship" relationship="viewControllers" id="2m7-cQ-LJQ"/>
@@ -129,7 +148,7 @@
             </objects>
             <point key="canvasLocation" x="-1404" y="-203"/>
         </scene>
-        <!--Item-->
+        <!--Finished Goals-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CCR" customModuleProvider="target" sceneMemberID="viewController">
@@ -181,7 +200,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="zrb-G2-Lfj"/>
+                    <tabBarItem key="tabBarItem" title="Finished Goals" image="Goal-25" selectedImage="Goal Filled-25" id="zrb-G2-Lfj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -189,6 +208,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Goal Filled-25" width="25" height="25"/>
+        <image name="Goal-25" width="25" height="25"/>
         <image name="Timer Filled-25" width="25" height="25"/>
     </resources>
 </document>

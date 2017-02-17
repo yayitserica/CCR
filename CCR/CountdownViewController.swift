@@ -17,6 +17,9 @@ class CountdownViewController: UIViewController {
     var timerIsOn = false
     var buttonSound = AVAudioPlayer()
     
+    let store = DataStore.sharedInstance
+    
+    @IBOutlet weak var quoteLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var progressLabel: UILabel!
@@ -60,11 +63,17 @@ class CountdownViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         do {
             try buttonSound = AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "double_ring_from_desk_bell", ofType: "mp3")!))
         } catch {
             print(error.localizedDescription)
             print("Error: There's an error with the audio file named double_ring_from_desk_bell.mp3")
+        }
+        
+        self.store.getQuote { (quote, author) in
+            guard let unwrappedQuote = quote, let unwrappedAuthor = author else { return }
+            self.quoteLabel.text = "\(unwrappedQuote) - \(unwrappedAuthor)"
         }
     }
 
