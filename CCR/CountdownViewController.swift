@@ -24,7 +24,7 @@ class CountdownViewController: UIViewController {
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var progressLabel: UILabel!
     
-    @IBAction func clearBtnTapped(_ sender: Any) {
+    @IBAction func resetTapped(_ sender: Any) {
         timer.invalidate()
         timeRemaining = 1500
         timeLabel.text = "25:00"
@@ -50,7 +50,7 @@ class CountdownViewController: UIViewController {
 //        let completionPercentage = Int((Float(timeRemaining)/Float(totalTime)) * 100)
         let completionPercentage = Int(((Float(totalTime) - Float(timeRemaining))/Float(totalTime)) * 100)
         progressView.setProgress(Float(timeRemaining)/Float(totalTime), animated: false)
-        progressLabel.text = "\(completionPercentage)%"
+        progressLabel.text = "\(completionPercentage)% complete"
         let minutesLeft = Int(timeRemaining) / 60 % 60
         let secondsLeft = Int(timeRemaining) % 60
         timeLabel.text = "\(minutesLeft):\(secondsLeft)"
