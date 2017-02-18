@@ -23,6 +23,7 @@ class CountdownViewController: UIViewController {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var progressLabel: UILabel!
+    @IBOutlet weak var resetButton: UIBarButtonItem!
     
     @IBAction func resetTapped(_ sender: Any) {
         timer.invalidate()
@@ -47,7 +48,6 @@ class CountdownViewController: UIViewController {
     
     func timerRunning() {
         timeRemaining -= 1
-//        let completionPercentage = Int((Float(timeRemaining)/Float(totalTime)) * 100)
         let completionPercentage = Int(((Float(totalTime) - Float(timeRemaining))/Float(totalTime)) * 100)
         progressView.setProgress(Float(timeRemaining)/Float(totalTime), animated: false)
         progressLabel.text = "\(completionPercentage)% complete"
@@ -64,18 +64,32 @@ class CountdownViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        formatViews()
+        playTimerBell()
+        displayQuote()
         
+    }
+    
+    func displayQuote() {
+        self.store.getQuote { (quote, author) in
+            guard let unwrappedQuote = quote, let unwrappedAuthor = author else { return }
+            self.quoteLabel.text = "\(unwrappedQuote) - \(unwrappedAuthor)"
+        }
+    }
+    
+    func playTimerBell() {
         do {
             try buttonSound = AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "double_ring_from_desk_bell", ofType: "mp3")!))
         } catch {
             print(error.localizedDescription)
             print("Error: There's an error with the audio file named double_ring_from_desk_bell.mp3")
         }
+    }
+    
+    func formatViews() {
+        resetButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "American Typewriter", size: 18.0)], for: .normal)
         
-        self.store.getQuote { (quote, author) in
-            guard let unwrappedQuote = quote, let unwrappedAuthor = author else { return }
-            self.quoteLabel.text = "\(unwrappedQuote) - \(unwrappedAuthor)"
-        }
+        progressView.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI_2) * 2)
     }
 
     

@@ -66,17 +66,17 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOt-kN-qa6">
                                 <rect key="frame" x="16" y="181" width="343" height="58"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="50"/>
-                                <color key="textColor" red="0.29411764705882354" green="0.21176470588235294" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.96862745100000003" green="0.14901960780000001" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SGb-TY-Ixa">
                                 <rect key="frame" x="36" y="249" width="303" height="33.5"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="trackTintColor">
-                                        <color key="value" red="0.96862745098039216" green="0.14901960784313725" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.29411764705882354" green="0.21176470588235294" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="progressTintColor">
-                                        <color key="value" red="0.99607843137254903" green="0.98431372549019602" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </progressView>
@@ -204,6 +204,7 @@
                         <outlet property="progressLabel" destination="mOD-wO-8gF" id="8fd-Of-C39"/>
                         <outlet property="progressView" destination="SGb-TY-Ixa" id="4DK-LH-E8T"/>
                         <outlet property="quoteLabel" destination="Xbp-ft-ITq" id="kNZ-9q-5Kq"/>
+                        <outlet property="resetButton" destination="FC3-9A-XoC" id="Hhl-vg-7Y6"/>
                         <outlet property="timeLabel" destination="sOt-kN-qa6" id="SDP-MN-fKT"/>
                     </connections>
                 </viewController>
