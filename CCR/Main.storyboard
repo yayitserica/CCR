@@ -27,7 +27,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <textAttributes key="titleTextAttributes">
                                     <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="30"/>
-                                    <color key="textColor" red="0.96862745100000003" green="0.14901960780000001" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" red="0.36862745099999999" green="0.0" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Set a CCR Goal" id="sYh-Em-Or5"/>
@@ -38,72 +38,41 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </navigationBar>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QMt-PX-eqe">
-                                <rect key="frame" x="0.0" y="579" width="375" height="44"/>
-                                <items>
-                                    <barButtonItem systemItem="play" id="Wb0-aK-xwe">
-                                        <color key="tintColor" red="0.29411764705882354" green="0.21176470588235294" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
-                                        <connections>
-                                            <action selector="playBtnTapped:" destination="axF-ZI-INX" id="4Vh-zm-I4c"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="n43-y7-n0B"/>
-                                    <barButtonItem systemItem="pause" id="GOo-rJ-7We">
-                                        <color key="tintColor" red="0.29411764705882354" green="0.21176470588235294" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
-                                        <connections>
-                                            <action selector="pauseBtnTapped:" destination="axF-ZI-INX" id="Up2-49-oiz"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="OkQ-Zz-asi"/>
-                                    <barButtonItem title="Reset" id="FC3-9A-XoC">
-                                        <color key="tintColor" red="0.29411764709999999" green="0.21176470589999999" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
-                                        <connections>
-                                            <action selector="resetTapped:" destination="axF-ZI-INX" id="VYF-ah-dEZ"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOt-kN-qa6">
-                                <rect key="frame" x="16" y="181" width="343" height="58"/>
+                                <rect key="frame" x="16" y="185" width="343" height="58"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="50"/>
-                                <color key="textColor" red="0.96862745100000003" green="0.14901960780000001" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.36862745099999999" green="0.0" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SGb-TY-Ixa">
-                                <rect key="frame" x="36" y="249" width="303" height="33.5"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="trackTintColor">
-                                        <color key="value" red="0.29411764705882354" green="0.21176470588235294" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="progressTintColor">
-                                        <color key="value" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
+                                <rect key="frame" x="36" y="253" width="303" height="33.5"/>
+                                <color key="progressTintColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="trackTintColor" red="0.0" green="0.34509803921568627" blue="0.41176470588235292" alpha="1" colorSpace="calibratedRGB"/>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOD-wO-8gF">
-                                <rect key="frame" x="36" y="327.5" width="303" height="0.0"/>
+                                <rect key="frame" x="36" y="296.5" width="303" height="0.0"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="35"/>
-                                <color key="textColor" red="0.29411764709999999" green="0.21176470589999999" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.36862745099999999" green="0.0" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="bqv-AT-2PV">
-                                <rect key="frame" x="16" y="66" width="343" height="90"/>
+                                <rect key="frame" x="16" y="70" width="343" height="90"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="onI-bl-2UB">
                                         <rect key="frame" x="0.0" y="0.0" width="175.5" height="30"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDS-kh-pNS">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDS-kh-pNS">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="NPf-yD-97x"/>
                                                     <constraint firstAttribute="width" constant="30" id="ecJ-Yh-a8E"/>
                                                 </constraints>
-                                                <state key="normal" backgroundImage="Checked-50red"/>
+                                                <state key="normal" backgroundImage="Checked Filled-25"/>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Is it CLEAR?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3e-dd-nfa">
                                                 <rect key="frame" x="30" y="0.0" width="145.5" height="30"/>
                                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="22"/>
-                                                <color key="textColor" red="0.29411764709999999" green="0.21176470589999999" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.0" green="0.34509803921568627" blue="0.41176470588235292" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -114,18 +83,18 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GOK-xD-oEs">
                                         <rect key="frame" x="0.0" y="30" width="263" height="30"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZqY-Mm-Ill">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZqY-Mm-Ill">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="kip-8K-CIV"/>
                                                     <constraint firstAttribute="width" constant="30" id="ork-B1-vJ3"/>
                                                 </constraints>
-                                                <state key="normal" backgroundImage="Checked-50red"/>
+                                                <state key="normal" backgroundImage="Checked Filled-25"/>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Is it CHALLENGING?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYz-du-1Hv">
                                                 <rect key="frame" x="30" y="0.0" width="233" height="30"/>
                                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="22"/>
-                                                <color key="textColor" red="0.29411764709999999" green="0.21176470589999999" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.0" green="0.34509803921568627" blue="0.41176470588235292" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -133,28 +102,31 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lxn-J6-QBr">
                                         <rect key="frame" x="0.0" y="60" width="252.5" height="30"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nX-rf-W4b">
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nX-rf-W4b">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="1OP-rD-3Nt"/>
                                                     <constraint firstAttribute="height" constant="30" id="Ell-J2-7gd"/>
                                                 </constraints>
-                                                <state key="normal" backgroundImage="Checked-50red"/>
+                                                <state key="normal" backgroundImage="Checked Filled-25"/>
+                                                <connections>
+                                                    <action selector="showPopUp:" destination="axF-ZI-INX" eventType="touchUpInside" id="Ljz-YN-ZLQ"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Is it REASONABLE?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Fq-ap-0tr">
                                                 <rect key="frame" x="30" y="0.0" width="222.5" height="30"/>
                                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="22"/>
-                                                <color key="textColor" red="0.29411764709999999" green="0.21176470589999999" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.0" green="0.34509803921568627" blue="0.41176470588235292" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="Xbp-ft-ITq">
-                                <rect key="frame" x="16" y="377.5" width="343" height="166.5"/>
-                                <color key="backgroundColor" red="0.29411764709999999" green="0.21176470589999999" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="20"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="Xbp-ft-ITq">
+                                <rect key="frame" x="16" y="469" width="343" height="100"/>
+                                <color key="backgroundColor" red="0.17254901960784313" green="0.13333333333333333" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
@@ -169,35 +141,61 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QMt-PX-eqe">
+                                <rect key="frame" x="0.0" y="579" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="play" id="Wb0-aK-xwe">
+                                        <color key="tintColor" red="0.36862745099999999" green="0.0" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="playBtnTapped:" destination="axF-ZI-INX" id="4Vh-zm-I4c"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="n43-y7-n0B"/>
+                                    <barButtonItem systemItem="pause" id="GOo-rJ-7We">
+                                        <color key="tintColor" red="0.36862745099999999" green="0.0" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="pauseBtnTapped:" destination="axF-ZI-INX" id="Up2-49-oiz"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="OkQ-Zz-asi"/>
+                                    <barButtonItem title="Reset" id="FC3-9A-XoC">
+                                        <color key="tintColor" red="0.36862745099999999" green="0.0" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="resetTapped:" destination="axF-ZI-INX" id="VYF-ah-dEZ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="aTx-FV-f1p" firstAttribute="top" secondItem="QMt-PX-eqe" secondAttribute="bottom" id="5Eh-6j-m6g"/>
                             <constraint firstItem="s1h-Pi-nNp" firstAttribute="top" secondItem="CqV-vS-ug2" secondAttribute="bottom" id="6Kp-55-9P6"/>
                             <constraint firstAttribute="trailing" secondItem="QMt-PX-eqe" secondAttribute="trailing" id="8zd-La-Q1b"/>
-                            <constraint firstItem="bqv-AT-2PV" firstAttribute="top" secondItem="4fL-l7-wh4" secondAttribute="topMargin" constant="66" id="9R2-2t-RDR"/>
+                            <constraint firstItem="bqv-AT-2PV" firstAttribute="top" secondItem="4fL-l7-wh4" secondAttribute="topMargin" constant="70" id="9R2-2t-RDR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bqv-AT-2PV" secondAttribute="trailing" id="9dP-EJ-6Fl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="sOt-kN-qa6" secondAttribute="trailing" id="9va-8y-lj1"/>
                             <constraint firstItem="s1h-Pi-nNp" firstAttribute="leading" secondItem="4fL-l7-wh4" secondAttribute="leading" id="F24-Zf-1pO"/>
                             <constraint firstAttribute="leadingMargin" secondItem="bqv-AT-2PV" secondAttribute="leading" id="Ho2-59-sjY"/>
-                            <constraint firstItem="Xbp-ft-ITq" firstAttribute="height" secondItem="4fL-l7-wh4" secondAttribute="height" multiplier="0.25" id="K9L-Ri-2AG"/>
+                            <constraint firstItem="Xbp-ft-ITq" firstAttribute="height" secondItem="4fL-l7-wh4" secondAttribute="height" multiplier="0.15" id="K9L-Ri-2AG"/>
                             <constraint firstItem="QMt-PX-eqe" firstAttribute="leading" secondItem="4fL-l7-wh4" secondAttribute="leading" id="PPH-CY-me4"/>
                             <constraint firstItem="Xbp-ft-ITq" firstAttribute="leading" secondItem="4fL-l7-wh4" secondAttribute="leadingMargin" id="Ql2-Gr-Uqy"/>
                             <constraint firstItem="mOD-wO-8gF" firstAttribute="leading" secondItem="4fL-l7-wh4" secondAttribute="leadingMargin" constant="20" id="RfX-GG-O3u"/>
+                            <constraint firstItem="QMt-PX-eqe" firstAttribute="top" secondItem="Xbp-ft-ITq" secondAttribute="bottom" constant="10" id="VsX-vA-2k8"/>
                             <constraint firstItem="SGb-TY-Ixa" firstAttribute="leading" secondItem="4fL-l7-wh4" secondAttribute="leadingMargin" constant="20" id="XWL-zm-duv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Xbp-ft-ITq" secondAttribute="trailing" id="YYX-Lk-fRz"/>
                             <constraint firstItem="SGb-TY-Ixa" firstAttribute="height" secondItem="4fL-l7-wh4" secondAttribute="height" multiplier="0.05" id="a3s-jb-esq"/>
                             <constraint firstItem="sOt-kN-qa6" firstAttribute="top" secondItem="bqv-AT-2PV" secondAttribute="bottom" constant="25" id="ca7-Ll-tL2"/>
                             <constraint firstItem="SGb-TY-Ixa" firstAttribute="top" secondItem="sOt-kN-qa6" secondAttribute="bottom" constant="10" id="eGI-g3-uiG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SGb-TY-Ixa" secondAttribute="trailing" constant="20" id="eNk-zD-js8"/>
-                            <constraint firstItem="Xbp-ft-ITq" firstAttribute="top" secondItem="mOD-wO-8gF" secondAttribute="bottom" constant="50" id="eWF-m0-fro"/>
                             <constraint firstAttribute="leadingMargin" secondItem="sOt-kN-qa6" secondAttribute="leading" id="gER-f7-IAf"/>
+                            <constraint firstItem="aTx-FV-f1p" firstAttribute="top" secondItem="QMt-PX-eqe" secondAttribute="bottom" id="gob-5y-47w"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mOD-wO-8gF" secondAttribute="trailing" constant="20" id="hqS-K6-FyV"/>
-                            <constraint firstItem="mOD-wO-8gF" firstAttribute="top" secondItem="SGb-TY-Ixa" secondAttribute="bottom" constant="45" id="meo-Ld-ALI"/>
+                            <constraint firstItem="mOD-wO-8gF" firstAttribute="top" secondItem="SGb-TY-Ixa" secondAttribute="bottom" constant="10" id="meo-Ld-ALI"/>
                             <constraint firstAttribute="trailing" secondItem="s1h-Pi-nNp" secondAttribute="trailing" id="q3J-3T-sNg"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Timer" image="Timer Filled-25" selectedImage="Timer Filled-25" id="yy9-tE-hnS"/>
+                    <tabBarItem key="tabBarItem" title="Timer" image="Timer-25" selectedImage="Timer Filled-25" id="yy9-tE-hnS"/>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -212,6 +210,58 @@
             </objects>
             <point key="canvasLocation" x="-540" y="-560.86956521739137"/>
         </scene>
+        <!--Pop Up View Controller-->
+        <scene sceneID="N6o-E1-8or">
+            <objects>
+                <viewController storyboardIdentifier="sbPopUpID" id="7Pa-oR-hlb" customClass="PopUpViewController" customModule="CCR" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jdg-9L-tsB"/>
+                        <viewControllerLayoutGuide type="bottom" id="DFm-Ig-YX5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Tb7-5l-m3g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NOY-FD-1W4">
+                                <rect key="frame" x="67" y="159" width="240" height="349"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJo-fc-TRn">
+                                        <rect key="frame" x="95" y="286" width="51" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="20"/>
+                                        <state key="normal" title="Close">
+                                            <color key="titleColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="closePopUp:" destination="7Pa-oR-hlb" eventType="touchUpInside" id="yIH-5f-PpI"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rate this Interval" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAV-tq-GzR">
+                                        <rect key="frame" x="7" y="8" width="227" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="23"/>
+                                        <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.34509803919999998" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="FAM-rA-zSK"/>
+                                    <constraint firstAttribute="height" constant="349" id="d8N-wB-Mpz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NOY-FD-1W4" firstAttribute="centerX" secondItem="Tb7-5l-m3g" secondAttribute="centerX" id="Wa3-BN-4r5"/>
+                            <constraint firstItem="NOY-FD-1W4" firstAttribute="centerY" secondItem="Tb7-5l-m3g" secondAttribute="centerY" id="ohJ-3b-dBD"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dZa-nn-rnN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="88.799999999999997" y="-563.56821589205401"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="iun-r3-eRW">
             <objects>
@@ -220,12 +270,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                <color key="value" red="0.96862745098039216" green="0.14901960784313725" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="value" red="0.0" green="0.34509803921568627" blue="0.41176470588235292" alpha="1" colorSpace="calibratedRGB"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
-                                <color key="value" red="0.29411764705882354" green="0.21176470588235294" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="value" red="0.17254901960784313" green="0.13333333333333333" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBar>
@@ -272,9 +323,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Checked-50red" width="50" height="50"/>
+        <image name="Checked Filled-25" width="25" height="25"/>
         <image name="Goal Filled-25" width="25" height="25"/>
         <image name="Goal-25" width="25" height="25"/>
         <image name="Timer Filled-25" width="25" height="25"/>
+        <image name="Timer-25" width="25" height="25"/>
     </resources>
 </document>

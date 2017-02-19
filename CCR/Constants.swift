@@ -10,12 +10,11 @@ import Foundation
 import UIKit
 
 struct Constants {
-    //#4B36FE
-    static let blue = UIColor(red:0.29, green:0.21, blue:1.00, alpha:1.0)
-    //#FEFB29
-    static let yellow = UIColor(red:1.00, green:0.98, blue:0.16, alpha:1.0)
-    //#F72638
-    static let red = UIColor(red:0.97, green:0.15, blue:0.22, alpha:1.0)
-    //#4FF926
-    static let green = UIColor(red:0.31, green:0.98, blue:0.15, alpha:1.0)
+    //#00856A
+    static let aqua = UIColor(red:0.00, green:0.52, blue:0.42, alpha:1.0)
+    //#005869
+    static let teal = UIColor(red:0.00, green:0.35, blue:0.41, alpha:1.0)
+    
+    //#EFF0F1
+    static let grey = UIColor(red:0.94, green:0.94, blue:0.95, alpha:1.0)
 }

@@ -16,6 +16,9 @@ class CountdownViewController: UIViewController {
     var timer = Timer()
     var timerIsOn = false
     var buttonSound = AVAudioPlayer()
+    var oneIsChecked = false
+    var twoIsChecked = false
+    var threeIsChecked = false
     
     let store = DataStore.sharedInstance
     
@@ -25,6 +28,14 @@ class CountdownViewController: UIViewController {
     @IBOutlet weak var progressLabel: UILabel!
     @IBOutlet weak var resetButton: UIBarButtonItem!
     
+    @IBAction func showPopUp(_ sender: Any) {
+        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbPopUpID") as! PopUpViewController
+        self.addChildViewController(popOverVC)
+        popOverVC.view.frame = self.view.frame
+        self.view.addSubview(popOverVC.view)
+        popOverVC.didMove(toParentViewController: self)
+    }
+    
     @IBAction func resetTapped(_ sender: Any) {
         timer.invalidate()
         timeRemaining = 1500
@@ -33,7 +44,7 @@ class CountdownViewController: UIViewController {
     }
     
     @IBAction func playBtnTapped(_ sender: Any) {
-        
+        progressView.isHidden = false
         if !timerIsOn {
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerRunning), userInfo: nil, repeats: true)
             timerIsOn = true
@@ -87,7 +98,8 @@ class CountdownViewController: UIViewController {
     }
     
     func formatViews() {
-        resetButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "American Typewriter", size: 18.0)], for: .normal)
+        resetButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "American Typewriter", size: 18.0) as Any], for: .normal)
+        progressView.isHidden = true
         
         progressView.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI_2) * 2)
     }
