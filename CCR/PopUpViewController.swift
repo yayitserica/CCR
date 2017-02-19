@@ -9,9 +9,14 @@
 import UIKit
 
 class PopUpViewController: UIViewController {
+    
+    @IBOutlet weak var takeBreakLabel: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        takeBreakLabel.layer.borderColor = UIColor.white.cgColor
+        takeBreakLabel.layer.borderWidth = 2
+        takeBreakLabel.layer.cornerRadius = 8
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
         showAnimate()
         // Do any additional setup after loading the view.
