@@ -25,6 +25,7 @@
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1h-Pi-nNp">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <textAttributes key="titleTextAttributes">
                                     <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="30"/>
                                     <color key="textColor" red="0.36862745099999999" green="0.0" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -53,6 +54,12 @@
                                 <rect key="frame" x="36" y="296.5" width="303" height="0.0"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="35"/>
                                 <color key="textColor" red="0.36862745099999999" green="0.0" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="0% done" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfP-ZY-0qr">
+                                <rect key="frame" x="36" y="296.5" width="303" height="40.5"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="35"/>
+                                <color key="textColor" red="0.0" green="0.52156862749999999" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="bqv-AT-2PV">
@@ -109,9 +116,6 @@
                                                     <constraint firstAttribute="height" constant="30" id="Ell-J2-7gd"/>
                                                 </constraints>
                                                 <state key="normal" backgroundImage="Checked Filled-25"/>
-                                                <connections>
-                                                    <action selector="showPopUp:" destination="axF-ZI-INX" eventType="touchUpInside" id="Ljz-YN-ZLQ"/>
-                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Is it REASONABLE?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Fq-ap-0tr">
                                                 <rect key="frame" x="30" y="0.0" width="222.5" height="30"/>
@@ -123,10 +127,10 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="Xbp-ft-ITq">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="Xbp-ft-ITq">
                                 <rect key="frame" x="16" y="469" width="343" height="100"/>
                                 <color key="backgroundColor" red="0.17254901960784313" green="0.13333333333333333" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
@@ -167,12 +171,20 @@
                                 </items>
                                 <color key="barTintColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1RI-tL-2zu">
+                                <rect key="frame" x="16" y="185" width="343" height="58"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="50"/>
+                                <color key="textColor" red="0.0" green="0.52156862745098043" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="bfP-ZY-0qr" secondAttribute="trailing" constant="20" id="4KI-Oi-ILw"/>
                             <constraint firstItem="s1h-Pi-nNp" firstAttribute="top" secondItem="CqV-vS-ug2" secondAttribute="bottom" id="6Kp-55-9P6"/>
                             <constraint firstAttribute="trailing" secondItem="QMt-PX-eqe" secondAttribute="trailing" id="8zd-La-Q1b"/>
                             <constraint firstItem="bqv-AT-2PV" firstAttribute="top" secondItem="4fL-l7-wh4" secondAttribute="topMargin" constant="70" id="9R2-2t-RDR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1RI-tL-2zu" secondAttribute="trailing" id="9Ra-bD-VkT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bqv-AT-2PV" secondAttribute="trailing" id="9dP-EJ-6Fl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="sOt-kN-qa6" secondAttribute="trailing" id="9va-8y-lj1"/>
                             <constraint firstItem="s1h-Pi-nNp" firstAttribute="leading" secondItem="4fL-l7-wh4" secondAttribute="leading" id="F24-Zf-1pO"/>
@@ -181,17 +193,22 @@
                             <constraint firstItem="QMt-PX-eqe" firstAttribute="leading" secondItem="4fL-l7-wh4" secondAttribute="leading" id="PPH-CY-me4"/>
                             <constraint firstItem="Xbp-ft-ITq" firstAttribute="leading" secondItem="4fL-l7-wh4" secondAttribute="leadingMargin" id="Ql2-Gr-Uqy"/>
                             <constraint firstItem="mOD-wO-8gF" firstAttribute="leading" secondItem="4fL-l7-wh4" secondAttribute="leadingMargin" constant="20" id="RfX-GG-O3u"/>
+                            <constraint firstItem="SGb-TY-Ixa" firstAttribute="top" secondItem="1RI-tL-2zu" secondAttribute="bottom" constant="10" id="Ty4-2J-UI1"/>
                             <constraint firstItem="QMt-PX-eqe" firstAttribute="top" secondItem="Xbp-ft-ITq" secondAttribute="bottom" constant="10" id="VsX-vA-2k8"/>
                             <constraint firstItem="SGb-TY-Ixa" firstAttribute="leading" secondItem="4fL-l7-wh4" secondAttribute="leadingMargin" constant="20" id="XWL-zm-duv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Xbp-ft-ITq" secondAttribute="trailing" id="YYX-Lk-fRz"/>
                             <constraint firstItem="SGb-TY-Ixa" firstAttribute="height" secondItem="4fL-l7-wh4" secondAttribute="height" multiplier="0.05" id="a3s-jb-esq"/>
                             <constraint firstItem="sOt-kN-qa6" firstAttribute="top" secondItem="bqv-AT-2PV" secondAttribute="bottom" constant="25" id="ca7-Ll-tL2"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="1RI-tL-2zu" secondAttribute="leading" id="dcR-bm-axe"/>
                             <constraint firstItem="SGb-TY-Ixa" firstAttribute="top" secondItem="sOt-kN-qa6" secondAttribute="bottom" constant="10" id="eGI-g3-uiG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SGb-TY-Ixa" secondAttribute="trailing" constant="20" id="eNk-zD-js8"/>
+                            <constraint firstItem="bfP-ZY-0qr" firstAttribute="leading" secondItem="4fL-l7-wh4" secondAttribute="leadingMargin" constant="20" id="eo8-Rw-biu"/>
                             <constraint firstAttribute="leadingMargin" secondItem="sOt-kN-qa6" secondAttribute="leading" id="gER-f7-IAf"/>
                             <constraint firstItem="aTx-FV-f1p" firstAttribute="top" secondItem="QMt-PX-eqe" secondAttribute="bottom" id="gob-5y-47w"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mOD-wO-8gF" secondAttribute="trailing" constant="20" id="hqS-K6-FyV"/>
+                            <constraint firstItem="1RI-tL-2zu" firstAttribute="top" secondItem="bqv-AT-2PV" secondAttribute="bottom" constant="25" id="k35-Oq-EhJ"/>
                             <constraint firstItem="mOD-wO-8gF" firstAttribute="top" secondItem="SGb-TY-Ixa" secondAttribute="bottom" constant="10" id="meo-Ld-ALI"/>
+                            <constraint firstItem="bfP-ZY-0qr" firstAttribute="top" secondItem="SGb-TY-Ixa" secondAttribute="bottom" constant="10" id="pWE-dg-AwL"/>
                             <constraint firstAttribute="trailing" secondItem="s1h-Pi-nNp" secondAttribute="trailing" id="q3J-3T-sNg"/>
                         </constraints>
                     </view>
@@ -199,6 +216,8 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="breakProgressLabel" destination="bfP-ZY-0qr" id="nJT-3L-Xcg"/>
+                        <outlet property="breakTimeLabel" destination="1RI-tL-2zu" id="sfu-nB-3nS"/>
                         <outlet property="progressLabel" destination="mOD-wO-8gF" id="8fd-Of-C39"/>
                         <outlet property="progressView" destination="SGb-TY-Ixa" id="4DK-LH-E8T"/>
                         <outlet property="quoteLabel" destination="Xbp-ft-ITq" id="kNZ-9q-5Kq"/>
@@ -243,6 +262,24 @@
                                             <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
                                                 <color key="value" red="1" green="1" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="emptyBorderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="emptyBorderColor">
+                                                <color key="value" red="1" green="1" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="emptyColor">
+                                                <color key="value" red="0.0" green="0.34509803919999998" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="filledBorderColor">
+                                                <color key="value" red="1" green="1" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJo-fc-TRn">
@@ -276,6 +313,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="starringView" destination="xQh-5P-QFW" id="2q9-hF-ZT9"/>
                         <outlet property="takeBreakLabel" destination="YJo-fc-TRn" id="t1U-E3-CEx"/>
                     </connections>
                 </viewController>

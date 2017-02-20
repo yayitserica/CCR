@@ -78,18 +78,42 @@
 			children = (
 				4544836B1E4EC83000FA2ECB /* Supporting Files */,
 				450F1A291E4E209D00FAFBB9 /* AppDelegate.swift */,
-				450F1A3B1E4E74A800FAFBB9 /* Main.storyboard */,
-				45258FD21E5913FA00CF490E /* PopUpViewController.swift */,
-				450F1A2B1E4E209D00FAFBB9 /* ViewController.swift */,
-				4544836E1E4ED59A00FA2ECB /* Constants.swift */,
-				450F1A3D1E4E776B00FAFBB9 /* CountdownViewController.swift */,
-				45BEB4941E52377A000554AD /* APIClient.swift */,
-				45BEB4961E523BA4000554AD /* DataStore.swift */,
+				453E2ADA1E5B3E7100021569 /* View */,
+				453E2AD91E5B3E6B00021569 /* Model */,
+				453E2AD81E5B3E5300021569 /* Controller */,
 				450F1A301E4E209D00FAFBB9 /* Assets.xcassets */,
-				450F1A321E4E209D00FAFBB9 /* LaunchScreen.storyboard */,
 				450F1A351E4E209D00FAFBB9 /* Info.plist */,
 			);
 			path = CCR;
+			sourceTree = "<group>";
+		};
+		453E2AD81E5B3E5300021569 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				450F1A2B1E4E209D00FAFBB9 /* ViewController.swift */,
+				450F1A3D1E4E776B00FAFBB9 /* CountdownViewController.swift */,
+				45258FD21E5913FA00CF490E /* PopUpViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		453E2AD91E5B3E6B00021569 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4544836E1E4ED59A00FA2ECB /* Constants.swift */,
+				45BEB4941E52377A000554AD /* APIClient.swift */,
+				45BEB4961E523BA4000554AD /* DataStore.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		453E2ADA1E5B3E7100021569 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				450F1A3B1E4E74A800FAFBB9 /* Main.storyboard */,
+				450F1A321E4E209D00FAFBB9 /* LaunchScreen.storyboard */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		454483681E4EC80E00FA2ECB /* Frameworks */ = {
@@ -364,6 +388,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 52265825979FFA9AD77212DC /* Pods-CCR.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZG53357D46;
 				INFOPLIST_FILE = CCR/Info.plist;
@@ -378,6 +403,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EF36A58D27C7D9C0A3F32A28 /* Pods-CCR.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZG53357D46;
 				INFOPLIST_FILE = CCR/Info.plist;

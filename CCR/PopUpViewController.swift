@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import Cosmos
 
 class PopUpViewController: UIViewController {
     
     @IBOutlet weak var takeBreakLabel: UIButton!
 
+    @IBOutlet weak var starringView: CosmosView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         takeBreakLabel.layer.borderColor = UIColor.white.cgColor
@@ -19,11 +22,25 @@ class PopUpViewController: UIViewController {
         takeBreakLabel.layer.cornerRadius = 8
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
         showAnimate()
-        // Do any additional setup after loading the view.
+        
+        
+        starringView.didFinishTouchingCosmos = { rating in
+            switch rating {
+            case 1:
+                print("user chose 1 star")
+            case 2:
+                print("user chose 2 stars")
+            case 3:
+                print("user chose 3 stars")
+            case 4:
+                print("user chose 4 stars")
+            default:
+                print("user chose 5 stars")
+            }
+        }
     }
     
     @IBAction func closePopUp(_ sender: Any) {
-//        self.view.removeFromSuperview()
         removeAnimate()
     }
 

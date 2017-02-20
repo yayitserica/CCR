@@ -12,6 +12,8 @@ class DataStore {
     static let sharedInstance = DataStore()
     private init() {}
     
+    
+    
     func getQuote(completion: @escaping (String?, String?)-> Void) {
         APIClient.getQUOTEJSON { (quoteJSON) in
             let contents = quoteJSON?["contents"] as? [String: Any]
