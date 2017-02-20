@@ -11,11 +11,14 @@ import AVFoundation
 
 class CountdownViewController: UIViewController {
     
+    var timer = Timer()
+    
 //    var timeRemaining = 1500.0
 //    var totalTime = 1500.0
     var timeRemaining = 15.0
     var totalTime = 15.0
-    var timer = Timer()
+    var breakTimeRemaining = 300.0
+    var totalBreakTime = 300.0
     var timerIsOn = false
     var buttonSound = AVAudioPlayer()
     var isOnBreak = false
@@ -29,6 +32,8 @@ class CountdownViewController: UIViewController {
     @IBOutlet weak var progressLabel: UILabel!
     @IBOutlet weak var breakProgressLabel: UILabel!
     @IBOutlet weak var resetButton: UIBarButtonItem!
+    @IBOutlet weak var playButton: UIBarButtonItem!
+    @IBOutlet weak var pauseButton: UIBarButtonItem!
     
     @IBAction func resetTapped(_ sender: Any) {
         timer.invalidate()
@@ -45,7 +50,6 @@ class CountdownViewController: UIViewController {
         }
     }
     
-    
     @IBAction func pauseBtnTapped(_ sender: Any) {
         timer.invalidate()
         timerIsOn = false
@@ -55,56 +59,33 @@ class CountdownViewController: UIViewController {
         super.viewDidLoad()
         formatInitialViews()
         setupTimerBell()
-        displayQuote()
+//        displayQuote()
     }
     
     func timerRunning() {
-        //if the timer isn't a break timer,
-        if !isOnBreak {
-            timeRemaining -= 1
-            let completionPercentage = Int(((Float(totalTime) - Float(timeRemaining))/Float(totalTime)) * 100)
-            progressView.setProgress(Float(timeRemaining)/Float(totalTime), animated: false)
-            progressLabel.text = "\(completionPercentage)% done"
-            let minutesLeft = Int(timeRemaining) / 60 % 60
-            let secondsLeft = Int(timeRemaining) % 60
-            timeLabel.text = "\(minutesLeft):\(secondsLeft)"
-            
-            manageTimerEnd(seconds: timeRemaining)
-            isOnBreak = true
-        } else if isOnBreak {
-            timeRemaining -= 1
-            let completionPercentage = Int(((Float(totalTime) - Float(timeRemaining))/Float(totalTime)) * 100)
-            progressView.setProgress(Float(timeRemaining)/Float(totalTime), animated: false)
-            progressLabel.text = "\(completionPercentage)% done"
-            let minutesLeft = Int(timeRemaining) / 60 % 60
-            let secondsLeft = Int(timeRemaining) % 60
-            timeLabel.text = "\(minutesLeft):\(secondsLeft)"
-            
-            manageTimerEnd(seconds: timeRemaining)
-            isOnBreak = false
 
-        }
-//        timeRemaining -= 1
-//        let completionPercentage = Int(((Float(totalTime) - Float(timeRemaining))/Float(totalTime)) * 100)
-//        progressView.setProgress(Float(timeRemaining)/Float(totalTime), animated: false)
-//        progressLabel.text = "\(completionPercentage)% done"
-//        let minutesLeft = Int(timeRemaining) / 60 % 60
-//        let secondsLeft = Int(timeRemaining) % 60
-//        timeLabel.text = "\(minutesLeft):\(secondsLeft)"
-//        
-//        manageTimerEnd(seconds: timeRemaining)
-//        isOnBreak = true
+        timeRemaining -= 1
+        let completionPercentage = Int(((Float(totalTime) - Float(timeRemaining))/Float(totalTime)) * 100)
+        progressView.setProgress(Float(timeRemaining)/Float(totalTime), animated: false)
+        progressLabel.text = "\(completionPercentage)% done"
+        let minutesLeft = Int(timeRemaining) / 60 % 60
+        let secondsLeft = Int(timeRemaining) % 60
+        timeLabel.text = "\(minutesLeft):\(secondsLeft)"
+        manageTimerEnd(seconds: timeRemaining)
+        isOnBreak = true
     }
     
     func manageTimerEnd(seconds: Double) {
         if seconds == 0 {
             //when the timer ends
             //1 - shut off timer
+            timer.invalidate()
+            timerIsOn = false
             //2 - update label
             //3 - play bell
             //4 - show pop up to rate interval
             //5 - initiate break timer
-            timer.invalidate()
+            
             timeLabel.text = "Time's Up!"
             buttonSound.play()
             showPopUp()
@@ -122,15 +103,21 @@ class CountdownViewController: UIViewController {
         breakProgressLabel.isHidden = false
         //4 - hide the progress label
         progressLabel.isHidden = true
-        timeRemaining = 300
-        totalTime = 301
-        timeRemaining -= 1
-        let completionPercentage = Int(((Float(totalTime) - Float(timeRemaining))/Float(totalTime)) * 100)
-        progressView.setProgress(Float(timeRemaining)/Float(totalTime), animated: false)
-        progressLabel.text = "\(completionPercentage)% done"
-        let minutesLeft = Int(timeRemaining) / 60 % 60
-        let secondsLeft = Int(timeRemaining) % 60
-        timeLabel.text = "\(minutesLeft):\(secondsLeft)"
+        //5 - hide reset button, change color of play and pause buttons
+        resetButton.tintColor = UIColor.black.withAlphaComponent(0.0)
+        playButton.tintColor = Constants.aqua
+        pauseButton.tintColor = Constants.aqua
+        
+        breakTimeRemaining -= 1
+        print(breakTimeRemaining)
+        print(totalBreakTime)
+        let completionPercentage = Int(((Float(totalBreakTime) - Float(breakTimeRemaining))/Float(totalBreakTime)) * 100)
+        print(completionPercentage)
+        progressView.setProgress(Float(breakTimeRemaining)/Float(totalBreakTime), animated: false)
+        breakProgressLabel.text = "\(completionPercentage)% done"
+        let minutesLeft = Int(breakTimeRemaining) / 60 % 60
+        let secondsLeft = Int(breakTimeRemaining) % 60
+        breakTimeLabel.text = "\(minutesLeft):\(secondsLeft)"
     }
     
     func showPopUp() {
@@ -161,14 +148,9 @@ class CountdownViewController: UIViewController {
         breakTimeLabel.isHidden = true
         breakProgressLabel.isHidden = true
         resetButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "American Typewriter", size: 18.0) as Any], for: .normal)
-        progressView.isHidden = true
         progressView.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI_2) * 2)
     }
-    
-    
-    
 
-    
     
     /*
     // MARK: - Navigation

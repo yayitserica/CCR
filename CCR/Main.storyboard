@@ -45,10 +45,21 @@
                                 <color key="textColor" red="0.36862745099999999" green="0.0" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SGb-TY-Ixa">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1RI-tL-2zu">
+                                <rect key="frame" x="16" y="185" width="343" height="58"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="50"/>
+                                <color key="textColor" red="0.0" green="0.52156862745098043" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SGb-TY-Ixa">
                                 <rect key="frame" x="36" y="253" width="303" height="33.5"/>
                                 <color key="progressTintColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="trackTintColor" red="0.0" green="0.34509803921568627" blue="0.41176470588235292" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOD-wO-8gF">
                                 <rect key="frame" x="36" y="296.5" width="303" height="0.0"/>
@@ -62,7 +73,7 @@
                                 <color key="textColor" red="0.0" green="0.52156862749999999" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="bqv-AT-2PV">
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="bqv-AT-2PV">
                                 <rect key="frame" x="16" y="70" width="343" height="90"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="onI-bl-2UB">
@@ -127,8 +138,8 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="Xbp-ft-ITq">
-                                <rect key="frame" x="16" y="469" width="343" height="100"/>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="Xbp-ft-ITq">
+                                <rect key="frame" x="16" y="375.5" width="343" height="100"/>
                                 <color key="backgroundColor" red="0.17254901960784313" green="0.13333333333333333" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -145,8 +156,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QMt-PX-eqe">
-                                <rect key="frame" x="0.0" y="579" width="375" height="44"/>
+                            <toolbar opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QMt-PX-eqe">
+                                <rect key="frame" x="20" y="311.5" width="335" height="44"/>
                                 <items>
                                     <barButtonItem systemItem="play" id="Wb0-aK-xwe">
                                         <color key="tintColor" red="0.36862745099999999" green="0.0" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -169,32 +180,33 @@
                                         </connections>
                                     </barButtonItem>
                                 </items>
-                                <color key="barTintColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </toolbar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1RI-tL-2zu">
-                                <rect key="frame" x="16" y="185" width="343" height="58"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="50"/>
-                                <color key="textColor" red="0.0" green="0.52156862745098043" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="bfP-ZY-0qr" secondAttribute="trailing" constant="20" id="4KI-Oi-ILw"/>
                             <constraint firstItem="s1h-Pi-nNp" firstAttribute="top" secondItem="CqV-vS-ug2" secondAttribute="bottom" id="6Kp-55-9P6"/>
-                            <constraint firstAttribute="trailing" secondItem="QMt-PX-eqe" secondAttribute="trailing" id="8zd-La-Q1b"/>
+                            <constraint firstAttribute="trailing" secondItem="QMt-PX-eqe" secondAttribute="trailing" constant="20" id="8zd-La-Q1b"/>
                             <constraint firstItem="bqv-AT-2PV" firstAttribute="top" secondItem="4fL-l7-wh4" secondAttribute="topMargin" constant="70" id="9R2-2t-RDR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1RI-tL-2zu" secondAttribute="trailing" id="9Ra-bD-VkT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bqv-AT-2PV" secondAttribute="trailing" id="9dP-EJ-6Fl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="sOt-kN-qa6" secondAttribute="trailing" id="9va-8y-lj1"/>
+                            <constraint firstItem="Xbp-ft-ITq" firstAttribute="top" secondItem="QMt-PX-eqe" secondAttribute="bottom" constant="20" id="Epj-XZ-VxH"/>
                             <constraint firstItem="s1h-Pi-nNp" firstAttribute="leading" secondItem="4fL-l7-wh4" secondAttribute="leading" id="F24-Zf-1pO"/>
                             <constraint firstAttribute="leadingMargin" secondItem="bqv-AT-2PV" secondAttribute="leading" id="Ho2-59-sjY"/>
                             <constraint firstItem="Xbp-ft-ITq" firstAttribute="height" secondItem="4fL-l7-wh4" secondAttribute="height" multiplier="0.15" id="K9L-Ri-2AG"/>
-                            <constraint firstItem="QMt-PX-eqe" firstAttribute="leading" secondItem="4fL-l7-wh4" secondAttribute="leading" id="PPH-CY-me4"/>
+                            <constraint firstItem="QMt-PX-eqe" firstAttribute="leading" secondItem="4fL-l7-wh4" secondAttribute="leading" constant="20" id="PPH-CY-me4"/>
                             <constraint firstItem="Xbp-ft-ITq" firstAttribute="leading" secondItem="4fL-l7-wh4" secondAttribute="leadingMargin" id="Ql2-Gr-Uqy"/>
+                            <constraint firstItem="QMt-PX-eqe" firstAttribute="top" secondItem="mOD-wO-8gF" secondAttribute="bottom" constant="15" id="R8Y-r9-4cY"/>
                             <constraint firstItem="mOD-wO-8gF" firstAttribute="leading" secondItem="4fL-l7-wh4" secondAttribute="leadingMargin" constant="20" id="RfX-GG-O3u"/>
                             <constraint firstItem="SGb-TY-Ixa" firstAttribute="top" secondItem="1RI-tL-2zu" secondAttribute="bottom" constant="10" id="Ty4-2J-UI1"/>
-                            <constraint firstItem="QMt-PX-eqe" firstAttribute="top" secondItem="Xbp-ft-ITq" secondAttribute="bottom" constant="10" id="VsX-vA-2k8"/>
                             <constraint firstItem="SGb-TY-Ixa" firstAttribute="leading" secondItem="4fL-l7-wh4" secondAttribute="leadingMargin" constant="20" id="XWL-zm-duv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Xbp-ft-ITq" secondAttribute="trailing" id="YYX-Lk-fRz"/>
                             <constraint firstItem="SGb-TY-Ixa" firstAttribute="height" secondItem="4fL-l7-wh4" secondAttribute="height" multiplier="0.05" id="a3s-jb-esq"/>
@@ -204,7 +216,6 @@
                             <constraint firstAttribute="trailingMargin" secondItem="SGb-TY-Ixa" secondAttribute="trailing" constant="20" id="eNk-zD-js8"/>
                             <constraint firstItem="bfP-ZY-0qr" firstAttribute="leading" secondItem="4fL-l7-wh4" secondAttribute="leadingMargin" constant="20" id="eo8-Rw-biu"/>
                             <constraint firstAttribute="leadingMargin" secondItem="sOt-kN-qa6" secondAttribute="leading" id="gER-f7-IAf"/>
-                            <constraint firstItem="aTx-FV-f1p" firstAttribute="top" secondItem="QMt-PX-eqe" secondAttribute="bottom" id="gob-5y-47w"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mOD-wO-8gF" secondAttribute="trailing" constant="20" id="hqS-K6-FyV"/>
                             <constraint firstItem="1RI-tL-2zu" firstAttribute="top" secondItem="bqv-AT-2PV" secondAttribute="bottom" constant="25" id="k35-Oq-EhJ"/>
                             <constraint firstItem="mOD-wO-8gF" firstAttribute="top" secondItem="SGb-TY-Ixa" secondAttribute="bottom" constant="10" id="meo-Ld-ALI"/>
@@ -218,6 +229,8 @@
                     <connections>
                         <outlet property="breakProgressLabel" destination="bfP-ZY-0qr" id="nJT-3L-Xcg"/>
                         <outlet property="breakTimeLabel" destination="1RI-tL-2zu" id="sfu-nB-3nS"/>
+                        <outlet property="pauseButton" destination="GOo-rJ-7We" id="bxg-JR-uzL"/>
+                        <outlet property="playButton" destination="Wb0-aK-xwe" id="9dI-Cg-8aj"/>
                         <outlet property="progressLabel" destination="mOD-wO-8gF" id="8fd-Of-C39"/>
                         <outlet property="progressView" destination="SGb-TY-Ixa" id="4DK-LH-E8T"/>
                         <outlet property="quoteLabel" destination="Xbp-ft-ITq" id="kNZ-9q-5Kq"/>
@@ -286,7 +299,7 @@
                                         <rect key="frame" x="21" y="112" width="199" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
-                                        <state key="normal" title="Take 5 Min Break">
+                                        <state key="normal" title="Done">
                                             <color key="titleColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>

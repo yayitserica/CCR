@@ -14,6 +14,7 @@
 		450F1A3C1E4E74A800FAFBB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 450F1A3B1E4E74A800FAFBB9 /* Main.storyboard */; };
 		450F1A3E1E4E776B00FAFBB9 /* CountdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450F1A3D1E4E776B00FAFBB9 /* CountdownViewController.swift */; };
 		45258FD31E5913FA00CF490E /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45258FD21E5913FA00CF490E /* PopUpViewController.swift */; };
+		453E2ADC1E5B5DD900021569 /* Interval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453E2ADB1E5B5DD900021569 /* Interval.swift */; };
 		4544836A1E4EC80F00FA2ECB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 454483691E4EC80F00FA2ECB /* AVFoundation.framework */; };
 		4544836D1E4EC8BD00FA2ECB /* double_ring_from_desk_bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4544836C1E4EC8BD00FA2ECB /* double_ring_from_desk_bell.mp3 */; };
 		4544836F1E4ED59A00FA2ECB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4544836E1E4ED59A00FA2ECB /* Constants.swift */; };
@@ -32,6 +33,7 @@
 		450F1A3B1E4E74A800FAFBB9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		450F1A3D1E4E776B00FAFBB9 /* CountdownViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountdownViewController.swift; sourceTree = "<group>"; };
 		45258FD21E5913FA00CF490E /* PopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
+		453E2ADB1E5B5DD900021569 /* Interval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interval.swift; sourceTree = "<group>"; };
 		454483691E4EC80F00FA2ECB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		4544836C1E4EC8BD00FA2ECB /* double_ring_from_desk_bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = double_ring_from_desk_bell.mp3; sourceTree = "<group>"; };
 		4544836E1E4ED59A00FA2ECB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				4544836E1E4ED59A00FA2ECB /* Constants.swift */,
 				45BEB4941E52377A000554AD /* APIClient.swift */,
 				45BEB4961E523BA4000554AD /* DataStore.swift */,
+				453E2ADB1E5B5DD900021569 /* Interval.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				450F1A2C1E4E209D00FAFBB9 /* ViewController.swift in Sources */,
 				450F1A2A1E4E209D00FAFBB9 /* AppDelegate.swift in Sources */,
 				45BEB4951E52377A000554AD /* APIClient.swift in Sources */,
+				453E2ADC1E5B5DD900021569 /* Interval.swift in Sources */,
 				4544836F1E4ED59A00FA2ECB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

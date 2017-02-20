@@ -12,7 +12,7 @@ class DataStore {
     static let sharedInstance = DataStore()
     private init() {}
     
-    
+    var intervals: [Interval] = []
     
     func getQuote(completion: @escaping (String?, String?)-> Void) {
         APIClient.getQUOTEJSON { (quoteJSON) in

@@ -12,8 +12,9 @@ import Cosmos
 class PopUpViewController: UIViewController {
     
     @IBOutlet weak var takeBreakLabel: UIButton!
-
     @IBOutlet weak var starringView: CosmosView!
+    
+    let store = DataStore.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,18 +26,26 @@ class PopUpViewController: UIViewController {
         
         
         starringView.didFinishTouchingCosmos = { rating in
+            var newInterval = Interval()
             switch rating {
-            case 1:
-                print("user chose 1 star")
+            case 5:
+                newInterval.rating = 5
+                print("user chose 5 star")
             case 2:
+                newInterval.rating = 2
                 print("user chose 2 stars")
             case 3:
+                newInterval.rating = 3
                 print("user chose 3 stars")
             case 4:
+                newInterval.rating = 4
                 print("user chose 4 stars")
             default:
-                print("user chose 5 stars")
+                newInterval.rating = 1
+                print("user chose 1 stars")
             }
+            self.store.intervals.append(newInterval)
+            print("array count is \(self.store.intervals.count)")
         }
     }
     
