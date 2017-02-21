@@ -11,15 +11,16 @@ import AVFoundation
 
 class CountdownViewController: UIViewController {
     
-    var timer = Timer()
-    
 //    var timeRemaining = 1500.0
 //    var totalTime = 1500.0
     var timeRemaining = 15.0
     var totalTime = 15.0
-    var breakTimeRemaining = 300.0
-    var totalBreakTime = 300.0
+//    var breakTimeRemaining = 300.0
+//    var totalBreakTime = 300.0
+    var breakTimeRemaining = 15.0
+    var totalBreakTime = 15.0
     var timerIsOn = false
+    var timer = Timer()
     var buttonSound = AVAudioPlayer()
     var isOnBreak = false
     
@@ -43,10 +44,14 @@ class CountdownViewController: UIViewController {
     }
     
     @IBAction func playBtnTapped(_ sender: Any) {
-        progressView.isHidden = false
-        if !timerIsOn {
+        if !timerIsOn && !isOnBreak {
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerRunning), userInfo: nil, repeats: true)
+            print("timer is off and it is not on break")
             timerIsOn = true
+            playButton.isEnabled = false
+        } else if !timerIsOn && isOnBreak {
+            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(breakTimerRunning), userInfo: nil, repeats: true)
+            playButton.isEnabled = false
         }
     }
     
@@ -63,7 +68,6 @@ class CountdownViewController: UIViewController {
     }
     
     func timerRunning() {
-
         timeRemaining -= 1
         let completionPercentage = Int(((Float(totalTime) - Float(timeRemaining))/Float(totalTime)) * 100)
         progressView.setProgress(Float(timeRemaining)/Float(totalTime), animated: false)
@@ -71,12 +75,26 @@ class CountdownViewController: UIViewController {
         let minutesLeft = Int(timeRemaining) / 60 % 60
         let secondsLeft = Int(timeRemaining) % 60
         timeLabel.text = "\(minutesLeft):\(secondsLeft)"
+        timerIsOn = false
         manageTimerEnd(seconds: timeRemaining)
-        isOnBreak = true
+    }
+    
+    func breakTimerRunning() {
+        breakTimeRemaining -= 1
+        let completionPercentage = Int(((Float(totalBreakTime) - Float(breakTimeRemaining))/Float(totalBreakTime)) * 100)
+        progressView.setProgress(Float(breakTimeRemaining)/Float(totalBreakTime), animated: false)
+        breakProgressLabel.text = "\(completionPercentage)% done"
+        let minutesLeft = Int(breakTimeRemaining) / 60 % 60
+        let secondsLeft = Int(breakTimeRemaining) % 60
+        breakTimeLabel.text = "\(minutesLeft):\(secondsLeft)"
+        timerIsOn = false
+        manageTimerEnd(seconds: breakTimeRemaining)
     }
     
     func manageTimerEnd(seconds: Double) {
-        if seconds == 0 {
+        
+        if seconds == 0 && !isOnBreak {
+            
             //when the timer ends
             //1 - shut off timer
             timer.invalidate()
@@ -86,10 +104,33 @@ class CountdownViewController: UIViewController {
             //4 - show pop up to rate interval
             //5 - initiate break timer
             
-            timeLabel.text = "Time's Up!"
+            timeLabel.text = "Time to take a break!"
             buttonSound.play()
             showPopUp()
             setupBreakTimer()
+            isOnBreak = true
+            playButton.isEnabled = true
+            print("we are now on break")
+            breakTimeRemaining = 15.00
+            totalBreakTime = 15.00
+        } else if seconds == 0 && isOnBreak {
+            isOnBreak = false
+            timer.invalidate()
+            timerIsOn = false
+            timeLabel.text = "25:00"
+            breakProgressLabel.text = "0% done"
+            playButton.isEnabled = true
+            buttonSound.play()
+            breakTimeLabel.isHidden = true
+            timeLabel.isHidden = false
+            breakProgressLabel.isHidden = true
+            progressLabel.isHidden = false
+            resetButton.tintColor = Constants.fuschia
+            playButton.tintColor = Constants.fuschia
+            pauseButton.tintColor = Constants.fuschia
+            timeRemaining = 15.0
+            totalTime = 15.0
+            
         }
 
     }
@@ -104,21 +145,12 @@ class CountdownViewController: UIViewController {
         //4 - hide the progress label
         progressLabel.isHidden = true
         //5 - hide reset button, change color of play and pause buttons
-        resetButton.tintColor = UIColor.black.withAlphaComponent(0.0)
+        resetButton.tintColor = Constants.aqua
         playButton.tintColor = Constants.aqua
         pauseButton.tintColor = Constants.aqua
-        
-        breakTimeRemaining -= 1
-        print(breakTimeRemaining)
-        print(totalBreakTime)
-        let completionPercentage = Int(((Float(totalBreakTime) - Float(breakTimeRemaining))/Float(totalBreakTime)) * 100)
-        print(completionPercentage)
-        progressView.setProgress(Float(breakTimeRemaining)/Float(totalBreakTime), animated: false)
-        breakProgressLabel.text = "\(completionPercentage)% done"
-        let minutesLeft = Int(breakTimeRemaining) / 60 % 60
-        let secondsLeft = Int(breakTimeRemaining) % 60
-        breakTimeLabel.text = "\(minutesLeft):\(secondsLeft)"
     }
+    
+    
     
     func showPopUp() {
         let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbPopUpID") as! PopUpViewController
