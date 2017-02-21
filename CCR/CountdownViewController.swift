@@ -37,16 +37,29 @@ class CountdownViewController: UIViewController {
     @IBOutlet weak var pauseButton: UIBarButtonItem!
     
     @IBAction func resetTapped(_ sender: Any) {
-        timer.invalidate()
-        timeRemaining = 1500
-        timeLabel.text = "25:00"
-        timerIsOn = false
+        if !isOnBreak {
+            timer.invalidate()
+            timeRemaining = 1500
+            totalTime = 1500
+            timeLabel.text = "25:00"
+            progressLabel.text = "0% done"
+            timerIsOn = false
+            playButton.isEnabled = true
+        } else if isOnBreak {
+            timer.invalidate()
+            breakTimeRemaining = 300
+            totalBreakTime = 300
+            breakTimeLabel.text = "5:00"
+            breakProgressLabel.text = "0% done"
+            timerIsOn = false
+            playButton.isEnabled = true
+        }
+        
     }
     
     @IBAction func playBtnTapped(_ sender: Any) {
         if !timerIsOn && !isOnBreak {
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerRunning), userInfo: nil, repeats: true)
-            print("timer is off and it is not on break")
             timerIsOn = true
             playButton.isEnabled = false
         } else if !timerIsOn && isOnBreak {
@@ -56,8 +69,16 @@ class CountdownViewController: UIViewController {
     }
     
     @IBAction func pauseBtnTapped(_ sender: Any) {
-        timer.invalidate()
-        timerIsOn = false
+        
+        if !isOnBreak {
+            timer.invalidate()
+            timerIsOn = false
+            playButton.isEnabled = true
+        } else if isOnBreak {
+            timer.invalidate()
+            timerIsOn = false
+            playButton.isEnabled = true
+        }
     }
     
     override func viewDidLoad() {
@@ -110,7 +131,6 @@ class CountdownViewController: UIViewController {
             setupBreakTimer()
             isOnBreak = true
             playButton.isEnabled = true
-            print("we are now on break")
             breakTimeRemaining = 15.00
             totalBreakTime = 15.00
         } else if seconds == 0 && isOnBreak {
