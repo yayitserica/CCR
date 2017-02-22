@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct Interval {
+class Interval {
     var rating: Int?
     var goal: String?
+    
 }

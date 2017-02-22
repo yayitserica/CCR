@@ -14,7 +14,7 @@
         <!--Set Goal View Controller-->
         <scene sceneID="oNx-UT-c7m">
             <objects>
-                <viewController id="zx4-8F-ifS" customClass="SetGoalViewController" customModule="CCR" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sbGoalID" id="zx4-8F-ifS" customClass="SetGoalViewController" customModule="CCR" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="j3A-FR-ULH"/>
                         <viewControllerLayoutGuide type="bottom" id="oo5-Ls-bY3"/>
@@ -32,20 +32,20 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What are you working on today?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="1mM-7N-nRk">
-                                        <rect key="frame" x="19" y="56" width="269" height="46.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What are you working on?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="1mM-7N-nRk">
+                                        <rect key="frame" x="19" y="56" width="269" height="23.5"/>
                                         <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Goal" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3bm-1D-afR">
-                                        <rect key="frame" x="8" y="132.5" width="303" height="100"/>
+                                        <rect key="frame" x="8" y="109.5" width="303" height="100"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8z-Sw-a8o">
-                                        <rect key="frame" x="75" y="252.5" width="169" height="30"/>
+                                        <rect key="frame" x="75" y="229.5" width="169" height="30"/>
                                         <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
                                         <state key="normal" title="Submit">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -96,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nZ8-JB-FsD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1918" y="-392"/>
+            <point key="canvasLocation" x="-1175" y="-1113"/>
         </scene>
         <!--Timer-->
         <scene sceneID="5zO-yU-AIP">
@@ -228,7 +228,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bbq-mN-4xH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-279" y="-810"/>
+            <point key="canvasLocation" x="-518" y="-525"/>
         </scene>
         <!--Pop Up View Controller-->
         <scene sceneID="N6o-E1-8or">
@@ -347,9 +347,9 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iwc-WH-cmH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1175" y="-391"/>
+            <point key="canvasLocation" x="-1542" y="-278"/>
         </scene>
-        <!--Finished Goals-->
+        <!--History-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CCR" customModuleProvider="target" sceneMemberID="viewController">
@@ -375,28 +375,11 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Finished Goals" image="Goal-25" selectedImage="Goal Filled-25" id="zrb-G2-Lfj"/>
+                    <tabBarItem key="tabBarItem" title="History" image="Goal-25" selectedImage="Goal Filled-25" id="zrb-G2-Lfj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-279" y="-70"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="0xf-cK-GXB">
-            <objects>
-                <viewController id="QiR-49-Cqf" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="eWn-zK-0bI"/>
-                        <viewControllerLayoutGuide type="bottom" id="3zp-5G-RHq"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="TCM-dk-ddd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MuF-T8-Ryc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
+            <point key="canvasLocation" x="-519" y="126"/>
         </scene>
     </scenes>
     <resources>

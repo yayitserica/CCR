@@ -26,31 +26,31 @@ class PopUpViewController: UIViewController {
         
         
         starringView.didFinishTouchingCosmos = { rating in
-            var newInterval = Interval()
             switch rating {
             case 5:
-                newInterval.rating = 5
-                print("user chose 5 star")
+                self.store.intervals.last?.rating = 5
             case 2:
-                newInterval.rating = 2
-                print("user chose 2 stars")
+                self.store.intervals.last?.rating = 2
             case 3:
-                newInterval.rating = 3
-                print("user chose 3 stars")
+                self.store.intervals.last?.rating = 3
             case 4:
-                newInterval.rating = 4
-                print("user chose 4 stars")
+                self.store.intervals.last?.rating = 4
             default:
-                newInterval.rating = 1
-                print("user chose 1 stars")
+                self.store.intervals.last?.rating = 1
             }
-            self.store.intervals.append(newInterval)
-            print("array count is \(self.store.intervals.count)")
+            print("array count is still \(self.store.intervals.count)\n")
+            
+            if let unwrappedInterval = self.store.intervals.last {
+//                print("The most recent interval is \(unwrappedInterval.goal) and \(unwrappedInterval.rating)\n")
+//                dump(self.store.intervals)
+            }
+            
         }
     }
     
     @IBAction func closePopUp(_ sender: Any) {
         removeAnimate()
+        
     }
 
     func showAnimate() {
@@ -76,15 +76,15 @@ class PopUpViewController: UIViewController {
             }
         }
     }
-
-    /*
+    
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "goToNewGoal" {
+//            if let destinationVC = segue.destination as? SetGoalViewController {
+////                print("Have segued to creating a new goal VC")
+//            }
+//        }
+//    }
+    
 
 }

@@ -14,6 +14,8 @@ class DataStore {
     
     var intervals: [Interval] = []
     
+    var intervalCount = 0
+    
     func getQuote(completion: @escaping (String?, String?)-> Void) {
         APIClient.getQUOTEJSON { (quoteJSON) in
             let contents = quoteJSON?["contents"] as? [String: Any]

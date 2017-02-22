@@ -23,10 +23,9 @@ class SetGoalViewController: UIViewController {
     }
 
     @IBAction func submitButtonTapped(_ sender: Any) {
-        var newGoal = Interval()
+        let newGoal = Interval()
         newGoal.goal = goalTextField.text
         self.store.intervals.append(newGoal)
-        print("array has \(self.store.intervals.count) items")
     }
     
 

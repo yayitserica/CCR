@@ -13,12 +13,12 @@ class CountdownViewController: UIViewController {
     
 //    var timeRemaining = 1500.0
 //    var totalTime = 1500.0
-    var timeRemaining = 15.0
-    var totalTime = 15.0
+    var timeRemaining = 5.0
+    var totalTime = 5.0
 //    var breakTimeRemaining = 300.0
 //    var totalBreakTime = 300.0
-    var breakTimeRemaining = 15.0
-    var totalBreakTime = 15.0
+    var breakTimeRemaining = 5.0
+    var totalBreakTime = 5.0
     var timerIsOn = false
     var timer = Timer()
     var buttonSound = AVAudioPlayer()
@@ -70,7 +70,6 @@ class CountdownViewController: UIViewController {
     }
     
     @IBAction func pauseBtnTapped(_ sender: Any) {
-        
         if !isOnBreak {
             timer.invalidate()
             timerIsOn = false
@@ -115,25 +114,35 @@ class CountdownViewController: UIViewController {
     
     func manageTimerEnd(seconds: Double) {
         
-        if seconds == 0 && !isOnBreak {
-            
-            //when the timer ends
-            //1 - shut off timer
+        if seconds == 0 && !isOnBreak && self.store.intervalCount <= 4 {
             timer.invalidate()
             timerIsOn = false
-            //2 - update label
-            //3 - play bell
-            //4 - show pop up to rate interval
-            //5 - initiate break timer
-            
             timeLabel.text = "Time to take a break!"
             buttonSound.play()
             showPopUp()
             setupBreakTimer()
             isOnBreak = true
             playButton.isEnabled = true
-            breakTimeRemaining = 15.00
-            totalBreakTime = 15.00
+            
+            //change these times
+            breakTimeRemaining = 5.00
+            totalBreakTime = 5.00
+            self.store.intervalCount += 1
+            print("interval count is less than or equal to 4: \(self.store.intervalCount)")
+        } else if seconds == 0 && !isOnBreak && self.store.intervalCount > 4 {
+            self.store.intervalCount = 0
+            print("interval count has been reset to 0")
+            timer.invalidate()
+            timerIsOn = false
+            timeLabel.text = "Time to take a break!"
+            buttonSound.play()
+            showPopUp()
+            setupBreakTimer()
+            isOnBreak = true
+            playButton.isEnabled = true
+            //change these times
+            breakTimeRemaining = 5.00
+            totalBreakTime = 5.00
         } else if seconds == 0 && isOnBreak {
             isOnBreak = false
             timer.invalidate()
@@ -149,9 +158,10 @@ class CountdownViewController: UIViewController {
             resetButton.tintColor = Constants.fuschia
             playButton.tintColor = Constants.fuschia
             pauseButton.tintColor = Constants.fuschia
-            timeRemaining = 15.0
-            totalTime = 15.0
-            
+            //change these times
+            timeRemaining = 5.0
+            totalTime = 5.0
+            showNewGoalVC()
         }
 
     }
@@ -171,6 +181,11 @@ class CountdownViewController: UIViewController {
         pauseButton.tintColor = Constants.aqua
     }
     
+    func showNewGoalVC() {
+        let goalVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbGoalID") as! SetGoalViewController
+        self.present(goalVC, animated: true, completion: nil)
+
+    }
     
     
     func showPopUp() {
