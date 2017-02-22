@@ -26,6 +26,7 @@ class CountdownViewController: UIViewController {
     
     let store = DataStore.sharedInstance
     
+    @IBOutlet weak var goalLabel: UILabel!
     @IBOutlet weak var quoteLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var breakTimeLabel: UILabel!
@@ -197,6 +198,7 @@ class CountdownViewController: UIViewController {
     }
     
     func formatInitialViews() {
+        goalLabel.text = self.store.intervals.last?.goal
         breakTimeLabel.isHidden = true
         breakProgressLabel.isHidden = true
         resetButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "American Typewriter", size: 18.0) as Any], for: .normal)

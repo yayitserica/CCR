@@ -20,6 +20,7 @@
 		4544836F1E4ED59A00FA2ECB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4544836E1E4ED59A00FA2ECB /* Constants.swift */; };
 		45BEB4951E52377A000554AD /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BEB4941E52377A000554AD /* APIClient.swift */; };
 		45BEB4971E523BA4000554AD /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BEB4961E523BA4000554AD /* DataStore.swift */; };
+		45FA4DE61E5CEF06000AC235 /* SetGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FA4DE51E5CEF06000AC235 /* SetGoalViewController.swift */; };
 		D7A463BE78693F1998B3B680 /* Pods_CCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8AC5C294FC8BC2793D65367 /* Pods_CCR.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		4544836E1E4ED59A00FA2ECB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		45BEB4941E52377A000554AD /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		45BEB4961E523BA4000554AD /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		45FA4DE51E5CEF06000AC235 /* SetGoalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetGoalViewController.swift; sourceTree = "<group>"; };
 		52265825979FFA9AD77212DC /* Pods-CCR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CCR/Pods-CCR.debug.xcconfig"; sourceTree = "<group>"; };
 		D8AC5C294FC8BC2793D65367 /* Pods_CCR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CCR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF36A58D27C7D9C0A3F32A28 /* Pods-CCR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCR.release.xcconfig"; path = "Pods/Target Support Files/Pods-CCR/Pods-CCR.release.xcconfig"; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				450F1A2B1E4E209D00FAFBB9 /* ViewController.swift */,
+				45FA4DE51E5CEF06000AC235 /* SetGoalViewController.swift */,
 				450F1A3D1E4E776B00FAFBB9 /* CountdownViewController.swift */,
 				45258FD21E5913FA00CF490E /* PopUpViewController.swift */,
 			);
@@ -277,6 +280,7 @@
 				450F1A2A1E4E209D00FAFBB9 /* AppDelegate.swift in Sources */,
 				45BEB4951E52377A000554AD /* APIClient.swift in Sources */,
 				453E2ADC1E5B5DD900021569 /* Interval.swift in Sources */,
+				45FA4DE61E5CEF06000AC235 /* SetGoalViewController.swift in Sources */,
 				4544836F1E4ED59A00FA2ECB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

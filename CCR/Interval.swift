@@ -10,4 +10,5 @@ import Foundation
 
 struct Interval {
     var rating: Int?
+    var goal: String?
 }
