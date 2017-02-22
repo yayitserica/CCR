@@ -19,10 +19,15 @@ class CountdownViewController: UIViewController {
 //    var totalBreakTime = 300.0
     var breakTimeRemaining = 5.0
     var totalBreakTime = 5.0
+//    var longBreakTimeRemaining = 1200.0
+//    var totalLongBreakTime = 1200.0
+    var longBreakTimeRemaining = 10.00
+    var totalLongBreakTime = 10.0
     var timerIsOn = false
     var timer = Timer()
     var buttonSound = AVAudioPlayer()
     var isOnBreak = false
+    var isOnLongBreak = false
     
     let store = DataStore.sharedInstance
     
@@ -59,12 +64,18 @@ class CountdownViewController: UIViewController {
     }
     
     @IBAction func playBtnTapped(_ sender: Any) {
+        //regular interval
         if !timerIsOn && !isOnBreak {
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerRunning), userInfo: nil, repeats: true)
             timerIsOn = true
             playButton.isEnabled = false
+        //5 minute break interval
         } else if !timerIsOn && isOnBreak {
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(breakTimerRunning), userInfo: nil, repeats: true)
+            playButton.isEnabled = false
+        //20 minute break interval
+        } else if !timerIsOn && isOnLongBreak {
+            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(longBreakTimerRunning), userInfo: nil, repeats: true)
             playButton.isEnabled = false
         }
     }
@@ -112,39 +123,54 @@ class CountdownViewController: UIViewController {
         manageTimerEnd(seconds: breakTimeRemaining)
     }
     
+    func longBreakTimerRunning() {
+        longBreakTimeRemaining -= 1
+        let completionPercentage = Int(((Float(totalLongBreakTime) - Float(longBreakTimeRemaining))/Float(totalLongBreakTime)) * 100)
+        progressView.setProgress(Float(longBreakTimeRemaining)/Float(totalLongBreakTime), animated: false)
+        breakProgressLabel.text = "\(completionPercentage)% done"
+        let minutesLeft = Int(longBreakTimeRemaining) / 60 % 60
+        let secondsLeft = Int(longBreakTimeRemaining) % 60
+        breakTimeLabel.text = "\(minutesLeft):\(secondsLeft)"
+        timerIsOn = false
+        manageTimerEnd(seconds: longBreakTimeRemaining)
+    }
+    
     func manageTimerEnd(seconds: Double) {
-        
-        if seconds == 0 && !isOnBreak && self.store.intervalCount <= 4 {
-            timer.invalidate()
-            timerIsOn = false
-            timeLabel.text = "Time to take a break!"
-            buttonSound.play()
-            showPopUp()
-            setupBreakTimer()
-            isOnBreak = true
+        // a break for the first, second and third intervals: 0 seconds, not on a break and the interval is 1 2 or 3
+        if seconds == 0 && !isOnBreak && self.store.intervalCount < 4 {
+            timer.invalidate() //turn off the timer
+            timerIsOn = false //set the timer to off
+            timeLabel.text = "Time to take a break!" //update the label
+            buttonSound.play() //play a bell
+            showPopUp() //show the rating popup
+            setupBreakTimer() //format the timer
+            isOnBreak = true //change the status to be "on a break"
             playButton.isEnabled = true
-            
             //change these times
-            breakTimeRemaining = 5.00
+            breakTimeRemaining = 5.00 //resets the break time for the next break
             totalBreakTime = 5.00
-            self.store.intervalCount += 1
+            self.store.intervalCount += 1 //counts up to the next interval
             print("interval count is less than or equal to 4: \(self.store.intervalCount)")
-        } else if seconds == 0 && !isOnBreak && self.store.intervalCount > 4 {
+        // a long break for the 4th interval; 0 seconds, not on a LONG break, and the interval count is exactly 4
+        } else if seconds == 0 && !isOnLongBreak && self.store.intervalCount == 4 {
             self.store.intervalCount = 0
             print("interval count has been reset to 0")
             timer.invalidate()
             timerIsOn = false
-            timeLabel.text = "Time to take a break!"
+            timeLabel.text = "Time to take a long break!"
             buttonSound.play()
             showPopUp()
             setupBreakTimer()
-            isOnBreak = true
+            breakTimeLabel.text = "20:00"
+//            isOnBreak = true
+            isOnLongBreak = true
             playButton.isEnabled = true
             //change these times
             breakTimeRemaining = 5.00
             totalBreakTime = 5.00
-        } else if seconds == 0 && isOnBreak {
+        } else if seconds == 0 && (isOnBreak || isOnLongBreak) {
             isOnBreak = false
+            isOnLongBreak = false
             timer.invalidate()
             timerIsOn = false
             timeLabel.text = "25:00"
@@ -162,20 +188,15 @@ class CountdownViewController: UIViewController {
             timeRemaining = 5.0
             totalTime = 5.0
             showNewGoalVC()
-        }
+        } 
 
     }
     
     func setupBreakTimer() {
-        //1 - reveal the breaktime label
         breakTimeLabel.isHidden = false
-        //2 - hide the timeLabel
         timeLabel.isHidden = true
-        //3 - reveal the breaktime progress label
         breakProgressLabel.isHidden = false
-        //4 - hide the progress label
         progressLabel.isHidden = true
-        //5 - hide reset button, change color of play and pause buttons
         resetButton.tintColor = Constants.aqua
         playButton.tintColor = Constants.aqua
         pauseButton.tintColor = Constants.aqua
@@ -184,9 +205,7 @@ class CountdownViewController: UIViewController {
     func showNewGoalVC() {
         let goalVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbGoalID") as! SetGoalViewController
         self.present(goalVC, animated: true, completion: nil)
-
     }
-    
     
     func showPopUp() {
         let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbPopUpID") as! PopUpViewController
