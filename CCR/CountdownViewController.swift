@@ -234,7 +234,7 @@ class CountdownViewController: UIViewController {
     }
     
     func formatInitialViews() {
-        goalLabel.text = self.store.intervals.last?.goal
+        goalLabel.text = self.store.tasks.last?.description
         breakTimeLabel.isHidden = true
         breakProgressLabel.isHidden = true
         resetButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "American Typewriter", size: 18.0) as Any], for: .normal)

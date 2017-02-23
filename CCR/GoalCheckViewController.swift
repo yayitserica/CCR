@@ -42,7 +42,7 @@ class GoalCheckViewController: UIViewController {
         yesButton.layer.borderColor = UIColor.white.cgColor
         yesButton.layer.borderWidth = 2
         yesButton.layer.cornerRadius = 8
-        currentGoalLabel.text = self.store.intervals.last?.goal
+        currentGoalLabel.text = self.store.tasks.last?.description
         currentGoalLabel.layer.borderWidth = 1
         currentGoalLabel.layer.borderColor = Constants.fuschia.cgColor
         currentGoalLabel.layer.cornerRadius = 3

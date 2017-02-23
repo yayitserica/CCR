@@ -29,9 +29,13 @@ class SetGoalViewController: UIViewController {
             let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             present(noGoalAlert, animated: true, completion: nil)
         } else {
-            let newGoal = Interval()
-            newGoal.goal = goalTextField.text
-            self.store.intervals.append(newGoal)
+            let newGoal = Goal()
+            if let unwrappedText = goalTextField.text {
+                newGoal.description = unwrappedText
+            }
+            self.store.goals.append(newGoal)
+            showNewTaskVC()
+            self.view.removeFromSuperview()
         }
     }
     

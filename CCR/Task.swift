@@ -8,8 +8,8 @@
 
 import Foundation
 
-class Interval {
+class Task {
     var rating: Int?
-    var goal: String?
+    var description: String?
     
 }

@@ -28,17 +28,17 @@ class PopUpViewController: UIViewController {
         starringView.didFinishTouchingCosmos = { rating in
             switch rating {
             case 5:
-                self.store.intervals.last?.rating = 5
+                self.store.tasks.last?.rating = 5
             case 2:
-                self.store.intervals.last?.rating = 2
+                self.store.tasks.last?.rating = 2
             case 3:
-                self.store.intervals.last?.rating = 3
+                self.store.tasks.last?.rating = 3
             case 4:
-                self.store.intervals.last?.rating = 4
+                self.store.tasks.last?.rating = 4
             default:
-                self.store.intervals.last?.rating = 1
+                self.store.tasks.last?.rating = 1
             }
-            print("array count is still \(self.store.intervals.count)\n")
+            print("array count is still \(self.store.tasks.count)\n")
         
         }
     }
