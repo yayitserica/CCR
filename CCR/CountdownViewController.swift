@@ -187,7 +187,7 @@ class CountdownViewController: UIViewController {
             //change these times
             timeRemaining = 5.0
             totalTime = 5.0
-            showNewGoalVC()
+            //showNewGoalVC()
         } 
 
     }
@@ -202,7 +202,7 @@ class CountdownViewController: UIViewController {
         pauseButton.tintColor = Constants.aqua
     }
     
-    func showNewGoalVC() {
+   func showNewGoalVC() {
         let goalVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbGoalID") as! SetGoalViewController
         self.present(goalVC, animated: true, completion: nil)
     }

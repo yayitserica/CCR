@@ -78,13 +78,13 @@ class PopUpViewController: UIViewController {
     }
     
     // MARK: - Navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "goToNewGoal" {
-//            if let destinationVC = segue.destination as? SetGoalViewController {
-////                print("Have segued to creating a new goal VC")
-//            }
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToGoalCheck" {
+            if let destinationVC = segue.destination as? SetGoalViewController {
+//                print("Have segued to creating a new goal VC")
+            }
+        }
+    }
     
 
 }
