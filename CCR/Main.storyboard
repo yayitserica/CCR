@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zx4-8F-ifS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JmS-DX-pNH">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -14,7 +14,7 @@
         <!--Set Goal View Controller-->
         <scene sceneID="oNx-UT-c7m">
             <objects>
-                <viewController storyboardIdentifier="sbGoalID" id="zx4-8F-ifS" customClass="SetGoalViewController" customModule="CCR" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sbTaskID" id="zx4-8F-ifS" customClass="SetGoalViewController" customModule="CCR" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="j3A-FR-ULH"/>
                         <viewControllerLayoutGuide type="bottom" id="oo5-Ls-bY3"/>
@@ -29,13 +29,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What goal are you working on?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="1mM-7N-nRk">
-                                <rect key="frame" x="46" y="211" width="283" height="24"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="i.e. create new app" textAlignment="center" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="3bm-1D-afR">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="i.e. make GitHub repo" textAlignment="center" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="3bm-1D-afR">
                                 <rect key="frame" x="36" y="250" width="303" height="134"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
@@ -49,24 +43,30 @@
                                 </state>
                                 <connections>
                                     <action selector="submitButtonTapped:" destination="zx4-8F-ifS" eventType="touchUpInside" id="kIG-MI-Iom"/>
-                                    <segue destination="1q4-hl-mjE" kind="show" id="hhI-eT-DgU"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What specific task are you working on?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="1mM-7N-nRk">
+                                <rect key="frame" x="46" y="101" width="283" height="133.5"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.34509803919999998" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="P8z-Sw-a8o" secondAttribute="trailing" constant="100" id="1ac-NU-N4s"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1mM-7N-nRk" secondAttribute="trailing" constant="30" id="IRj-0A-4BW"/>
+                            <constraint firstItem="1mM-7N-nRk" firstAttribute="top" secondItem="OKA-KL-DsG" secondAttribute="bottom" constant="40" id="Iao-If-YDu"/>
+                            <constraint firstItem="3bm-1D-afR" firstAttribute="top" secondItem="1mM-7N-nRk" secondAttribute="bottom" constant="15" id="If5-Hl-NaZ"/>
+                            <constraint firstItem="1mM-7N-nRk" firstAttribute="height" secondItem="gD6-br-r8E" secondAttribute="height" multiplier="0.2" id="QlF-j0-rxu"/>
                             <constraint firstItem="P8z-Sw-a8o" firstAttribute="leading" secondItem="gD6-br-r8E" secondAttribute="leadingMargin" constant="100" id="RHL-dg-uuc"/>
                             <constraint firstItem="OKA-KL-DsG" firstAttribute="leading" secondItem="gD6-br-r8E" secondAttribute="leadingMargin" constant="30" id="W7F-Ip-79x"/>
                             <constraint firstItem="OKA-KL-DsG" firstAttribute="top" secondItem="j3A-FR-ULH" secondAttribute="bottom" constant="10" id="Xn2-mR-Nqv"/>
                             <constraint firstItem="3bm-1D-afR" firstAttribute="height" secondItem="gD6-br-r8E" secondAttribute="height" multiplier="0.2" id="YZI-gu-l7D"/>
-                            <constraint firstItem="1mM-7N-nRk" firstAttribute="top" secondItem="OKA-KL-DsG" secondAttribute="bottom" constant="150" id="bCc-vZ-gmD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="OKA-KL-DsG" secondAttribute="trailing" constant="30" id="diA-59-blf"/>
                             <constraint firstItem="1mM-7N-nRk" firstAttribute="leading" secondItem="gD6-br-r8E" secondAttribute="leadingMargin" constant="30" id="eXY-5T-oDL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3bm-1D-afR" secondAttribute="trailing" constant="20" id="f9J-xa-Ksd"/>
                             <constraint firstItem="3bm-1D-afR" firstAttribute="leading" secondItem="gD6-br-r8E" secondAttribute="leadingMargin" constant="20" id="igA-2G-DC7"/>
-                            <constraint firstItem="3bm-1D-afR" firstAttribute="top" secondItem="1mM-7N-nRk" secondAttribute="bottom" constant="15" id="scJ-5l-6RG"/>
                             <constraint firstItem="P8z-Sw-a8o" firstAttribute="top" secondItem="3bm-1D-afR" secondAttribute="bottom" constant="10" id="zj9-de-cgg"/>
                         </constraints>
                     </view>
@@ -98,52 +98,59 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you still working on" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="ZkE-h2-DG0">
-                                <rect key="frame" x="46" y="161" width="283" height="24"/>
+                                <rect key="frame" x="46" y="161" width="283" height="23.5"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INSERT GOAL HERE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="P9k-wB-sQ6">
-                                <rect key="frame" x="46" y="195" width="283" height="100"/>
+                                <rect key="frame" x="46" y="194.5" width="283" height="100"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKv-xN-obA" userLabel="Yes Button">
-                                <rect key="frame" x="41" y="315" width="94" height="30"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
-                                <state key="normal" title="Yes">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="submitButtonTapped:" destination="4fK-Qv-HSu" eventType="touchUpInside" id="1rL-Fg-jPd"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efB-6l-jw4">
-                                <rect key="frame" x="140" y="315" width="194" height="30"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
-                                <state key="normal" title="No">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="submitButtonTapped:" destination="4fK-Qv-HSu" eventType="touchUpInside" id="7Hv-SV-0wX"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="12q-3w-SAx">
+                                <rect key="frame" x="127.5" y="369" width="120" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKv-xN-obA" userLabel="Yes Button">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="W8L-cr-69Q"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
+                                        <state key="normal" title="Yes">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="yesButtonTapped:" destination="4fK-Qv-HSu" eventType="touchUpInside" id="oSG-21-6eT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efB-6l-jw4">
+                                        <rect key="frame" x="70" y="0.0" width="50" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="dkT-lc-fA9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
+                                        <state key="normal" title="No">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="noButtonTapped:" destination="4fK-Qv-HSu" eventType="touchUpInside" id="1i2-kT-Xah"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.34509803919999998" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="rdK-pD-zrJ" secondAttribute="trailing" constant="30" id="0BW-ba-gdA"/>
-                            <constraint firstItem="RKv-xN-obA" firstAttribute="width" secondItem="VkJ-Qw-M13" secondAttribute="width" multiplier="0.25" id="2KX-lW-Gi0"/>
                             <constraint firstItem="P9k-wB-sQ6" firstAttribute="height" secondItem="VkJ-Qw-M13" secondAttribute="height" multiplier="0.15" id="EKT-op-p7N"/>
                             <constraint firstAttribute="trailingMargin" secondItem="P9k-wB-sQ6" secondAttribute="trailing" constant="30" id="IWR-aR-3hv"/>
+                            <constraint firstItem="12q-3w-SAx" firstAttribute="centerY" secondItem="VkJ-Qw-M13" secondAttribute="centerY" constant="50" id="JVY-Mc-cQe"/>
                             <constraint firstItem="ZkE-h2-DG0" firstAttribute="leading" secondItem="VkJ-Qw-M13" secondAttribute="leadingMargin" constant="30" id="OSb-2u-mLk"/>
-                            <constraint firstItem="RKv-xN-obA" firstAttribute="leading" secondItem="VkJ-Qw-M13" secondAttribute="leadingMargin" constant="25" id="Sh8-xv-ffu"/>
                             <constraint firstItem="P9k-wB-sQ6" firstAttribute="leading" secondItem="VkJ-Qw-M13" secondAttribute="leadingMargin" constant="30" id="TRm-eP-SZy"/>
-                            <constraint firstItem="RKv-xN-obA" firstAttribute="top" secondItem="P9k-wB-sQ6" secondAttribute="bottom" constant="20" id="To2-vj-cLN"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="efB-6l-jw4" secondAttribute="trailing" constant="25" id="Uck-d3-1XG"/>
+                            <constraint firstItem="12q-3w-SAx" firstAttribute="centerX" secondItem="VkJ-Qw-M13" secondAttribute="centerX" id="UL9-Ib-A0m"/>
                             <constraint firstItem="ZkE-h2-DG0" firstAttribute="top" secondItem="rdK-pD-zrJ" secondAttribute="bottom" constant="100" id="Xew-3t-rBG"/>
-                            <constraint firstItem="efB-6l-jw4" firstAttribute="leading" secondItem="RKv-xN-obA" secondAttribute="trailing" constant="5" id="bqa-4p-ovC"/>
-                            <constraint firstItem="efB-6l-jw4" firstAttribute="top" secondItem="P9k-wB-sQ6" secondAttribute="bottom" constant="20" id="cBa-nz-h1M"/>
                             <constraint firstItem="rdK-pD-zrJ" firstAttribute="leading" secondItem="VkJ-Qw-M13" secondAttribute="leadingMargin" constant="30" id="gtF-4M-jvx"/>
                             <constraint firstItem="P9k-wB-sQ6" firstAttribute="top" secondItem="ZkE-h2-DG0" secondAttribute="bottom" constant="10" id="iCk-Oj-0gp"/>
                             <constraint firstItem="rdK-pD-zrJ" firstAttribute="top" secondItem="dwZ-hV-ebJ" secondAttribute="bottom" constant="10" id="oA6-ha-dRq"/>
@@ -151,8 +158,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="currentGoalLabel" destination="P9k-wB-sQ6" id="XtQ-lB-mNJ"/>
                         <outlet property="noButton" destination="efB-6l-jw4" id="Rwf-zX-0gj"/>
-                        <outlet property="yesButton" destination="RKv-xN-obA" id="5Xk-Ea-3bK"/>
+                        <outlet property="yesButton" destination="RKv-xN-obA" id="wf2-p6-BGj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KfY-mJ-hHg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -441,6 +449,140 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-18" y="182"/>
+        </scene>
+        <!--Set New Task View Controller-->
+        <scene sceneID="pLh-Dv-D1M">
+            <objects>
+                <viewController storyboardIdentifier="newTaskID" id="CdQ-zQ-UnB" customClass="SetNewTaskViewController" customModule="CCR" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ycb-i2-vwj"/>
+                        <viewControllerLayoutGuide type="bottom" id="YQe-U6-xE0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Yb-2h-AJD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's GryndTime!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="YXd-bg-zQ7">
+                                <rect key="frame" x="46" y="30" width="283" height="31"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set a new task" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="e2N-9N-UYd">
+                                <rect key="frame" x="46" y="211" width="283" height="23.5"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="i.e. Create UI constraints" textAlignment="center" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="xQy-cx-vKs">
+                                <rect key="frame" x="36" y="249.5" width="303" height="134"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7T-BX-8ue">
+                                <rect key="frame" x="116" y="393.5" width="143" height="30"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitButtonTapped:" destination="CdQ-zQ-UnB" eventType="touchUpInside" id="Myu-I7-g2g"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.34509803919999998" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="xQy-cx-vKs" secondAttribute="trailing" constant="20" id="9Sw-gl-HtJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="v7T-BX-8ue" secondAttribute="trailing" constant="100" id="Aos-Mb-tbc"/>
+                            <constraint firstItem="e2N-9N-UYd" firstAttribute="top" secondItem="YXd-bg-zQ7" secondAttribute="bottom" constant="150" id="GXT-lQ-zOZ"/>
+                            <constraint firstItem="YXd-bg-zQ7" firstAttribute="leading" secondItem="8Yb-2h-AJD" secondAttribute="leadingMargin" constant="30" id="JgF-y9-m0U"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YXd-bg-zQ7" secondAttribute="trailing" constant="30" id="Jgl-nO-xRs"/>
+                            <constraint firstItem="xQy-cx-vKs" firstAttribute="height" secondItem="8Yb-2h-AJD" secondAttribute="height" multiplier="0.2" id="ctA-AT-FXU"/>
+                            <constraint firstItem="xQy-cx-vKs" firstAttribute="top" secondItem="e2N-9N-UYd" secondAttribute="bottom" constant="15" id="eDw-Ju-bsg"/>
+                            <constraint firstItem="xQy-cx-vKs" firstAttribute="leading" secondItem="8Yb-2h-AJD" secondAttribute="leadingMargin" constant="20" id="kRw-Rg-amU"/>
+                            <constraint firstItem="v7T-BX-8ue" firstAttribute="leading" secondItem="8Yb-2h-AJD" secondAttribute="leadingMargin" constant="100" id="mxH-vB-56R"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="e2N-9N-UYd" secondAttribute="trailing" constant="30" id="s0q-NG-y21"/>
+                            <constraint firstItem="e2N-9N-UYd" firstAttribute="leading" secondItem="8Yb-2h-AJD" secondAttribute="leadingMargin" constant="30" id="vF5-DE-JdB"/>
+                            <constraint firstItem="YXd-bg-zQ7" firstAttribute="top" secondItem="ycb-i2-vwj" secondAttribute="bottom" constant="10" id="xTX-wP-XEG"/>
+                            <constraint firstItem="v7T-BX-8ue" firstAttribute="top" secondItem="xQy-cx-vKs" secondAttribute="bottom" constant="10" id="zey-In-BdO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="goalTextField" destination="xQy-cx-vKs" id="rqN-oV-Cd3"/>
+                        <outlet property="submitButton" destination="v7T-BX-8ue" id="g1T-Vg-00c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WKJ-4u-j7D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2092" y="-502"/>
+        </scene>
+        <!--Set Goal View Controller-->
+        <scene sceneID="Av1-d6-X0q">
+            <objects>
+                <viewController storyboardIdentifier="sbGoalID" id="JmS-DX-pNH" customClass="SetGoalViewController" customModule="CCR" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VqS-Ne-MXh"/>
+                        <viewControllerLayoutGuide type="bottom" id="iFF-8Q-ZOU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7VM-zM-xzg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's GryndTime!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="UWy-JN-mZg">
+                                <rect key="frame" x="46" y="30" width="283" height="31"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What goal are you working on?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="lcB-S0-TuQ">
+                                <rect key="frame" x="46" y="211" width="283" height="46.5"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="i.e. create new app" textAlignment="center" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="wyg-EY-Ba5">
+                                <rect key="frame" x="36" y="272.5" width="303" height="134"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lwp-FV-gXb">
+                                <rect key="frame" x="116" y="416.5" width="143" height="30"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitButtonTapped:" destination="JmS-DX-pNH" eventType="touchUpInside" id="YZL-gD-Dpb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.34509803919999998" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="wyg-EY-Ba5" secondAttribute="trailing" constant="20" id="8Km-Aw-hIh"/>
+                            <constraint firstItem="Lwp-FV-gXb" firstAttribute="top" secondItem="wyg-EY-Ba5" secondAttribute="bottom" constant="10" id="A2E-GC-K33"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UWy-JN-mZg" secondAttribute="trailing" constant="30" id="DOA-aF-bKx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Lwp-FV-gXb" secondAttribute="trailing" constant="100" id="DaQ-zM-ldt"/>
+                            <constraint firstItem="wyg-EY-Ba5" firstAttribute="height" secondItem="7VM-zM-xzg" secondAttribute="height" multiplier="0.2" id="Hi4-JH-IGw"/>
+                            <constraint firstItem="wyg-EY-Ba5" firstAttribute="top" secondItem="lcB-S0-TuQ" secondAttribute="bottom" constant="15" id="IAe-iw-BRB"/>
+                            <constraint firstItem="wyg-EY-Ba5" firstAttribute="leading" secondItem="7VM-zM-xzg" secondAttribute="leadingMargin" constant="20" id="KFg-IT-pjf"/>
+                            <constraint firstItem="UWy-JN-mZg" firstAttribute="leading" secondItem="7VM-zM-xzg" secondAttribute="leadingMargin" constant="30" id="PpO-D9-TOY"/>
+                            <constraint firstItem="UWy-JN-mZg" firstAttribute="top" secondItem="VqS-Ne-MXh" secondAttribute="bottom" constant="10" id="WPe-Df-ofx"/>
+                            <constraint firstItem="Lwp-FV-gXb" firstAttribute="leading" secondItem="7VM-zM-xzg" secondAttribute="leadingMargin" constant="100" id="YU7-XD-vs8"/>
+                            <constraint firstItem="lcB-S0-TuQ" firstAttribute="top" secondItem="UWy-JN-mZg" secondAttribute="bottom" constant="150" id="mC3-qU-sZf"/>
+                            <constraint firstItem="lcB-S0-TuQ" firstAttribute="leading" secondItem="7VM-zM-xzg" secondAttribute="leadingMargin" constant="30" id="tca-rH-kgL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lcB-S0-TuQ" secondAttribute="trailing" constant="30" id="y4k-rX-yY8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="goalTextField" destination="wyg-EY-Ba5" id="d0O-Ow-fwA"/>
+                        <outlet property="submitButton" destination="Lwp-FV-gXb" id="p4q-SH-K4m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0MX-Fo-3ro" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3002" y="-278"/>
         </scene>
     </scenes>
     <resources>

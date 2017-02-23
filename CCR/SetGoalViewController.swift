@@ -23,9 +23,21 @@ class SetGoalViewController: UIViewController {
     }
 
     @IBAction func submitButtonTapped(_ sender: Any) {
-        let newGoal = Interval()
-        newGoal.goal = goalTextField.text
-        self.store.intervals.append(newGoal)
+        
+        if goalTextField.text == nil {
+            let noGoalAlert = UIAlertController(title: "Missing a Task", message: "Enter ", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            present(noGoalAlert, animated: true, completion: nil)
+        } else {
+            let newGoal = Interval()
+            newGoal.goal = goalTextField.text
+            self.store.intervals.append(newGoal)
+        }
+    }
+    
+   func showNewTaskVC() {
+        let taskVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbTaskID") as! SetGoalViewController
+        self.present(taskVC, animated: true, completion: nil)
     }
     
 

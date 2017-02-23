@@ -12,7 +12,28 @@ class GoalCheckViewController: UIViewController {
 
     @IBOutlet weak var noButton: UIButton!
     @IBOutlet weak var yesButton: UIButton!
+    @IBOutlet weak var currentGoalLabel: UILabel!
     
+    let store = DataStore.sharedInstance
+    
+    @IBAction func yesButtonTapped(_ sender: Any) {
+        print("yes button tapped")
+        
+    }
+    
+    @IBAction func noButtonTapped(_ sender: Any) {
+        print("no button tapped")
+        self.showSetGoalVC()
+        self.view.removeFromSuperview()
+        
+    }
+    
+    func showSetGoalVC() {
+        let goalCheckVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "newTaskID") as! SetNewTaskViewController
+        self.present(goalCheckVC, animated: true, completion: nil)
+    }
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         noButton.layer.borderColor = UIColor.white.cgColor
@@ -21,6 +42,11 @@ class GoalCheckViewController: UIViewController {
         yesButton.layer.borderColor = UIColor.white.cgColor
         yesButton.layer.borderWidth = 2
         yesButton.layer.cornerRadius = 8
+        currentGoalLabel.text = self.store.intervals.last?.goal
+        currentGoalLabel.layer.borderWidth = 1
+        currentGoalLabel.layer.borderColor = Constants.fuschia.cgColor
+        currentGoalLabel.layer.cornerRadius = 3
+        
     }
     
 
