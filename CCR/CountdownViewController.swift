@@ -175,6 +175,7 @@ class CountdownViewController: UIViewController {
             timerIsOn = false
             timeLabel.text = "25:00"
             breakProgressLabel.text = "0% done"
+            showTaskCheckVC()
             playButton.isEnabled = true
             buttonSound.play()
             breakTimeLabel.isHidden = true
@@ -187,6 +188,7 @@ class CountdownViewController: UIViewController {
             //change these times
             timeRemaining = 5.0
             totalTime = 5.0
+            
             //delete this
             //showNewGoalVC()
         } 
@@ -208,6 +210,15 @@ class CountdownViewController: UIViewController {
 //        let goalVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbGoalID") as! SetGoalViewController
 //        self.present(goalVC, animated: true, completion: nil)
 //    }
+    
+    //this pops over the task check VC
+    func showTaskCheckVC() {
+        let taskCheckVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbTaskCheckID") as! TaskCheckViewController
+        self.addChildViewController(taskCheckVC)
+        taskCheckVC.view.frame = self.view.frame
+        self.view.addSubview(taskCheckVC.view)
+        taskCheckVC.didMove(toParentViewController: self)
+    }
     
     func showPopUp() {
         let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbPopUpID") as! PopUpViewController

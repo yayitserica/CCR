@@ -79,10 +79,10 @@
             </objects>
             <point key="canvasLocation" x="-2286" y="-278"/>
         </scene>
-        <!--Goal Check View Controller-->
+        <!--Task Check View Controller-->
         <scene sceneID="Ls7-vv-syW">
             <objects>
-                <viewController storyboardIdentifier="goalCheckID" id="4fK-Qv-HSu" customClass="GoalCheckViewController" customModule="CCR" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sbTaskCheckID" id="4fK-Qv-HSu" customClass="TaskCheckViewController" customModule="CCR" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dwZ-hV-ebJ"/>
                         <viewControllerLayoutGuide type="bottom" id="fUN-l0-W2K"/>
@@ -103,7 +103,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INSERT GOAL HERE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="P9k-wB-sQ6">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="insert task here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="P9k-wB-sQ6">
                                 <rect key="frame" x="46" y="194.5" width="283" height="100"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -536,19 +536,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What GOAL are you working on?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="lcB-S0-TuQ">
-                                <rect key="frame" x="46" y="211" width="283" height="46.5"/>
+                                <rect key="frame" x="46" y="186" width="283" height="46.5"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="i.e. create new app" textAlignment="center" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="wyg-EY-Ba5">
-                                <rect key="frame" x="36" y="272.5" width="303" height="134"/>
+                                <rect key="frame" x="36" y="247.5" width="303" height="134"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lwp-FV-gXb">
-                                <rect key="frame" x="116" y="416.5" width="143" height="30"/>
+                                <rect key="frame" x="116" y="391.5" width="143" height="30"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -570,7 +570,7 @@
                             <constraint firstItem="UWy-JN-mZg" firstAttribute="leading" secondItem="7VM-zM-xzg" secondAttribute="leadingMargin" constant="30" id="PpO-D9-TOY"/>
                             <constraint firstItem="UWy-JN-mZg" firstAttribute="top" secondItem="VqS-Ne-MXh" secondAttribute="bottom" constant="10" id="WPe-Df-ofx"/>
                             <constraint firstItem="Lwp-FV-gXb" firstAttribute="leading" secondItem="7VM-zM-xzg" secondAttribute="leadingMargin" constant="100" id="YU7-XD-vs8"/>
-                            <constraint firstItem="lcB-S0-TuQ" firstAttribute="top" secondItem="UWy-JN-mZg" secondAttribute="bottom" constant="150" id="mC3-qU-sZf"/>
+                            <constraint firstItem="lcB-S0-TuQ" firstAttribute="top" secondItem="UWy-JN-mZg" secondAttribute="bottom" constant="125" id="mC3-qU-sZf"/>
                             <constraint firstItem="lcB-S0-TuQ" firstAttribute="leading" secondItem="7VM-zM-xzg" secondAttribute="leadingMargin" constant="30" id="tca-rH-kgL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lcB-S0-TuQ" secondAttribute="trailing" constant="30" id="y4k-rX-yY8"/>
                         </constraints>

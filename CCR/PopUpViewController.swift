@@ -48,10 +48,13 @@ class PopUpViewController: UIViewController {
         
     }
     
-    func showGoalCheckVC() {
-        let goalCheckVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "goalCheckID") as! GoalCheckViewController
-        self.present(goalCheckVC, animated: true, completion: nil)
-    }
+    
+    //delete this
+//    func showTabBarVC() {
+//        let tabBarVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbTabBarID") as! TabBarController
+//        self.present(tabBarVC, animated: true, completion: nil)
+//    }
+    
 
 
     func showAnimate() {
@@ -73,7 +76,9 @@ class PopUpViewController: UIViewController {
         }) { (success) in
             if success {
                 //once finishes, it removes from view
-                self.showGoalCheckVC()
+                //delete this line below
+//                self.showGoalCheckVC()
+//                self.showTabBarVC()
                 self.view.removeFromSuperview()
             }
         }

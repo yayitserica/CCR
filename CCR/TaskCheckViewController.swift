@@ -1,5 +1,5 @@
 //
-//  GoalCheckViewController.swift
+//  TaskCheckViewController.swift
 //  CCR
 //
 //  Created by Erica Millado on 2/22/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GoalCheckViewController: UIViewController {
+class TaskCheckViewController: UIViewController {
 
     @IBOutlet weak var noButton: UIButton!
     @IBOutlet weak var yesButton: UIButton!
@@ -18,16 +18,26 @@ class GoalCheckViewController: UIViewController {
     
     @IBAction func yesButtonTapped(_ sender: Any) {
         print("yes button tapped")
+        //delete this line
+//        showTabBarVC()
         
+        self.view.removeFromSuperview()
     }
     
     @IBAction func noButtonTapped(_ sender: Any) {
         print("no button tapped")
-        self.showSetGoalVC()
-        self.view.removeFromSuperview()
+//        self.showSetGoalVC()
+//        self.view.removeFromSuperview()
         
     }
     
+    //user clicked "yes" and needs to go back to timer
+    func showTabBarVC() {
+        let tabBarVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbTabBarID") as! TabBarController
+        self.present(tabBarVC, animated: true, completion: nil)
+    }
+    
+    //user clicked "no" and needs to set a new task
     func showSetGoalVC() {
         let goalCheckVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "newTaskID") as! SetNewTaskViewController
         self.present(goalCheckVC, animated: true, completion: nil)
