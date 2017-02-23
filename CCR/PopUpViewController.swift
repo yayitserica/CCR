@@ -39,19 +39,20 @@ class PopUpViewController: UIViewController {
                 self.store.intervals.last?.rating = 1
             }
             print("array count is still \(self.store.intervals.count)\n")
-            
-            if let unwrappedInterval = self.store.intervals.last {
-//                print("The most recent interval is \(unwrappedInterval.goal) and \(unwrappedInterval.rating)\n")
-//                dump(self.store.intervals)
-            }
-            
+        
         }
     }
     
-    @IBAction func closePopUp(_ sender: Any) {
+    @IBAction func doneButtonTapped(_ sender: Any) {
         removeAnimate()
         
     }
+    
+    func showGoalCheckVC() {
+        let goalCheckVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "goalCheckID") as! GoalCheckViewController
+        self.present(goalCheckVC, animated: true, completion: nil)
+    }
+
 
     func showAnimate() {
         //makes the view bigger
@@ -72,19 +73,22 @@ class PopUpViewController: UIViewController {
         }) { (success) in
             if success {
                 //once finishes, it removes from view
+                self.showGoalCheckVC()
                 self.view.removeFromSuperview()
             }
         }
     }
     
     // MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToGoalCheck" {
-            if let destinationVC = segue.destination as? SetGoalViewController {
-//                print("Have segued to creating a new goal VC")
-            }
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        
+//        removeAnimate()
+//        if segue.identifier == "goToGoalCheck" {
+//            if let destinationVC = segue.destination as? SetGoalViewController {
+////                print("Have segued to creating a new goal VC")
+//            }
+//        }
+//    }
     
 
 }

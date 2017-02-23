@@ -10,15 +10,17 @@ import UIKit
 
 class GoalCheckViewController: UIViewController {
 
+    @IBOutlet weak var noButton: UIButton!
+    @IBOutlet weak var yesButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        noButton.layer.borderColor = UIColor.white.cgColor
+        noButton.layer.borderWidth = 2
+        noButton.layer.cornerRadius = 8
+        yesButton.layer.borderColor = UIColor.white.cgColor
+        yesButton.layer.borderWidth = 2
+        yesButton.layer.cornerRadius = 8
     }
     
 

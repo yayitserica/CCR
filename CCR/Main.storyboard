@@ -82,7 +82,7 @@
         <!--Goal Check View Controller-->
         <scene sceneID="Ls7-vv-syW">
             <objects>
-                <viewController id="4fK-Qv-HSu" customClass="GoalCheckViewController" customModule="CCR" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="goalCheckID" id="4fK-Qv-HSu" customClass="GoalCheckViewController" customModule="CCR" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dwZ-hV-ebJ"/>
                         <viewControllerLayoutGuide type="bottom" id="fUN-l0-W2K"/>
@@ -109,7 +109,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKv-xN-obA">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKv-xN-obA" userLabel="Yes Button">
                                 <rect key="frame" x="41" y="315" width="94" height="30"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
                                 <state key="normal" title="Yes">
@@ -151,7 +151,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="submitButton" destination="RKv-xN-obA" id="7eO-ZR-m0s"/>
+                        <outlet property="noButton" destination="efB-6l-jw4" id="Rwf-zX-0gj"/>
+                        <outlet property="yesButton" destination="RKv-xN-obA" id="5Xk-Ea-3bK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KfY-mJ-hHg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -351,8 +352,7 @@
                                             <color key="titleColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="closePopUp:" destination="7Pa-oR-hlb" eventType="touchUpInside" id="yIH-5f-PpI"/>
-                                            <segue destination="4fK-Qv-HSu" kind="show" identifier="goToGoalCheck" id="qya-IW-kst"/>
+                                            <action selector="doneButtonTapped:" destination="7Pa-oR-hlb" eventType="touchUpInside" id="fUA-4S-BNb"/>
                                         </connections>
                                     </button>
                                 </subviews>

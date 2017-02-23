@@ -98,9 +98,9 @@
 			children = (
 				450F1A2B1E4E209D00FAFBB9 /* ViewController.swift */,
 				45FA4DE51E5CEF06000AC235 /* SetGoalViewController.swift */,
-				45F4BA711E5E360700AEBABA /* GoalCheckViewController.swift */,
 				450F1A3D1E4E776B00FAFBB9 /* CountdownViewController.swift */,
 				45258FD21E5913FA00CF490E /* PopUpViewController.swift */,
+				45F4BA711E5E360700AEBABA /* GoalCheckViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
