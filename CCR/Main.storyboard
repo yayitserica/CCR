@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Set Goal View Controller-->
+        <!--Set Task View Controller-->
         <scene sceneID="oNx-UT-c7m">
             <objects>
-                <viewController storyboardIdentifier="sbTaskID" id="zx4-8F-ifS" customClass="SetGoalViewController" customModule="CCR" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sbTaskID" id="zx4-8F-ifS" customClass="SetTaskViewController" customModule="CCR" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="j3A-FR-ULH"/>
                         <viewControllerLayoutGuide type="bottom" id="oo5-Ls-bY3"/>
@@ -42,10 +42,10 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="submitButtonTapped:" destination="zx4-8F-ifS" eventType="touchUpInside" id="kIG-MI-Iom"/>
+                                    <action selector="submitButtonTapped:" destination="zx4-8F-ifS" eventType="touchUpInside" id="z6F-7g-AMy"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What specific task are you working on?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="1mM-7N-nRk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What specific TASK are you working on?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="1mM-7N-nRk">
                                 <rect key="frame" x="46" y="101" width="283" height="133.5"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -71,8 +71,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="goalTextField" destination="3bm-1D-afR" id="Nfa-5c-t0b"/>
-                        <outlet property="submitButton" destination="P8z-Sw-a8o" id="Hbd-uj-KCl"/>
+                        <outlet property="submitButton" destination="P8z-Sw-a8o" id="W6f-uk-z5M"/>
+                        <outlet property="taskTextField" destination="3bm-1D-afR" id="YMI-Wl-tO6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nZ8-JB-FsD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -394,7 +394,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="iun-r3-eRW">
             <objects>
-                <tabBarController id="1q4-hl-mjE" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="sbTabBarID" id="1q4-hl-mjE" customClass="TabBarController" customModule="CCR" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="sHu-5n-h4k">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

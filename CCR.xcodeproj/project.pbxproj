@@ -24,6 +24,7 @@
 		45F4C3021E5F6715004359B3 /* SetNewTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F4C3011E5F6715004359B3 /* SetNewTaskViewController.swift */; };
 		45F4C3041E5F6B80004359B3 /* SetTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F4C3031E5F6B80004359B3 /* SetTaskViewController.swift */; };
 		45F4C3061E5F70B1004359B3 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F4C3051E5F70B1004359B3 /* Goal.swift */; };
+		45F4C3081E5F79BE004359B3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F4C3071E5F79BE004359B3 /* TabBarController.swift */; };
 		45FA4DE61E5CEF06000AC235 /* SetGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FA4DE51E5CEF06000AC235 /* SetGoalViewController.swift */; };
 		D7A463BE78693F1998B3B680 /* Pods_CCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8AC5C294FC8BC2793D65367 /* Pods_CCR.framework */; };
 /* End PBXBuildFile section */
@@ -48,6 +49,7 @@
 		45F4C3011E5F6715004359B3 /* SetNewTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetNewTaskViewController.swift; sourceTree = "<group>"; };
 		45F4C3031E5F6B80004359B3 /* SetTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetTaskViewController.swift; sourceTree = "<group>"; };
 		45F4C3051E5F70B1004359B3 /* Goal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
+		45F4C3071E5F79BE004359B3 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		45FA4DE51E5CEF06000AC235 /* SetGoalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetGoalViewController.swift; sourceTree = "<group>"; };
 		52265825979FFA9AD77212DC /* Pods-CCR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CCR/Pods-CCR.debug.xcconfig"; sourceTree = "<group>"; };
 		D8AC5C294FC8BC2793D65367 /* Pods_CCR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CCR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +107,7 @@
 				450F1A2B1E4E209D00FAFBB9 /* ViewController.swift */,
 				45FA4DE51E5CEF06000AC235 /* SetGoalViewController.swift */,
 				45F4C3031E5F6B80004359B3 /* SetTaskViewController.swift */,
+				45F4C3071E5F79BE004359B3 /* TabBarController.swift */,
 				450F1A3D1E4E776B00FAFBB9 /* CountdownViewController.swift */,
 				45258FD21E5913FA00CF490E /* PopUpViewController.swift */,
 				45F4BA711E5E360700AEBABA /* GoalCheckViewController.swift */,
@@ -296,6 +299,7 @@
 				45F4C3061E5F70B1004359B3 /* Goal.swift in Sources */,
 				45F4C3041E5F6B80004359B3 /* SetTaskViewController.swift in Sources */,
 				45FA4DE61E5CEF06000AC235 /* SetGoalViewController.swift in Sources */,
+				45F4C3081E5F79BE004359B3 /* TabBarController.swift in Sources */,
 				45F4C3021E5F6715004359B3 /* SetNewTaskViewController.swift in Sources */,
 				4544836F1E4ED59A00FA2ECB /* Constants.swift in Sources */,
 			);
