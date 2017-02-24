@@ -136,7 +136,7 @@ class CountdownViewController: UIViewController {
     }
     
     func manageTimerEnd(seconds: Double) {
-        // a break for the first, second and third intervals: 0 seconds, not on a break and the interval is 1 2 or 3
+        // a break for the first, second and third intervals: 0 seconds, not on a break and the interval is 1 or 2
         if seconds == 0 && !isOnBreak && self.store.intervalCount < 4 {
             timer.invalidate() //turn off the timer
             timerIsOn = false //set the timer to off
@@ -144,6 +144,7 @@ class CountdownViewController: UIViewController {
             buttonSound.play() //play a bell
             showPopUp() //show the rating popup
             setupBreakTimer() //format the timer
+            breakTimeLabel.text = "5:00"
             isOnBreak = true //change the status to be "on a break"
             playButton.isEnabled = true
             //change these times
@@ -162,12 +163,12 @@ class CountdownViewController: UIViewController {
             showPopUp()
             setupBreakTimer()
             breakTimeLabel.text = "20:00"
-//            isOnBreak = true
+            isOnBreak = true
             isOnLongBreak = true
             playButton.isEnabled = true
             //change these times
-            breakTimeRemaining = 5.00
-            totalBreakTime = 5.00
+            breakTimeRemaining = 10.00
+            totalBreakTime = 10.00
         } else if seconds == 0 && (isOnBreak || isOnLongBreak) {
             isOnBreak = false
             isOnLongBreak = false

@@ -18,23 +18,14 @@ class TaskCheckViewController: UIViewController {
     
     @IBAction func yesButtonTapped(_ sender: Any) {
         print("yes button tapped")
-        //delete this line
-//        showTabBarVC()
-        
         self.view.removeFromSuperview()
     }
     
     @IBAction func noButtonTapped(_ sender: Any) {
         print("no button tapped")
-//        self.showSetGoalVC()
-//        self.view.removeFromSuperview()
+        self.showSetGoalVC()
+        self.view.removeFromSuperview()
         
-    }
-    
-    //user clicked "yes" and needs to go back to timer
-    func showTabBarVC() {
-        let tabBarVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbTabBarID") as! TabBarController
-        self.present(tabBarVC, animated: true, completion: nil)
     }
     
     //user clicked "no" and needs to set a new task

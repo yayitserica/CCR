@@ -18,6 +18,13 @@ class SetTaskViewController: UIViewController {
     @IBAction func submitButtonTapped(_ sender: Any) {
         if taskTextField.text == "" {
             let noGoalAlert = UIAlertController(title: "Missing a Task", message: "Enter a goal", preferredStyle: .alert)
+            let titleFont:[String : AnyObject] = [ NSFontAttributeName : UIFont(name: "AmericanTypewriter", size: 18)! ]
+            let messageFont:[String : AnyObject] = [ NSFontAttributeName : UIFont(name: "AmericanTypewriter", size: 14)! ]
+            let attributedTitle = NSMutableAttributedString(string: "Missing a Task", attributes: titleFont)
+            let attributedMessage = NSMutableAttributedString(string: "Enter a goal", attributes: messageFont)
+            noGoalAlert.setValue(attributedTitle, forKey: "attributedTitle")
+            noGoalAlert.setValue(attributedMessage, forKey: "attributedMessage")
+            
             let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             noGoalAlert.addAction(okAction)
             present(noGoalAlert, animated: true, completion: nil)
