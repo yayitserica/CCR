@@ -36,11 +36,6 @@ class CountdownViewController: UIViewController {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var breakTimeLabel: UILabel!
     @IBOutlet weak var progressView: UIProgressView!
-    @IBOutlet weak var progressLabel: UILabel!
-    @IBOutlet weak var breakProgressLabel: UILabel!
-//    @IBOutlet weak var resetButton: UIBarButtonItem!
-//    @IBOutlet weak var playButton: UIBarButtonItem!
-//    @IBOutlet weak var pauseButton: UIBarButtonItem!
     
     @IBOutlet weak var playBtn: UIButton!
     @IBOutlet weak var pauseBtn: UIButton!
@@ -52,7 +47,6 @@ class CountdownViewController: UIViewController {
             timeRemaining = 1500
             totalTime = 1500
             timeLabel.text = "25:00"
-            progressLabel.text = "0% done"
             timerIsOn = false
             playBtn.isEnabled = true
         } else if isOnBreak {
@@ -60,7 +54,6 @@ class CountdownViewController: UIViewController {
             breakTimeRemaining = 300
             totalBreakTime = 300
             breakTimeLabel.text = "5:00"
-            breakProgressLabel.text = "0% done"
             timerIsOn = false
             playBtn.isEnabled = true
         }
@@ -104,9 +97,7 @@ class CountdownViewController: UIViewController {
     
     func timerRunning() {
         timeRemaining -= 1
-        let completionPercentage = Int(((Float(totalTime) - Float(timeRemaining))/Float(totalTime)) * 100)
         progressView.setProgress(Float(timeRemaining)/Float(totalTime), animated: false)
-        progressLabel.text = "\(completionPercentage)% done"
         let minutesLeft = Int(timeRemaining) / 60 % 60
         let secondsLeft = Int(timeRemaining) % 60
         timeLabel.text = "\(minutesLeft):\(secondsLeft)"
@@ -116,9 +107,7 @@ class CountdownViewController: UIViewController {
     
     func breakTimerRunning() {
         breakTimeRemaining -= 1
-        let completionPercentage = Int(((Float(totalBreakTime) - Float(breakTimeRemaining))/Float(totalBreakTime)) * 100)
         progressView.setProgress(Float(breakTimeRemaining)/Float(totalBreakTime), animated: false)
-        breakProgressLabel.text = "\(completionPercentage)% done"
         let minutesLeft = Int(breakTimeRemaining) / 60 % 60
         let secondsLeft = Int(breakTimeRemaining) % 60
         breakTimeLabel.text = "\(minutesLeft):\(secondsLeft)"
@@ -128,9 +117,7 @@ class CountdownViewController: UIViewController {
     
     func longBreakTimerRunning() {
         longBreakTimeRemaining -= 1
-        let completionPercentage = Int(((Float(totalLongBreakTime) - Float(longBreakTimeRemaining))/Float(totalLongBreakTime)) * 100)
         progressView.setProgress(Float(longBreakTimeRemaining)/Float(totalLongBreakTime), animated: false)
-        breakProgressLabel.text = "\(completionPercentage)% done"
         let minutesLeft = Int(longBreakTimeRemaining) / 60 % 60
         let secondsLeft = Int(longBreakTimeRemaining) % 60
         breakTimeLabel.text = "\(minutesLeft):\(secondsLeft)"
@@ -178,15 +165,12 @@ class CountdownViewController: UIViewController {
             timer.invalidate()
             timerIsOn = false
             timeLabel.text = "25:00"
-            breakProgressLabel.text = "0% done"
             self.performSegue(withIdentifier: "toTaskCheck", sender: self)
 //            showTaskCheckVC()
             playBtn.isEnabled = true
             buttonSound.play()
             breakTimeLabel.isHidden = true
             timeLabel.isHidden = false
-            breakProgressLabel.isHidden = true
-            progressLabel.isHidden = false
             resetBtn.tintColor = Constants.fuschia
             playBtn.tintColor = Constants.fuschia
             pauseBtn.tintColor = Constants.fuschia
@@ -203,8 +187,6 @@ class CountdownViewController: UIViewController {
     func setupBreakTimer() {
         breakTimeLabel.isHidden = false
         timeLabel.isHidden = true
-        breakProgressLabel.isHidden = false
-        progressLabel.isHidden = true
         resetBtn.tintColor = Constants.aqua
         playBtn.tintColor = Constants.aqua
         pauseBtn.tintColor = Constants.aqua
@@ -254,8 +236,9 @@ class CountdownViewController: UIViewController {
         navigationController?.isNavigationBarHidden = true
         goalLabel.text = self.store.tasks.last?.description
         breakTimeLabel.isHidden = true
-        breakProgressLabel.isHidden = true
-//        resetButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "American Typewriter", size: 18.0) as Any], for: .normal)
+        resetBtn.layer.borderColor = Constants.red.cgColor
+        resetBtn.layer.cornerRadius = 8
+        resetBtn.layer.borderWidth = 1
         progressView.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI_2) * 2)
     }
 

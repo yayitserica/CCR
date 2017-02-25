@@ -52,7 +52,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8z-Sw-a8o">
                                 <rect key="frame" x="36" y="353.5" width="303" height="53.5"/>
                                 <color key="backgroundColor" red="1" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                                 <state key="normal" title="SUBMIT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -196,8 +196,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="theGrind" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wC-Zh-QeS">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="theGrind" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wC-Zh-QeS">
+                                <rect key="frame" x="-4" y="0.0" width="383" height="66"/>
                                 <color key="backgroundColor" red="0.70588235294117652" green="0.70588235294117652" blue="0.70588235294117652" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Exo2-Bold" family="Exo 2" pointSize="25"/>
                                 <nil key="textColor"/>
@@ -209,21 +209,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1RI-tL-2zu">
-                                <rect key="frame" x="16" y="220" width="343" height="77"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="50"/>
+                                <rect key="frame" x="16" y="220" width="343" height="82"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="60"/>
                                 <color key="textColor" red="0.0" green="0.52156862745098043" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="mOD-wO-8gF">
-                                <rect key="frame" x="36" y="307" width="303" height="0.0"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
-                                <color key="textColor" red="0.36862745099999999" green="0.0" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="0% done" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="bfP-ZY-0qr">
-                                <rect key="frame" x="36" y="298" width="303" height="24"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
-                                <color key="textColor" red="0.0" green="0.52156862749999999" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SGb-TY-Ixa">
@@ -241,26 +229,28 @@
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="30"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ews-9v-NoD">
-                                <rect key="frame" x="79" y="438" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Play Filled-50"/>
-                                <connections>
-                                    <action selector="playButtonTapped:" destination="axF-ZI-INX" eventType="touchUpInside" id="kar-ep-nbb"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9f-y2-ncU">
-                                <rect key="frame" x="162" y="438" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Pause Filled-50"/>
-                                <connections>
-                                    <action selector="pauseButtonTapped:" destination="axF-ZI-INX" eventType="touchUpInside" id="UCV-5y-8kM"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uu0-KP-Kty">
-                                <rect key="frame" x="127" y="508" width="125" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="20"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="qg2-EH-SRa">
+                                <rect key="frame" x="125" y="307" width="125" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ews-9v-NoD">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <state key="normal" image="Play Filled-50"/>
+                                        <connections>
+                                            <action selector="playButtonTapped:" destination="axF-ZI-INX" eventType="touchUpInside" id="kar-ep-nbb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9f-y2-ncU">
+                                        <rect key="frame" x="75" y="0.0" width="50" height="50"/>
+                                        <state key="normal" image="Pause Filled-50"/>
+                                        <connections>
+                                            <action selector="pauseButtonTapped:" destination="axF-ZI-INX" eventType="touchUpInside" id="UCV-5y-8kM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uu0-KP-Kty">
+                                <rect key="frame" x="99.5" y="407" width="176.5" height="53.5"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                                 <state key="normal" title="RESET TIMER">
                                     <color key="titleColor" red="1" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -271,16 +261,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="uu0-KP-Kty" firstAttribute="centerX" secondItem="4fL-l7-wh4" secondAttribute="centerX" id="1Ht-vt-aAp"/>
                             <constraint firstItem="sOt-kN-qa6" firstAttribute="top" secondItem="SGb-TY-Ixa" secondAttribute="bottom" constant="20" id="3bQ-q1-vT3"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="bfP-ZY-0qr" secondAttribute="trailing" constant="20" id="4KI-Oi-ILw"/>
                             <constraint firstItem="SGb-TY-Ixa" firstAttribute="top" secondItem="0SO-xC-Ark" secondAttribute="bottom" id="5jF-AK-dni"/>
+                            <constraint firstItem="qg2-EH-SRa" firstAttribute="top" secondItem="sOt-kN-qa6" secondAttribute="bottom" constant="5" id="6XX-iG-e26"/>
                             <constraint firstItem="1RI-tL-2zu" firstAttribute="top" secondItem="SGb-TY-Ixa" secondAttribute="bottom" constant="20" id="8KA-MV-kwk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1RI-tL-2zu" secondAttribute="trailing" id="9Ra-bD-VkT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="sOt-kN-qa6" secondAttribute="trailing" id="9va-8y-lj1"/>
                             <constraint firstItem="4wC-Zh-QeS" firstAttribute="height" secondItem="4fL-l7-wh4" secondAttribute="height" multiplier="0.1" id="ClP-2R-FK8"/>
                             <constraint firstItem="sOt-kN-qa6" firstAttribute="baseline" secondItem="1RI-tL-2zu" secondAttribute="baseline" id="FA5-QM-VOU"/>
+                            <constraint firstItem="qg2-EH-SRa" firstAttribute="centerX" secondItem="4fL-l7-wh4" secondAttribute="centerX" id="Hxe-Cu-QWW"/>
                             <constraint firstItem="4wC-Zh-QeS" firstAttribute="leading" secondItem="4fL-l7-wh4" secondAttribute="leadingMargin" constant="-20" id="MYt-rI-D2G"/>
-                            <constraint firstItem="mOD-wO-8gF" firstAttribute="leading" secondItem="4fL-l7-wh4" secondAttribute="leadingMargin" constant="20" id="RfX-GG-O3u"/>
+                            <constraint firstItem="uu0-KP-Kty" firstAttribute="top" secondItem="qg2-EH-SRa" secondAttribute="bottom" constant="50" id="Ney-68-yON"/>
+                            <constraint firstItem="uu0-KP-Kty" firstAttribute="height" secondItem="4fL-l7-wh4" secondAttribute="height" multiplier="0.08" id="Nwf-UI-6eV"/>
                             <constraint firstItem="SGb-TY-Ixa" firstAttribute="leading" secondItem="4fL-l7-wh4" secondAttribute="leadingMargin" constant="20" id="XWL-zm-duv"/>
                             <constraint firstItem="SGb-TY-Ixa" firstAttribute="height" secondItem="4fL-l7-wh4" secondAttribute="height" multiplier="0.03" id="a3s-jb-esq"/>
                             <constraint firstItem="0SO-xC-Ark" firstAttribute="top" secondItem="CqV-vS-ug2" secondAttribute="bottom" constant="60" id="aA3-Tl-OG4"/>
@@ -288,12 +281,10 @@
                             <constraint firstAttribute="trailingMargin" secondItem="4wC-Zh-QeS" secondAttribute="trailing" constant="-20" id="dun-L0-cIj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SGb-TY-Ixa" secondAttribute="trailing" constant="20" id="eNk-zD-js8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0SO-xC-Ark" secondAttribute="trailing" constant="10" id="ebL-7D-ycR"/>
-                            <constraint firstItem="bfP-ZY-0qr" firstAttribute="leading" secondItem="4fL-l7-wh4" secondAttribute="leadingMargin" constant="20" id="eo8-Rw-biu"/>
                             <constraint firstItem="0SO-xC-Ark" firstAttribute="height" secondItem="4fL-l7-wh4" secondAttribute="height" multiplier="0.15" id="f8T-CC-Tor"/>
                             <constraint firstAttribute="leadingMargin" secondItem="sOt-kN-qa6" secondAttribute="leading" id="gER-f7-IAf"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="mOD-wO-8gF" secondAttribute="trailing" constant="20" id="hqS-K6-FyV"/>
-                            <constraint firstItem="bfP-ZY-0qr" firstAttribute="top" secondItem="1RI-tL-2zu" secondAttribute="bottom" constant="1" id="hws-X3-jnY"/>
-                            <constraint firstItem="mOD-wO-8gF" firstAttribute="top" secondItem="sOt-kN-qa6" secondAttribute="bottom" constant="5" id="wxF-fO-zHY"/>
+                            <constraint firstItem="uu0-KP-Kty" firstAttribute="width" secondItem="4fL-l7-wh4" secondAttribute="width" multiplier="0.47" id="tV0-ix-AAB"/>
+                            <constraint firstItem="4wC-Zh-QeS" firstAttribute="top" secondItem="CqV-vS-ug2" secondAttribute="bottom" constant="-20" id="w2N-ST-nQO"/>
                             <constraint firstItem="0SO-xC-Ark" firstAttribute="leading" secondItem="4fL-l7-wh4" secondAttribute="leadingMargin" constant="10" id="x4T-fy-GX8"/>
                         </constraints>
                     </view>
@@ -301,12 +292,10 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="breakProgressLabel" destination="bfP-ZY-0qr" id="nJT-3L-Xcg"/>
                         <outlet property="breakTimeLabel" destination="1RI-tL-2zu" id="sfu-nB-3nS"/>
                         <outlet property="goalLabel" destination="0SO-xC-Ark" id="zPg-ui-Scu"/>
                         <outlet property="pauseBtn" destination="W9f-y2-ncU" id="ohT-w2-CAl"/>
                         <outlet property="playBtn" destination="ews-9v-NoD" id="shs-lj-11Y"/>
-                        <outlet property="progressLabel" destination="mOD-wO-8gF" id="8fd-Of-C39"/>
                         <outlet property="progressView" destination="SGb-TY-Ixa" id="4DK-LH-E8T"/>
                         <outlet property="resetBtn" destination="uu0-KP-Kty" id="lJb-d6-rZ6"/>
                         <outlet property="timeLabel" destination="sOt-kN-qa6" id="SDP-MN-fKT"/>
@@ -572,7 +561,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lwp-FV-gXb">
                                 <rect key="frame" x="36" y="353" width="303" height="53.5"/>
                                 <color key="backgroundColor" red="1" green="0.31764705882352939" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                                 <state key="normal" title="SUBMIT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
