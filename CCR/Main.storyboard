@@ -45,12 +45,12 @@
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="i.e. make GitHub repo" textAlignment="center" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="3bm-1D-afR">
                                 <rect key="frame" x="36" y="203" width="303" height="134"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8z-Sw-a8o">
-                                <rect key="frame" x="116" y="347" width="143" height="33"/>
+                                <rect key="frame" x="36" y="347" width="303" height="53.5"/>
                                 <color key="backgroundColor" red="1" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="15"/>
                                 <state key="normal" title="SUBMIT">
@@ -68,11 +68,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="P8z-Sw-a8o" secondAttribute="trailing" constant="100" id="1ac-NU-N4s"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="P8z-Sw-a8o" secondAttribute="trailing" constant="20" id="1ac-NU-N4s"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1mM-7N-nRk" secondAttribute="trailing" constant="30" id="IRj-0A-4BW"/>
                             <constraint firstItem="1mM-7N-nRk" firstAttribute="top" secondItem="OKA-KL-DsG" secondAttribute="bottom" constant="100" id="Iao-If-YDu"/>
                             <constraint firstItem="3bm-1D-afR" firstAttribute="top" secondItem="1mM-7N-nRk" secondAttribute="bottom" constant="15" id="If5-Hl-NaZ"/>
-                            <constraint firstItem="P8z-Sw-a8o" firstAttribute="leading" secondItem="gD6-br-r8E" secondAttribute="leadingMargin" constant="100" id="RHL-dg-uuc"/>
+                            <constraint firstItem="P8z-Sw-a8o" firstAttribute="leading" secondItem="gD6-br-r8E" secondAttribute="leadingMargin" constant="20" id="RHL-dg-uuc"/>
                             <constraint firstItem="OKA-KL-DsG" firstAttribute="leading" secondItem="gD6-br-r8E" secondAttribute="leadingMargin" constant="-16" id="W7F-Ip-79x"/>
                             <constraint firstItem="OKA-KL-DsG" firstAttribute="top" secondItem="j3A-FR-ULH" secondAttribute="bottom" constant="-20" id="Xn2-mR-Nqv"/>
                             <constraint firstItem="3bm-1D-afR" firstAttribute="height" secondItem="gD6-br-r8E" secondAttribute="height" multiplier="0.2" id="YZI-gu-l7D"/>
@@ -81,6 +81,7 @@
                             <constraint firstItem="1mM-7N-nRk" firstAttribute="leading" secondItem="gD6-br-r8E" secondAttribute="leadingMargin" constant="30" id="eXY-5T-oDL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3bm-1D-afR" secondAttribute="trailing" constant="20" id="f9J-xa-Ksd"/>
                             <constraint firstItem="3bm-1D-afR" firstAttribute="leading" secondItem="gD6-br-r8E" secondAttribute="leadingMargin" constant="20" id="igA-2G-DC7"/>
+                            <constraint firstItem="P8z-Sw-a8o" firstAttribute="height" secondItem="gD6-br-r8E" secondAttribute="height" multiplier="0.08" id="kWk-GZ-5ZN"/>
                             <constraint firstItem="P8z-Sw-a8o" firstAttribute="top" secondItem="3bm-1D-afR" secondAttribute="bottom" constant="10" id="zj9-de-cgg"/>
                         </constraints>
                     </view>
@@ -564,7 +565,7 @@
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="i.e. create new app" textAlignment="center" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="wyg-EY-Ba5">
                                 <rect key="frame" x="36" y="209" width="303" height="134"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>

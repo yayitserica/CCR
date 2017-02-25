@@ -17,7 +17,7 @@ class SetTaskViewController: UIViewController {
     
     @IBAction func submitButtonTapped(_ sender: Any) {
         if taskTextField.text == "" {
-            let noGoalAlert = UIAlertController(title: "Missing a Task", message: "Enter a goal", preferredStyle: .alert)
+            let noGoalAlert = UIAlertController(title: "Missing a Task", message: "", preferredStyle: .alert)
             let titleFont:[String : AnyObject] = [ NSFontAttributeName : UIFont(name: "OpenSans-Semibold", size: 18)! ]
             let attributedTitle = NSMutableAttributedString(string: "You Must Enter a Task", attributes: titleFont)
             noGoalAlert.setValue(attributedTitle, forKey: "attributedTitle")
