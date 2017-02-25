@@ -188,24 +188,11 @@ class CountdownViewController: UIViewController {
         breakTimeLabel.isHidden = false
         timeLabel.isHidden = true
         resetBtn.tintColor = Constants.aqua
-        playBtn.tintColor = Constants.aqua
+//        playBtn.tintColor = Constants.aqua
         pauseBtn.tintColor = Constants.aqua
+        playBtn.imageView?.image = UIImage(named: "Play Filled-50teal.png")
     }
     
-    //delete this
-//   func showNewGoalVC() {
-//        let goalVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbGoalID") as! SetGoalViewController
-//        self.present(goalVC, animated: true, completion: nil)
-//    }
-    
-    //this pops over the task check VC
-//    func showTaskCheckVC() {
-//        let taskCheckVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbTaskCheckID") as! TaskCheckViewController
-//        self.addChildViewController(taskCheckVC)
-//        taskCheckVC.view.frame = self.view.frame
-//        self.view.addSubview(taskCheckVC.view)
-//        taskCheckVC.didMove(toParentViewController: self)
-//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dest = segue.destination as! TaskCheckViewController

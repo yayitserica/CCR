@@ -93,7 +93,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nZ8-JB-FsD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1657" y="-635"/>
+            <point key="canvasLocation" x="-566" y="-300"/>
         </scene>
         <!--Task Check View Controller-->
         <scene sceneID="Ls7-vv-syW">
@@ -107,46 +107,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's GryndTime!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="rdK-pD-zrJ">
-                                <rect key="frame" x="46" y="30" width="283" height="31"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="theGrind" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="rdK-pD-zrJ">
+                                <rect key="frame" x="-4" y="0.0" width="383" height="66.5"/>
+                                <color key="backgroundColor" red="0.70588235290000001" green="0.70588235290000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Exo2-Bold" family="Exo 2" pointSize="25"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you still working on" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="ZkE-h2-DG0">
-                                <rect key="frame" x="46" y="161" width="283" height="23.5"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="46" y="166.5" width="283" height="27.5"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="insert task here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="P9k-wB-sQ6">
-                                <rect key="frame" x="46" y="194.5" width="283" height="100"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="46" y="204" width="283" height="100"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="12q-3w-SAx">
-                                <rect key="frame" x="127.5" y="369" width="120" height="30"/>
+                                <rect key="frame" x="127.5" y="367.5" width="120" height="33"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKv-xN-obA" userLabel="Yes Button">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="33"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="W8L-cr-69Q"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
                                         <state key="normal" title="Yes">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleColor" red="1" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="yesButtonTapped:" destination="4fK-Qv-HSu" eventType="touchUpInside" id="oSG-21-6eT"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efB-6l-jw4">
-                                        <rect key="frame" x="70" y="0.0" width="50" height="30"/>
+                                        <rect key="frame" x="70" y="0.0" width="50" height="33"/>
+                                        <color key="backgroundColor" red="1" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="dkT-lc-fA9"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
                                         <state key="normal" title="No">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -157,9 +157,9 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.34509803919999998" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="rdK-pD-zrJ" secondAttribute="trailing" constant="30" id="0BW-ba-gdA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rdK-pD-zrJ" secondAttribute="trailing" constant="-20" id="0BW-ba-gdA"/>
                             <constraint firstItem="P9k-wB-sQ6" firstAttribute="height" secondItem="VkJ-Qw-M13" secondAttribute="height" multiplier="0.15" id="EKT-op-p7N"/>
                             <constraint firstAttribute="trailingMargin" secondItem="P9k-wB-sQ6" secondAttribute="trailing" constant="30" id="IWR-aR-3hv"/>
                             <constraint firstItem="12q-3w-SAx" firstAttribute="centerY" secondItem="VkJ-Qw-M13" secondAttribute="centerY" constant="50" id="JVY-Mc-cQe"/>
@@ -167,9 +167,10 @@
                             <constraint firstItem="P9k-wB-sQ6" firstAttribute="leading" secondItem="VkJ-Qw-M13" secondAttribute="leadingMargin" constant="30" id="TRm-eP-SZy"/>
                             <constraint firstItem="12q-3w-SAx" firstAttribute="centerX" secondItem="VkJ-Qw-M13" secondAttribute="centerX" id="UL9-Ib-A0m"/>
                             <constraint firstItem="ZkE-h2-DG0" firstAttribute="top" secondItem="rdK-pD-zrJ" secondAttribute="bottom" constant="100" id="Xew-3t-rBG"/>
-                            <constraint firstItem="rdK-pD-zrJ" firstAttribute="leading" secondItem="VkJ-Qw-M13" secondAttribute="leadingMargin" constant="30" id="gtF-4M-jvx"/>
+                            <constraint firstItem="rdK-pD-zrJ" firstAttribute="height" secondItem="VkJ-Qw-M13" secondAttribute="height" multiplier="0.1" id="ebX-kU-mss"/>
+                            <constraint firstItem="rdK-pD-zrJ" firstAttribute="leading" secondItem="VkJ-Qw-M13" secondAttribute="leadingMargin" constant="-20" id="gtF-4M-jvx"/>
                             <constraint firstItem="P9k-wB-sQ6" firstAttribute="top" secondItem="ZkE-h2-DG0" secondAttribute="bottom" constant="10" id="iCk-Oj-0gp"/>
-                            <constraint firstItem="rdK-pD-zrJ" firstAttribute="top" secondItem="dwZ-hV-ebJ" secondAttribute="bottom" constant="10" id="oA6-ha-dRq"/>
+                            <constraint firstItem="rdK-pD-zrJ" firstAttribute="top" secondItem="dwZ-hV-ebJ" secondAttribute="bottom" constant="-20" id="oA6-ha-dRq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZkE-h2-DG0" secondAttribute="trailing" constant="30" id="wUC-UO-RHm"/>
                         </constraints>
                     </view>
@@ -182,7 +183,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KfY-mJ-hHg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2311" y="-502"/>
+            <point key="canvasLocation" x="1167" y="466"/>
         </scene>
         <!--Tasks-->
         <scene sceneID="5zO-yU-AIP">
@@ -288,7 +289,7 @@
                             <constraint firstItem="0SO-xC-Ark" firstAttribute="leading" secondItem="4fL-l7-wh4" secondAttribute="leadingMargin" constant="10" id="x4T-fy-GX8"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Tasks" image="To Do-25" selectedImage="To Do Filled-25" id="yy9-tE-hnS"/>
+                    <tabBarItem key="tabBarItem" title="Tasks" image="Timer-25" selectedImage="Timer Filled-25" id="yy9-tE-hnS"/>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -304,7 +305,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bbq-mN-4xH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="920.79999999999995" y="-502.39880059970017"/>
+            <point key="canvasLocation" x="458" y="466"/>
         </scene>
         <!--Pop Up View Controller-->
         <scene sceneID="N6o-E1-8or">
@@ -324,20 +325,19 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How did you do?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAV-tq-GzR">
                                         <rect key="frame" x="7" y="8" width="227" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="23"/>
-                                        <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="18"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xQh-5P-QFW" customClass="CosmosView" customModule="Cosmos">
                                         <rect key="frame" x="22" y="47" width="199" height="52"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.0" green="0.34509803919999998" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="starSize">
                                                 <real key="value" value="35"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
-                                                <color key="value" red="1" green="1" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="1" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="rating">
                                                 <real key="value" value="0.0"/>
@@ -349,29 +349,29 @@
                                                 <real key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="emptyBorderColor">
-                                                <color key="value" red="1" green="1" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="1" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="emptyColor">
-                                                <color key="value" red="0.0" green="0.34509803919999998" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="filledBorderColor">
-                                                <color key="value" red="1" green="1" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="value" red="1" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJo-fc-TRn">
                                         <rect key="frame" x="21" y="112" width="199" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
-                                        <state key="normal" title="Done">
-                                            <color key="titleColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="16"/>
+                                        <state key="normal" title="Submit">
+                                            <color key="titleColor" red="1" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="doneButtonTapped:" destination="7Pa-oR-hlb" eventType="touchUpInside" id="fUA-4S-BNb"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.34509803919999998" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="FAM-rA-zSK"/>
                                     <constraint firstAttribute="height" constant="160" id="d8N-wB-Mpz"/>
@@ -396,7 +396,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dZa-nn-rnN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1633" y="-122"/>
+            <point key="canvasLocation" x="854" y="-300"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="iun-r3-eRW">
@@ -423,7 +423,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iwc-WH-cmH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-604" y="-278.41079460269867"/>
+            <point key="canvasLocation" x="148" y="-300"/>
         </scene>
         <!--Goals-->
         <scene sceneID="tne-QT-ifu">
@@ -451,11 +451,11 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Goals" image="Goal-25" selectedImage="Goal Filled-25" id="zrb-G2-Lfj"/>
+                    <tabBarItem key="tabBarItem" title="Goals" image="To Do-25" selectedImage="To Do Filled-25" id="zrb-G2-Lfj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="920.79999999999995" y="181.25937031484258"/>
+            <point key="canvasLocation" x="-241" y="466"/>
         </scene>
         <!--Set New Task View Controller-->
         <scene sceneID="pLh-Dv-D1M">
@@ -533,7 +533,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WKJ-4u-j7D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3065" y="-502"/>
+            <point key="canvasLocation" x="1881" y="466"/>
         </scene>
         <!--Set Goal View Controller-->
         <scene sceneID="Av1-d6-X0q">
@@ -604,7 +604,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0MX-Fo-3ro" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2378.4000000000001" y="-634.632683658171"/>
+            <point key="canvasLocation" x="-1292" y="-300"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qm7-ey-EG0">
@@ -622,14 +622,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sat-wp-ndz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3303" y="-596"/>
+            <point key="canvasLocation" x="-2006" y="-300"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Goal Filled-25" width="25" height="25"/>
-        <image name="Goal-25" width="25" height="25"/>
         <image name="Pause Filled-50" width="50" height="50"/>
         <image name="Play Filled-50" width="50" height="50"/>
+        <image name="Timer Filled-25" width="25" height="25"/>
+        <image name="Timer-25" width="25" height="25"/>
         <image name="To Do Filled-25" width="25" height="25"/>
         <image name="To Do-25" width="25" height="25"/>
     </resources>

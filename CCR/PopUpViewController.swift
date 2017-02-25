@@ -18,8 +18,8 @@ class PopUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        takeBreakLabel.layer.borderColor = UIColor.white.cgColor
-        takeBreakLabel.layer.borderWidth = 2
+        takeBreakLabel.layer.borderColor = Constants.red.cgColor
+        takeBreakLabel.layer.borderWidth = 1
         takeBreakLabel.layer.cornerRadius = 8
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
         showAnimate()

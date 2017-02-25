@@ -43,15 +43,15 @@ class TaskCheckViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        noButton.layer.borderColor = UIColor.white.cgColor
-        noButton.layer.borderWidth = 2
+        navigationController?.isNavigationBarHidden = true
+//        noButton.layer.borderWidth = 1
         noButton.layer.cornerRadius = 8
-        yesButton.layer.borderColor = UIColor.white.cgColor
-        yesButton.layer.borderWidth = 2
+        yesButton.layer.borderColor = Constants.red.cgColor
+        yesButton.layer.borderWidth = 1
         yesButton.layer.cornerRadius = 8
         currentGoalLabel.text = self.store.tasks.last?.description
         currentGoalLabel.layer.borderWidth = 1
-        currentGoalLabel.layer.borderColor = Constants.fuschia.cgColor
+        currentGoalLabel.layer.borderColor = UIColor.white.cgColor
         currentGoalLabel.layer.cornerRadius = 3
         
     }
