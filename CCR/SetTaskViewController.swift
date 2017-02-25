@@ -18,24 +18,27 @@ class SetTaskViewController: UIViewController {
     @IBAction func submitButtonTapped(_ sender: Any) {
         if taskTextField.text == "" {
             let noGoalAlert = UIAlertController(title: "Missing a Task", message: "Enter a goal", preferredStyle: .alert)
-            let titleFont:[String : AnyObject] = [ NSFontAttributeName : UIFont(name: "AmericanTypewriter", size: 18)! ]
-            let messageFont:[String : AnyObject] = [ NSFontAttributeName : UIFont(name: "AmericanTypewriter", size: 14)! ]
-            let attributedTitle = NSMutableAttributedString(string: "Missing a Task", attributes: titleFont)
-            let attributedMessage = NSMutableAttributedString(string: "Enter a goal", attributes: messageFont)
+            let titleFont:[String : AnyObject] = [ NSFontAttributeName : UIFont(name: "OpenSans-Semibold", size: 18)! ]
+            let attributedTitle = NSMutableAttributedString(string: "You Must Enter a Task", attributes: titleFont)
             noGoalAlert.setValue(attributedTitle, forKey: "attributedTitle")
-            noGoalAlert.setValue(attributedMessage, forKey: "attributedMessage")
             
             let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             noGoalAlert.addAction(okAction)
             present(noGoalAlert, animated: true, completion: nil)
+            noGoalAlert.view.tintColor = Constants.red
         } else {
             let newTask = Task()
             newTask.description = taskTextField.text //captures the task description
             self.store.goals.last?.Task = newTask //associates this task with a goal
             self.store.tasks.append(newTask) //adds it to the task array
-            self.showTabBarVC()
-            self.view.removeFromSuperview()
+            self.performSegue(withIdentifier: "toTabBar", sender: self)
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dest = segue.destination as! TabBarController
+        
+        print("HEY I AM BEING CALLED")
     }
     
     func showTabBarVC() {

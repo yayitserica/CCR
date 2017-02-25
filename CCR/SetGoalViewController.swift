@@ -25,27 +25,37 @@ class SetGoalViewController: UIViewController {
     @IBAction func submitButtonTapped(_ sender: Any) {
         
         if goalTextField.text == "" {
-            let noGoalAlert = UIAlertController(title: "Missing a Task", message: "Enter a goal", preferredStyle: .alert)
+            let noGoalAlert = UIAlertController(title: "You Must Enter a Goal", message: "", preferredStyle: .alert)
             
-            let titleFont:[String : AnyObject] = [ NSFontAttributeName : UIFont(name: "AmericanTypewriter", size: 18)! ]
-            let messageFont:[String : AnyObject] = [ NSFontAttributeName : UIFont(name: "AmericanTypewriter", size: 14)! ]
-            let attributedTitle = NSMutableAttributedString(string: "Missing a Task", attributes: titleFont)
-            let attributedMessage = NSMutableAttributedString(string: "Enter a goal", attributes: messageFont)
+            let titleFont: [String : AnyObject] = [ NSFontAttributeName : UIFont(name: "OpenSans-Semibold", size: 18)! ]
+            let attributedTitle = NSMutableAttributedString(string: "You Must Enter a Goal", attributes: titleFont)
             noGoalAlert.setValue(attributedTitle, forKey: "attributedTitle")
-            noGoalAlert.setValue(attributedMessage, forKey: "attributedMessage")
             
             let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            
             noGoalAlert.addAction(okAction)
             present(noGoalAlert, animated: true, completion: nil)
+            noGoalAlert.view.tintColor = Constants.red
+            
         } else {
+            
+            //TODO: - write in perform segue here
+            
             let newGoal = Goal()
             if let unwrappedText = goalTextField.text {
                 newGoal.description = unwrappedText
             }
             self.store.goals.append(newGoal)
-            showNewTaskVC()
-            self.view.removeFromSuperview()
+            
+            self.performSegue(withIdentifier: "toSetTask", sender: self)
         }
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dest = segue.destination as! SetTaskViewController
+        
+        print("HEY I AM BEING CALLED")
     }
     
    func showNewTaskVC() {

@@ -47,15 +47,6 @@ class PopUpViewController: UIViewController {
         removeAnimate()
         
     }
-    
-    
-    //delete this
-//    func showTabBarVC() {
-//        let tabBarVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbTabBarID") as! TabBarController
-//        self.present(tabBarVC, animated: true, completion: nil)
-//    }
-    
-
 
     func showAnimate() {
         //makes the view bigger
@@ -76,10 +67,9 @@ class PopUpViewController: UIViewController {
         }) { (success) in
             if success {
                 //once finishes, it removes from view
-                //delete this line below
-//                self.showGoalCheckVC()
-//                self.showTabBarVC()
-                self.view.removeFromSuperview()
+                
+                self.dismiss(animated: true, completion: nil)
+                
             }
         }
     }

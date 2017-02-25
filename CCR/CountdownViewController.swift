@@ -176,7 +176,8 @@ class CountdownViewController: UIViewController {
             timerIsOn = false
             timeLabel.text = "25:00"
             breakProgressLabel.text = "0% done"
-            showTaskCheckVC()
+            self.performSegue(withIdentifier: "toTaskCheck", sender: self)
+//            showTaskCheckVC()
             playButton.isEnabled = true
             buttonSound.play()
             breakTimeLabel.isHidden = true
@@ -213,12 +214,18 @@ class CountdownViewController: UIViewController {
 //    }
     
     //this pops over the task check VC
-    func showTaskCheckVC() {
-        let taskCheckVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbTaskCheckID") as! TaskCheckViewController
-        self.addChildViewController(taskCheckVC)
-        taskCheckVC.view.frame = self.view.frame
-        self.view.addSubview(taskCheckVC.view)
-        taskCheckVC.didMove(toParentViewController: self)
+//    func showTaskCheckVC() {
+//        let taskCheckVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbTaskCheckID") as! TaskCheckViewController
+//        self.addChildViewController(taskCheckVC)
+//        taskCheckVC.view.frame = self.view.frame
+//        self.view.addSubview(taskCheckVC.view)
+//        taskCheckVC.didMove(toParentViewController: self)
+//    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dest = segue.destination as! TaskCheckViewController
+        
+        print("HEY I AM BEING CALLED")
     }
     
     func showPopUp() {

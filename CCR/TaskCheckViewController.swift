@@ -18,14 +18,14 @@ class TaskCheckViewController: UIViewController {
     
     @IBAction func yesButtonTapped(_ sender: Any) {
         print("yes button tapped")
-        self.view.removeFromSuperview()
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func noButtonTapped(_ sender: Any) {
         print("no button tapped")
         self.showSetGoalVC()
-        self.view.removeFromSuperview()
-        
+        self.performSegue(withIdentifier: "toBrandNewTask", sender: self)
+//        self.navigationController?.popViewController(animated: true)
     }
     
     //user clicked "no" and needs to set a new task
@@ -33,6 +33,12 @@ class TaskCheckViewController: UIViewController {
         let goalCheckVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "newTaskID") as! SetNewTaskViewController
         self.present(goalCheckVC, animated: true, completion: nil)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dest = segue.destination as! SetNewTaskViewController
+        print("Hey I am being called")
+    }
+    
     
 
     override func viewDidLoad() {

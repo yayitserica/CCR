@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JmS-DX-pNH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="IHH-5V-gtX">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,6 +10,20 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Exo2-Bold.ttf">
+            <string>Exo2-Bold</string>
+        </array>
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </array>
+        <array key="OpenSans-Semibold.ttf">
+            <string>OpenSans-Semibold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Set Task View Controller-->
         <scene sceneID="oNx-UT-c7m">
@@ -23,47 +37,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's GryndTime!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="OKA-KL-DsG">
-                                <rect key="frame" x="46" y="30" width="283" height="31"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="theGrind" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="OKA-KL-DsG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Exo2-Bold" family="Exo 2" pointSize="25"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="i.e. make GitHub repo" textAlignment="center" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="3bm-1D-afR">
-                                <rect key="frame" x="36" y="250" width="303" height="134"/>
+                                <rect key="frame" x="36" y="203" width="303" height="134"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8z-Sw-a8o">
-                                <rect key="frame" x="116" y="394" width="143" height="30"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
-                                <state key="normal" title="Submit">
+                                <rect key="frame" x="116" y="347" width="143" height="33"/>
+                                <color key="backgroundColor" red="1" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="15"/>
+                                <state key="normal" title="SUBMIT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="submitButtonTapped:" destination="zx4-8F-ifS" eventType="touchUpInside" id="z6F-7g-AMy"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What specific TASK are you working on?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="1mM-7N-nRk">
-                                <rect key="frame" x="46" y="101" width="283" height="133.5"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your TASK?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="1mM-7N-nRk">
+                                <rect key="frame" x="46" y="160" width="283" height="27.5"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.34509803919999998" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="P8z-Sw-a8o" secondAttribute="trailing" constant="100" id="1ac-NU-N4s"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1mM-7N-nRk" secondAttribute="trailing" constant="30" id="IRj-0A-4BW"/>
-                            <constraint firstItem="1mM-7N-nRk" firstAttribute="top" secondItem="OKA-KL-DsG" secondAttribute="bottom" constant="40" id="Iao-If-YDu"/>
+                            <constraint firstItem="1mM-7N-nRk" firstAttribute="top" secondItem="OKA-KL-DsG" secondAttribute="bottom" constant="100" id="Iao-If-YDu"/>
                             <constraint firstItem="3bm-1D-afR" firstAttribute="top" secondItem="1mM-7N-nRk" secondAttribute="bottom" constant="15" id="If5-Hl-NaZ"/>
-                            <constraint firstItem="1mM-7N-nRk" firstAttribute="height" secondItem="gD6-br-r8E" secondAttribute="height" multiplier="0.2" id="QlF-j0-rxu"/>
                             <constraint firstItem="P8z-Sw-a8o" firstAttribute="leading" secondItem="gD6-br-r8E" secondAttribute="leadingMargin" constant="100" id="RHL-dg-uuc"/>
-                            <constraint firstItem="OKA-KL-DsG" firstAttribute="leading" secondItem="gD6-br-r8E" secondAttribute="leadingMargin" constant="30" id="W7F-Ip-79x"/>
-                            <constraint firstItem="OKA-KL-DsG" firstAttribute="top" secondItem="j3A-FR-ULH" secondAttribute="bottom" constant="10" id="Xn2-mR-Nqv"/>
+                            <constraint firstItem="OKA-KL-DsG" firstAttribute="leading" secondItem="gD6-br-r8E" secondAttribute="leadingMargin" constant="-16" id="W7F-Ip-79x"/>
+                            <constraint firstItem="OKA-KL-DsG" firstAttribute="top" secondItem="j3A-FR-ULH" secondAttribute="bottom" constant="-20" id="Xn2-mR-Nqv"/>
                             <constraint firstItem="3bm-1D-afR" firstAttribute="height" secondItem="gD6-br-r8E" secondAttribute="height" multiplier="0.2" id="YZI-gu-l7D"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="OKA-KL-DsG" secondAttribute="trailing" constant="30" id="diA-59-blf"/>
+                            <constraint firstItem="OKA-KL-DsG" firstAttribute="height" secondItem="gD6-br-r8E" secondAttribute="height" multiplier="0.1" constant="-6.7000000000000028" id="a0Z-oh-EJv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OKA-KL-DsG" secondAttribute="trailing" constant="-16" id="diA-59-blf"/>
                             <constraint firstItem="1mM-7N-nRk" firstAttribute="leading" secondItem="gD6-br-r8E" secondAttribute="leadingMargin" constant="30" id="eXY-5T-oDL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3bm-1D-afR" secondAttribute="trailing" constant="20" id="f9J-xa-Ksd"/>
                             <constraint firstItem="3bm-1D-afR" firstAttribute="leading" secondItem="gD6-br-r8E" secondAttribute="leadingMargin" constant="20" id="igA-2G-DC7"/>
@@ -73,11 +87,12 @@
                     <connections>
                         <outlet property="submitButton" destination="P8z-Sw-a8o" id="W6f-uk-z5M"/>
                         <outlet property="taskTextField" destination="3bm-1D-afR" id="YMI-Wl-tO6"/>
+                        <segue destination="1q4-hl-mjE" kind="show" identifier="toTabBar" id="HeJ-rs-jG5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nZ8-JB-FsD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2286" y="-278"/>
+            <point key="canvasLocation" x="-1657" y="-635"/>
         </scene>
         <!--Task Check View Controller-->
         <scene sceneID="Ls7-vv-syW">
@@ -161,11 +176,12 @@
                         <outlet property="currentGoalLabel" destination="P9k-wB-sQ6" id="XtQ-lB-mNJ"/>
                         <outlet property="noButton" destination="efB-6l-jw4" id="Rwf-zX-0gj"/>
                         <outlet property="yesButton" destination="RKv-xN-obA" id="wf2-p6-BGj"/>
+                        <segue destination="CdQ-zQ-UnB" kind="show" identifier="toBrandNewTask" id="fyN-kp-gjh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KfY-mJ-hHg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1406" y="-502"/>
+            <point key="canvasLocation" x="2311" y="-502"/>
         </scene>
         <!--Tasks-->
         <scene sceneID="5zO-yU-AIP">
@@ -293,11 +309,12 @@
                         <outlet property="progressView" destination="SGb-TY-Ixa" id="4DK-LH-E8T"/>
                         <outlet property="resetButton" destination="FC3-9A-XoC" id="Hhl-vg-7Y6"/>
                         <outlet property="timeLabel" destination="sOt-kN-qa6" id="SDP-MN-fKT"/>
+                        <segue destination="4fK-Qv-HSu" kind="show" identifier="toTaskCheck" id="d6y-Wg-kHN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bbq-mN-4xH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-17" y="-502"/>
+            <point key="canvasLocation" x="920.79999999999995" y="-502.39880059970017"/>
         </scene>
         <!--Pop Up View Controller-->
         <scene sceneID="N6o-E1-8or">
@@ -389,7 +406,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dZa-nn-rnN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="714" y="-502"/>
+            <point key="canvasLocation" x="1633" y="-122"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="iun-r3-eRW">
@@ -416,7 +433,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iwc-WH-cmH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1542" y="-278"/>
+            <point key="canvasLocation" x="-604" y="-278.41079460269867"/>
         </scene>
         <!--Goals-->
         <scene sceneID="tne-QT-ifu">
@@ -448,7 +465,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-18" y="182"/>
+            <point key="canvasLocation" x="920.79999999999995" y="181.25937031484258"/>
         </scene>
         <!--Set New Task View Controller-->
         <scene sceneID="pLh-Dv-D1M">
@@ -526,7 +543,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WKJ-4u-j7D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2092" y="-502"/>
+            <point key="canvasLocation" x="3065" y="-502"/>
         </scene>
         <!--Set Goal View Controller-->
         <scene sceneID="Av1-d6-X0q">
@@ -540,60 +557,82 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's GryndTime!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="UWy-JN-mZg">
-                                <rect key="frame" x="46" y="30" width="283" height="31"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What GOAL are you working on?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="lcB-S0-TuQ">
-                                <rect key="frame" x="46" y="186" width="283" height="46.5"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your GOAL?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="lcB-S0-TuQ">
+                                <rect key="frame" x="46" y="166.5" width="283" height="27.5"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="i.e. create new app" textAlignment="center" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="wyg-EY-Ba5">
-                                <rect key="frame" x="36" y="247.5" width="303" height="134"/>
+                                <rect key="frame" x="36" y="209" width="303" height="134"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lwp-FV-gXb">
-                                <rect key="frame" x="116" y="391.5" width="143" height="30"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
-                                <state key="normal" title="Submit">
+                                <rect key="frame" x="36" y="353" width="303" height="53.5"/>
+                                <color key="backgroundColor" red="1" green="0.31764705882352939" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="15"/>
+                                <state key="normal" title="SUBMIT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="submitButtonTapped:" destination="JmS-DX-pNH" eventType="touchUpInside" id="YZL-gD-Dpb"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="theGrind" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="UWy-JN-mZg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="66.5"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Exo2-Bold" family="Exo 2" pointSize="25"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.34509803919999998" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="wyg-EY-Ba5" secondAttribute="trailing" constant="20" id="8Km-Aw-hIh"/>
                             <constraint firstItem="Lwp-FV-gXb" firstAttribute="top" secondItem="wyg-EY-Ba5" secondAttribute="bottom" constant="10" id="A2E-GC-K33"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="UWy-JN-mZg" secondAttribute="trailing" constant="30" id="DOA-aF-bKx"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Lwp-FV-gXb" secondAttribute="trailing" constant="100" id="DaQ-zM-ldt"/>
+                            <constraint firstItem="Lwp-FV-gXb" firstAttribute="height" secondItem="7VM-zM-xzg" secondAttribute="height" multiplier="0.08" id="BeP-Lt-0PU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UWy-JN-mZg" secondAttribute="trailing" constant="-16" id="DOA-aF-bKx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Lwp-FV-gXb" secondAttribute="trailing" constant="20" id="DaQ-zM-ldt"/>
                             <constraint firstItem="wyg-EY-Ba5" firstAttribute="height" secondItem="7VM-zM-xzg" secondAttribute="height" multiplier="0.2" id="Hi4-JH-IGw"/>
                             <constraint firstItem="wyg-EY-Ba5" firstAttribute="top" secondItem="lcB-S0-TuQ" secondAttribute="bottom" constant="15" id="IAe-iw-BRB"/>
                             <constraint firstItem="wyg-EY-Ba5" firstAttribute="leading" secondItem="7VM-zM-xzg" secondAttribute="leadingMargin" constant="20" id="KFg-IT-pjf"/>
-                            <constraint firstItem="UWy-JN-mZg" firstAttribute="leading" secondItem="7VM-zM-xzg" secondAttribute="leadingMargin" constant="30" id="PpO-D9-TOY"/>
-                            <constraint firstItem="UWy-JN-mZg" firstAttribute="top" secondItem="VqS-Ne-MXh" secondAttribute="bottom" constant="10" id="WPe-Df-ofx"/>
-                            <constraint firstItem="Lwp-FV-gXb" firstAttribute="leading" secondItem="7VM-zM-xzg" secondAttribute="leadingMargin" constant="100" id="YU7-XD-vs8"/>
-                            <constraint firstItem="lcB-S0-TuQ" firstAttribute="top" secondItem="UWy-JN-mZg" secondAttribute="bottom" constant="125" id="mC3-qU-sZf"/>
+                            <constraint firstItem="UWy-JN-mZg" firstAttribute="leading" secondItem="7VM-zM-xzg" secondAttribute="leadingMargin" constant="-16" id="PpO-D9-TOY"/>
+                            <constraint firstItem="UWy-JN-mZg" firstAttribute="top" secondItem="VqS-Ne-MXh" secondAttribute="bottom" constant="-20" id="WPe-Df-ofx"/>
+                            <constraint firstItem="Lwp-FV-gXb" firstAttribute="leading" secondItem="7VM-zM-xzg" secondAttribute="leadingMargin" constant="20" id="YU7-XD-vs8"/>
+                            <constraint firstItem="UWy-JN-mZg" firstAttribute="height" secondItem="7VM-zM-xzg" secondAttribute="height" multiplier="0.1" id="cTE-2y-GXw"/>
+                            <constraint firstItem="lcB-S0-TuQ" firstAttribute="top" secondItem="UWy-JN-mZg" secondAttribute="bottom" constant="100" id="mC3-qU-sZf"/>
                             <constraint firstItem="lcB-S0-TuQ" firstAttribute="leading" secondItem="7VM-zM-xzg" secondAttribute="leadingMargin" constant="30" id="tca-rH-kgL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lcB-S0-TuQ" secondAttribute="trailing" constant="30" id="y4k-rX-yY8"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="bHR-1T-Yz4"/>
                     <connections>
                         <outlet property="goalTextField" destination="wyg-EY-Ba5" id="d0O-Ow-fwA"/>
                         <outlet property="submitButton" destination="Lwp-FV-gXb" id="p4q-SH-K4m"/>
+                        <segue destination="zx4-8F-ifS" kind="show" identifier="toSetTask" id="dNP-mb-UW1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0MX-Fo-3ro" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3002" y="-278"/>
+            <point key="canvasLocation" x="-2378.4000000000001" y="-634.632683658171"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Qm7-ey-EG0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="IHH-5V-gtX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="uiU-tf-Gj6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="JmS-DX-pNH" kind="relationship" relationship="rootViewController" id="uol-6N-ygq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sat-wp-ndz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3303" y="-596"/>
         </scene>
     </scenes>
     <resources>

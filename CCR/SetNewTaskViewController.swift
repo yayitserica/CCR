@@ -37,9 +37,7 @@ class SetNewTaskViewController: UIViewController {
             }
             self.store.tasks.append(newTask)
             print("a brand new task was added")
-            
-            //TODO: - this removing of superview is taking me to a blank screen
-            self.view.removeFromSuperview()
+            self.navigationController?.popViewController(animated: true)
         }
     }
 
@@ -48,9 +46,14 @@ class SetNewTaskViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addNewTaskButton.layer.cornerRadius = 8
-        addNewTaskButton.layer.borderColor = UIColor.white.cgColor
+        addNewTaskButton.layer.borderColor = Constants.grey.cgColor
         addNewTaskButton.layer.borderWidth = 2
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let dest = segue.destination as! TabBarController
+//        print("going back to tab bar")
+//    }
 
 
 
