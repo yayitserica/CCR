@@ -195,7 +195,7 @@ class CountdownViewController: UIViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let dest = segue.destination as! TaskCheckViewController
+        _ = segue.destination as! TaskCheckViewController
         
         print("HEY I AM BEING CALLED")
     }

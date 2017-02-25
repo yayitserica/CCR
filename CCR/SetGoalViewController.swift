@@ -51,7 +51,7 @@ class SetGoalViewController: UIViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let dest = segue.destination as! SetTaskViewController
+        _ = segue.destination as! SetTaskViewController
         
         print("HEY I AM BEING CALLED")
     }

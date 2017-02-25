@@ -503,6 +503,10 @@
                                 <state key="normal" title="Finished this goal?  Set a new goal.">
                                     <color key="titleColor" red="1" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="addNewGoalTapped:" destination="CdQ-zQ-UnB" eventType="touchUpInside" id="OUf-9c-mDJ"/>
+                                    <segue destination="JmS-DX-pNH" kind="show" identifier="toNewGoal" id="ugJ-Pa-at4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -635,4 +639,7 @@
         <image name="To Do Filled-25" width="25" height="25"/>
         <image name="To Do-25" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ugJ-Pa-at4"/>
+    </inferredMetricsTieBreakers>
 </document>

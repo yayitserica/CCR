@@ -35,7 +35,7 @@ class TaskCheckViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let dest = segue.destination as! SetNewTaskViewController
+        _ = segue.destination as! SetNewTaskViewController
         print("Hey I am being called")
     }
     
