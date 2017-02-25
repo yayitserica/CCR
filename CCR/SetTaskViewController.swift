@@ -38,7 +38,6 @@ class SetTaskViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         _ = segue.destination as! TabBarController
         
-        print("HEY I AM BEING CALLED")
     }
     
     func showTabBarVC() {

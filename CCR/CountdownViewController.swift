@@ -187,17 +187,12 @@ class CountdownViewController: UIViewController {
     func setupBreakTimer() {
         breakTimeLabel.isHidden = false
         timeLabel.isHidden = true
-        resetBtn.tintColor = Constants.aqua
-//        playBtn.tintColor = Constants.aqua
-        pauseBtn.tintColor = Constants.aqua
-        playBtn.imageView?.image = UIImage(named: "Play Filled-50teal.png")
+        progressView.trackTintColor = Constants.aqua
     }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         _ = segue.destination as! TaskCheckViewController
-        
-        print("HEY I AM BEING CALLED")
     }
     
     func showPopUp() {

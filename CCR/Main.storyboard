@@ -221,7 +221,7 @@
                                 <color key="trackTintColor" red="1" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
+                                        <integer key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </progressView>
@@ -505,7 +505,6 @@
                                 </state>
                                 <connections>
                                     <action selector="addNewGoalTapped:" destination="CdQ-zQ-UnB" eventType="touchUpInside" id="OUf-9c-mDJ"/>
-                                    <segue destination="JmS-DX-pNH" kind="show" identifier="toNewGoal" id="ugJ-Pa-at4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -639,7 +638,4 @@
         <image name="To Do Filled-25" width="25" height="25"/>
         <image name="To Do-25" width="25" height="25"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="ugJ-Pa-at4"/>
-    </inferredMetricsTieBreakers>
 </document>

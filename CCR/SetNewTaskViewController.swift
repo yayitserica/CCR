@@ -41,12 +41,10 @@ class SetNewTaskViewController: UIViewController {
     }
 
     @IBAction func addNewGoalTapped(_ sender: Any) {
-        self.performSegue(withIdentifier: "toNewGoal", sender: self)
-    }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        _ = segue.destination as! SetGoalViewController
-        print("going to a new goal")
+        let goalVC = self.navigationController?.viewControllers[1]
+        navigationController?.popToViewController(goalVC!, animated: true)
+        print("go to new goal tapped \(goalVC?.description)")
+        
     }
     
     override func viewDidLoad() {
