@@ -38,11 +38,15 @@ class CountdownViewController: UIViewController {
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var progressLabel: UILabel!
     @IBOutlet weak var breakProgressLabel: UILabel!
-    @IBOutlet weak var resetButton: UIBarButtonItem!
-    @IBOutlet weak var playButton: UIBarButtonItem!
-    @IBOutlet weak var pauseButton: UIBarButtonItem!
+//    @IBOutlet weak var resetButton: UIBarButtonItem!
+//    @IBOutlet weak var playButton: UIBarButtonItem!
+//    @IBOutlet weak var pauseButton: UIBarButtonItem!
     
-    @IBAction func resetTapped(_ sender: Any) {
+    @IBOutlet weak var playBtn: UIButton!
+    @IBOutlet weak var pauseBtn: UIButton!
+    @IBOutlet weak var resetBtn: UIButton!
+    
+    @IBAction func resetButtonTapped(_ sender: Any) {
         if !isOnBreak {
             timer.invalidate()
             timeRemaining = 1500
@@ -50,7 +54,7 @@ class CountdownViewController: UIViewController {
             timeLabel.text = "25:00"
             progressLabel.text = "0% done"
             timerIsOn = false
-            playButton.isEnabled = true
+            playBtn.isEnabled = true
         } else if isOnBreak {
             timer.invalidate()
             breakTimeRemaining = 300
@@ -58,45 +62,44 @@ class CountdownViewController: UIViewController {
             breakTimeLabel.text = "5:00"
             breakProgressLabel.text = "0% done"
             timerIsOn = false
-            playButton.isEnabled = true
+            playBtn.isEnabled = true
         }
-        
     }
     
-    @IBAction func playBtnTapped(_ sender: Any) {
+    @IBAction func pauseButtonTapped(_ sender: Any) {
+        if !isOnBreak {
+            timer.invalidate()
+            timerIsOn = false
+            playBtn.isEnabled = true
+        } else if isOnBreak {
+            timer.invalidate()
+            timerIsOn = false
+            playBtn.isEnabled = true
+        }
+    }
+    
+    @IBAction func playButtonTapped(_ sender: Any) {
         //regular interval
         if !timerIsOn && !isOnBreak {
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerRunning), userInfo: nil, repeats: true)
             timerIsOn = true
-            playButton.isEnabled = false
-        //5 minute break interval
+            playBtn.isEnabled = false
+            //5 minute break interval
         } else if !timerIsOn && isOnBreak {
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(breakTimerRunning), userInfo: nil, repeats: true)
-            playButton.isEnabled = false
-        //20 minute break interval
+            playBtn.isEnabled = false
+            //20 minute break interval
         } else if !timerIsOn && isOnLongBreak {
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(longBreakTimerRunning), userInfo: nil, repeats: true)
-            playButton.isEnabled = false
+            playBtn.isEnabled = false
         }
     }
-    
-    @IBAction func pauseBtnTapped(_ sender: Any) {
-        if !isOnBreak {
-            timer.invalidate()
-            timerIsOn = false
-            playButton.isEnabled = true
-        } else if isOnBreak {
-            timer.invalidate()
-            timerIsOn = false
-            playButton.isEnabled = true
-        }
-    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         formatInitialViews()
         setupTimerBell()
-//        displayQuote()
     }
     
     func timerRunning() {
@@ -146,7 +149,7 @@ class CountdownViewController: UIViewController {
             setupBreakTimer() //format the timer
             breakTimeLabel.text = "5:00"
             isOnBreak = true //change the status to be "on a break"
-            playButton.isEnabled = true
+            playBtn.isEnabled = true
             //change these times
             breakTimeRemaining = 5.00 //resets the break time for the next break
             totalBreakTime = 5.00
@@ -165,7 +168,7 @@ class CountdownViewController: UIViewController {
             breakTimeLabel.text = "20:00"
             isOnBreak = true
             isOnLongBreak = true
-            playButton.isEnabled = true
+            playBtn.isEnabled = true
             //change these times
             breakTimeRemaining = 10.00
             totalBreakTime = 10.00
@@ -178,15 +181,15 @@ class CountdownViewController: UIViewController {
             breakProgressLabel.text = "0% done"
             self.performSegue(withIdentifier: "toTaskCheck", sender: self)
 //            showTaskCheckVC()
-            playButton.isEnabled = true
+            playBtn.isEnabled = true
             buttonSound.play()
             breakTimeLabel.isHidden = true
             timeLabel.isHidden = false
             breakProgressLabel.isHidden = true
             progressLabel.isHidden = false
-            resetButton.tintColor = Constants.fuschia
-            playButton.tintColor = Constants.fuschia
-            pauseButton.tintColor = Constants.fuschia
+            resetBtn.tintColor = Constants.fuschia
+            playBtn.tintColor = Constants.fuschia
+            pauseBtn.tintColor = Constants.fuschia
             //change these times
             timeRemaining = 5.0
             totalTime = 5.0
@@ -202,9 +205,9 @@ class CountdownViewController: UIViewController {
         timeLabel.isHidden = true
         breakProgressLabel.isHidden = false
         progressLabel.isHidden = true
-        resetButton.tintColor = Constants.aqua
-        playButton.tintColor = Constants.aqua
-        pauseButton.tintColor = Constants.aqua
+        resetBtn.tintColor = Constants.aqua
+        playBtn.tintColor = Constants.aqua
+        pauseBtn.tintColor = Constants.aqua
     }
     
     //delete this
@@ -236,12 +239,7 @@ class CountdownViewController: UIViewController {
         popOverVC.didMove(toParentViewController: self)
     }
     
-    func displayQuote() {
-        self.store.getQuote { (quote, author) in
-            guard let unwrappedQuote = quote, let unwrappedAuthor = author else { return }
-            self.quoteLabel.text = "\(unwrappedQuote) - \(unwrappedAuthor)"
-        }
-    }
+
     
     func setupTimerBell() {
         do {
@@ -253,10 +251,11 @@ class CountdownViewController: UIViewController {
     }
     
     func formatInitialViews() {
+        navigationController?.isNavigationBarHidden = true
         goalLabel.text = self.store.tasks.last?.description
         breakTimeLabel.isHidden = true
         breakProgressLabel.isHidden = true
-        resetButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "American Typewriter", size: 18.0) as Any], for: .normal)
+//        resetButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "American Typewriter", size: 18.0) as Any], for: .normal)
         progressView.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI_2) * 2)
     }
 
