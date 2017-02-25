@@ -18,8 +18,6 @@ class SetGoalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         submitButton.layer.cornerRadius = 8
-        submitButton.layer.borderColor = UIColor.white.cgColor
-        submitButton.layer.borderWidth = 2
     }
 
     @IBAction func submitButtonTapped(_ sender: Any) {

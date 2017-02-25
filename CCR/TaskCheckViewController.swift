@@ -50,12 +50,9 @@ class TaskCheckViewController: UIViewController {
         yesButton.layer.borderWidth = 1
         yesButton.layer.cornerRadius = 8
         currentGoalLabel.text = self.store.tasks.last?.description
-        currentGoalLabel.layer.borderWidth = 1
-        currentGoalLabel.layer.borderColor = UIColor.white.cgColor
         currentGoalLabel.layer.cornerRadius = 3
         
     }
-    
 
     /*
     // MARK: - Navigation

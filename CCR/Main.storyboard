@@ -250,8 +250,8 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uu0-KP-Kty">
-                                <rect key="frame" x="99.5" y="407" width="176.5" height="53.5"/>
-                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
+                                <rect key="frame" x="113" y="407" width="150" height="46.5"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="13"/>
                                 <state key="normal" title="RESET TIMER">
                                     <color key="titleColor" red="1" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -274,7 +274,7 @@
                             <constraint firstItem="qg2-EH-SRa" firstAttribute="centerX" secondItem="4fL-l7-wh4" secondAttribute="centerX" id="Hxe-Cu-QWW"/>
                             <constraint firstItem="4wC-Zh-QeS" firstAttribute="leading" secondItem="4fL-l7-wh4" secondAttribute="leadingMargin" constant="-20" id="MYt-rI-D2G"/>
                             <constraint firstItem="uu0-KP-Kty" firstAttribute="top" secondItem="qg2-EH-SRa" secondAttribute="bottom" constant="50" id="Ney-68-yON"/>
-                            <constraint firstItem="uu0-KP-Kty" firstAttribute="height" secondItem="4fL-l7-wh4" secondAttribute="height" multiplier="0.08" id="Nwf-UI-6eV"/>
+                            <constraint firstItem="uu0-KP-Kty" firstAttribute="height" secondItem="4fL-l7-wh4" secondAttribute="height" multiplier="0.07" id="Nwf-UI-6eV"/>
                             <constraint firstItem="SGb-TY-Ixa" firstAttribute="leading" secondItem="4fL-l7-wh4" secondAttribute="leadingMargin" constant="20" id="XWL-zm-duv"/>
                             <constraint firstItem="SGb-TY-Ixa" firstAttribute="height" secondItem="4fL-l7-wh4" secondAttribute="height" multiplier="0.03" id="a3s-jb-esq"/>
                             <constraint firstItem="0SO-xC-Ark" firstAttribute="top" secondItem="CqV-vS-ug2" secondAttribute="bottom" constant="60" id="aA3-Tl-OG4"/>
@@ -284,7 +284,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="0SO-xC-Ark" secondAttribute="trailing" constant="10" id="ebL-7D-ycR"/>
                             <constraint firstItem="0SO-xC-Ark" firstAttribute="height" secondItem="4fL-l7-wh4" secondAttribute="height" multiplier="0.15" id="f8T-CC-Tor"/>
                             <constraint firstAttribute="leadingMargin" secondItem="sOt-kN-qa6" secondAttribute="leading" id="gER-f7-IAf"/>
-                            <constraint firstItem="uu0-KP-Kty" firstAttribute="width" secondItem="4fL-l7-wh4" secondAttribute="width" multiplier="0.47" id="tV0-ix-AAB"/>
+                            <constraint firstItem="uu0-KP-Kty" firstAttribute="width" secondItem="4fL-l7-wh4" secondAttribute="width" multiplier="0.4" id="tV0-ix-AAB"/>
                             <constraint firstItem="4wC-Zh-QeS" firstAttribute="top" secondItem="CqV-vS-ug2" secondAttribute="bottom" constant="-20" id="w2N-ST-nQO"/>
                             <constraint firstItem="0SO-xC-Ark" firstAttribute="leading" secondItem="4fL-l7-wh4" secondAttribute="leadingMargin" constant="10" id="x4T-fy-GX8"/>
                         </constraints>
@@ -469,28 +469,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's GryndTime!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="YXd-bg-zQ7">
-                                <rect key="frame" x="46" y="30" width="283" height="31"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="25"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="theGrind" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="YXd-bg-zQ7">
+                                <rect key="frame" x="-4" y="0.0" width="383" height="66.5"/>
+                                <color key="backgroundColor" red="0.70588235290000001" green="0.70588235290000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Exo2-Bold" family="Exo 2" pointSize="25"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set a new task" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="e2N-9N-UYd">
-                                <rect key="frame" x="46" y="211" width="283" height="23.5"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set a new TASK" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="e2N-9N-UYd">
+                                <rect key="frame" x="46" y="166.5" width="283" height="27.5"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="i.e. Create UI constraints" textAlignment="center" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="xQy-cx-vKs">
-                                <rect key="frame" x="36" y="249.5" width="303" height="134"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
+                                <rect key="frame" x="36" y="209" width="303" height="134"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7T-BX-8ue">
-                                <rect key="frame" x="76" y="393.5" width="223" height="30"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
-                                <state key="normal" title="Add New Task">
+                                <rect key="frame" x="36" y="353" width="303" height="53.5"/>
+                                <color key="backgroundColor" red="1" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
+                                <state key="normal" title="SUBMIT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -498,31 +498,33 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkf-5d-AUT">
-                                <rect key="frame" x="26" y="498.5" width="323" height="100"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="15"/>
+                                <rect key="frame" x="26" y="506.5" width="323" height="100"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="15"/>
                                 <state key="normal" title="Finished this goal?  Set a new goal.">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.34509803919999998" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="gkf-5d-AUT" firstAttribute="leading" secondItem="8Yb-2h-AJD" secondAttribute="leadingMargin" constant="10" id="0TG-ue-BbF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xQy-cx-vKs" secondAttribute="trailing" constant="20" id="9Sw-gl-HtJ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="v7T-BX-8ue" secondAttribute="trailing" constant="60" id="Aos-Mb-tbc"/>
-                            <constraint firstItem="e2N-9N-UYd" firstAttribute="top" secondItem="YXd-bg-zQ7" secondAttribute="bottom" constant="150" id="GXT-lQ-zOZ"/>
-                            <constraint firstItem="YXd-bg-zQ7" firstAttribute="leading" secondItem="8Yb-2h-AJD" secondAttribute="leadingMargin" constant="30" id="JgF-y9-m0U"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="YXd-bg-zQ7" secondAttribute="trailing" constant="30" id="Jgl-nO-xRs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="v7T-BX-8ue" secondAttribute="trailing" constant="20" id="Aos-Mb-tbc"/>
+                            <constraint firstItem="e2N-9N-UYd" firstAttribute="top" secondItem="YXd-bg-zQ7" secondAttribute="bottom" constant="100" id="GXT-lQ-zOZ"/>
+                            <constraint firstItem="YXd-bg-zQ7" firstAttribute="leading" secondItem="8Yb-2h-AJD" secondAttribute="leadingMargin" constant="-20" id="JgF-y9-m0U"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YXd-bg-zQ7" secondAttribute="trailing" constant="-20" id="Jgl-nO-xRs"/>
                             <constraint firstItem="gkf-5d-AUT" firstAttribute="height" secondItem="8Yb-2h-AJD" secondAttribute="height" multiplier="0.15" id="OXe-9f-z0r"/>
                             <constraint firstItem="xQy-cx-vKs" firstAttribute="height" secondItem="8Yb-2h-AJD" secondAttribute="height" multiplier="0.2" id="ctA-AT-FXU"/>
                             <constraint firstItem="xQy-cx-vKs" firstAttribute="top" secondItem="e2N-9N-UYd" secondAttribute="bottom" constant="15" id="eDw-Ju-bsg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gkf-5d-AUT" secondAttribute="trailing" constant="10" id="je1-Mf-gck"/>
                             <constraint firstItem="xQy-cx-vKs" firstAttribute="leading" secondItem="8Yb-2h-AJD" secondAttribute="leadingMargin" constant="20" id="kRw-Rg-amU"/>
-                            <constraint firstItem="v7T-BX-8ue" firstAttribute="leading" secondItem="8Yb-2h-AJD" secondAttribute="leadingMargin" constant="60" id="mxH-vB-56R"/>
+                            <constraint firstItem="v7T-BX-8ue" firstAttribute="leading" secondItem="8Yb-2h-AJD" secondAttribute="leadingMargin" constant="20" id="mxH-vB-56R"/>
                             <constraint firstAttribute="trailingMargin" secondItem="e2N-9N-UYd" secondAttribute="trailing" constant="30" id="s0q-NG-y21"/>
                             <constraint firstItem="e2N-9N-UYd" firstAttribute="leading" secondItem="8Yb-2h-AJD" secondAttribute="leadingMargin" constant="30" id="vF5-DE-JdB"/>
-                            <constraint firstItem="gkf-5d-AUT" firstAttribute="top" secondItem="v7T-BX-8ue" secondAttribute="bottom" constant="75" id="x4g-4J-PvH"/>
-                            <constraint firstItem="YXd-bg-zQ7" firstAttribute="top" secondItem="ycb-i2-vwj" secondAttribute="bottom" constant="10" id="xTX-wP-XEG"/>
+                            <constraint firstItem="v7T-BX-8ue" firstAttribute="height" secondItem="8Yb-2h-AJD" secondAttribute="height" multiplier="0.08" id="wGH-qZ-aO4"/>
+                            <constraint firstItem="YXd-bg-zQ7" firstAttribute="height" secondItem="8Yb-2h-AJD" secondAttribute="height" multiplier="0.1" id="wen-Bh-pIn"/>
+                            <constraint firstItem="gkf-5d-AUT" firstAttribute="top" secondItem="v7T-BX-8ue" secondAttribute="bottom" constant="100" id="wsG-gs-UIo"/>
+                            <constraint firstItem="YXd-bg-zQ7" firstAttribute="top" secondItem="ycb-i2-vwj" secondAttribute="bottom" constant="-20" id="xTX-wP-XEG"/>
                             <constraint firstItem="v7T-BX-8ue" firstAttribute="top" secondItem="xQy-cx-vKs" secondAttribute="bottom" constant="10" id="zey-In-BdO"/>
                         </constraints>
                     </view>
