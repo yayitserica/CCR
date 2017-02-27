@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TaskTableViewController.swift
 //  CCR
 //
 //  Created by Erica Millado on 2/10/17.
@@ -8,11 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class TaskTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var timer = Timer()
     var counter = 0
     var timerIsOn = false
+    
+    let store = DataStore.sharedInstance
     
     @IBOutlet weak var countingLabel: UILabel!
     
@@ -44,9 +46,22 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
     }
 
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return store.tasks.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath) as! TaskCell
+        cell.goalLabel.text = self.store.goals.last?.description
+        cell.taskLabel.text = self.store.tasks.last?.description
+        cell.starLabel.text = "\(self.store.tasks.last?.rating)/5 🌟"
+        return cell
+    }
 
 
 }
