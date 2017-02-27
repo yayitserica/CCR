@@ -534,6 +534,8 @@
                     <connections>
                         <outlet property="addNewTaskButton" destination="v7T-BX-8ue" id="loE-u4-8ab"/>
                         <outlet property="newTaskTextField" destination="xQy-cx-vKs" id="r5J-Dt-5db"/>
+                        <segue destination="1q4-hl-mjE" kind="show" identifier="toTabBarController" id="egs-bo-ag8"/>
+                        <segue destination="JmS-DX-pNH" kind="show" identifier="toNewGoal" id="mqc-AQ-jjb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WKJ-4u-j7D" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -638,4 +640,8 @@
         <image name="To Do Filled-25" width="25" height="25"/>
         <image name="To Do-25" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="uol-6N-ygq"/>
+        <segue reference="egs-bo-ag8"/>
+    </inferredMetricsTieBreakers>
 </document>

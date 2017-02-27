@@ -38,7 +38,7 @@ class PopUpViewController: UIViewController {
             default:
                 self.store.tasks.last?.rating = 1
             }
-            print("array count is still \(self.store.tasks.count)\n")
+            print("array count of rated tasks is \(self.store.tasks.count)\n")
         
         }
     }

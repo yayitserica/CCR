@@ -188,6 +188,7 @@ class CountdownViewController: UIViewController {
         breakTimeLabel.isHidden = false
         timeLabel.isHidden = true
         progressView.trackTintColor = Constants.aqua
+        progressView.layer.cornerRadius = 3
     }
     
     

@@ -25,7 +25,6 @@ class TaskCheckViewController: UIViewController {
         print("no button tapped")
         self.showSetGoalVC()
         self.performSegue(withIdentifier: "toBrandNewTask", sender: self)
-//        self.navigationController?.popViewController(animated: true)
     }
     
     //user clicked "no" and needs to set a new task

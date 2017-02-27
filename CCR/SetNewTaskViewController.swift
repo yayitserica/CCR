@@ -36,16 +36,17 @@ class SetNewTaskViewController: UIViewController {
             }
             self.store.tasks.append(newTask)
             print("a brand new task was added")
-            self.navigationController?.popViewController(animated: true)
+            
+            self.performSegue(withIdentifier: "toTabBarController", sender: self)
         }
     }
 
+
     @IBAction func addNewGoalTapped(_ sender: Any) {
-        let goalVC = self.navigationController?.viewControllers[1]
-        navigationController?.popToViewController(goalVC!, animated: true)
-        print("go to new goal tapped \(goalVC?.description)")
+         self.performSegue(withIdentifier: "toNewGoal", sender: self)
         
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,11 +55,6 @@ class SetNewTaskViewController: UIViewController {
         addNewTaskButton.layer.borderWidth = 2
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let dest = segue.destination as! TabBarController
-//        print("going back to tab bar")
-//    }
-
 
 
     /*
