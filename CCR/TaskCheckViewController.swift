@@ -43,7 +43,6 @@ class TaskCheckViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = true
-//        noButton.layer.borderWidth = 1
         noButton.layer.cornerRadius = 8
         yesButton.layer.borderColor = Constants.red.cgColor
         yesButton.layer.borderWidth = 1

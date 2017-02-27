@@ -44,8 +44,11 @@ class CountdownViewController: UIViewController {
     @IBAction func resetButtonTapped(_ sender: Any) {
         if !isOnBreak {
             timer.invalidate()
-            timeRemaining = 1500
-            totalTime = 1500
+            //uncomment these 1500
+//            timeRemaining = 1500
+//            totalTime = 1500
+            timeRemaining = 5.0
+            totalTime = 5.0
             timeLabel.text = "25:00"
             timerIsOn = false
             playBtn.isEnabled = true

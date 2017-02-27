@@ -418,7 +418,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="axF-ZI-INX" kind="relationship" relationship="viewControllers" id="2m7-cQ-LJQ"/>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="ZQG-KC-onb"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Psf-lA-P1s"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iwc-WH-cmH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -428,7 +428,7 @@
         <!--Goals-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="TaskCheckViewController" customModule="CCR" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TaskTableViewController" customModule="CCR" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
