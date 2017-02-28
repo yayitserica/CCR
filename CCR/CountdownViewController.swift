@@ -73,18 +73,36 @@ class CountdownViewController: UIViewController {
     
     @IBAction func playButtonTapped(_ sender: Any) {
         //regular interval
-        if !timerIsOn && !isOnBreak {
-            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerRunning), userInfo: nil, repeats: true)
-            timerIsOn = true
-            playBtn.isEnabled = false
-            //5 minute break interval
-        } else if !timerIsOn && isOnBreak {
+//        if !timerIsOn && !isOnBreak {
+//            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerRunning), userInfo: nil, repeats: true)
+//            timerIsOn = true
+//            playBtn.isEnabled = false
+//            //5 minute break interval
+//        } else if !timerIsOn && isOnBreak {
+//            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(breakTimerRunning), userInfo: nil, repeats: true)
+//            playBtn.isEnabled = false
+//            //20 minute break interval
+//        } else if !timerIsOn {
+//            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(longBreakTimerRunning), userInfo: nil, repeats: true)
+//            playBtn.isEnabled = false
+//        }
+        
+        //this is a regular interval
+        if !timerIsOn && !self.store.userIsOnBreak {
+            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(regularTimerRunning), userInfo: nil, repeats: true)
+        }
+        //this is a break interval
+        if !timerIsOn && self.store.userIsOnBreak {
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(breakTimerRunning), userInfo: nil, repeats: true)
-            playBtn.isEnabled = false
-            //20 minute break interval
-        } else if !timerIsOn {
-            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(longBreakTimerRunning), userInfo: nil, repeats: true)
-            playBtn.isEnabled = false
+        }
+    }
+    
+    func manageTimerEnd(seconds: Double) {
+        //regular 25 min interval is ending, stop the timer and show pop up
+        if seconds == 0 && !self.store.userIsOnBreak {
+            timer.invalidate()
+            timerIsOn = false
+            showPopUp()
         }
     }
 
@@ -95,7 +113,22 @@ class CountdownViewController: UIViewController {
         setupTimerBell()
     }
     
-    func timerRunning() {
+    override func viewDidAppear(_ animated: Bool) {
+        //here is when you play a break or not
+        actionAfterPopUp()
+    }
+    
+    func actionAfterPopUp() {
+        if self.store.userIsOnBreak {
+            breakTimeLabel.isHidden = false
+            timeLabel.isHidden = true
+            progressView.trackTintColor = Constants.aqua
+            playBtn.isEnabled = true
+            
+        }
+    }
+    
+    func regularTimerRunning() {
         timeRemaining -= 1
         progressView.setProgress(Float(timeRemaining)/Float(totalTime), animated: false)
         let minutesLeft = Int(timeRemaining) / 60 % 60
@@ -127,69 +160,12 @@ class CountdownViewController: UIViewController {
     
 
     
-    func manageTimerEnd(seconds: Double) {
-        // a break for the first, second and third intervals: 0 seconds, not on a break and the interval is 1 or 2
-//        if seconds == 0 && !isOnBreak && self.store.intervalCount < 4 {
-        if seconds == 0 && !isOnBreak && !self.store.userIsOnBreak {
-            timer.invalidate() //turn off the timer
-            timerIsOn = false //set the timer to off
-            timeLabel.text = "Time to take a break!" //update the label
-            buttonSound.play() //play a bell
-            showPopUp() //show the rating popup
-            setupBreakTimer() //format the timer
-            breakTimeLabel.text = "5:00"
-            isOnBreak = true //change the status to be "on a break"
-            playBtn.isEnabled = true
-            //change these times
-            breakTimeRemaining = 5.00 //resets the break time for the next break
-            totalBreakTime = 5.00
-            self.store.intervalCount += 1 //counts up to the next interval
-            print("interval count is less than or equal to 4: \(self.store.intervalCount)")
-        // a long break for the 4th interval; 0 seconds, not on a LONG break, and the interval count is exactly 4
-        } else if seconds == 0 && self.store.intervalCount == 4 {
-            self.store.intervalCount = 0
-            print("interval count has been reset to 0")
-            timer.invalidate()
-            timerIsOn = false
-            timeLabel.text = "Time to take a long break!"
-            buttonSound.play()
-            showPopUp()
-            setupBreakTimer()
-            breakTimeLabel.text = "20:00"
-            isOnBreak = true
-            playBtn.isEnabled = true
-            //change these times
-            breakTimeRemaining = 10.00
-            totalBreakTime = 10.00
-        } else if seconds == 0 && (isOnBreak) {
-            isOnBreak = false
-            timer.invalidate()
-            timerIsOn = false
-            timeLabel.text = "25:00"
-            progressView.trackTintColor = Constants.red
-            self.performSegue(withIdentifier: "toTaskCheck", sender: self)
-//            showTaskCheckVC()
-            playBtn.isEnabled = true
-            buttonSound.play()
-            breakTimeLabel.isHidden = true
-            timeLabel.isHidden = false
     
-            
-            //change these times
-            timeRemaining = 5.0
-            totalTime = 5.0
-            
-            //delete this
-            //showNewGoalVC()
-        } 
-
-    }
-    
+    //delete this function!
     func setupBreakTimer() {
         breakTimeLabel.isHidden = false
         timeLabel.isHidden = true
         progressView.trackTintColor = Constants.aqua
-        progressView.layer.cornerRadius = 3
     }
     
     func showPopUp() {
