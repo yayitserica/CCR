@@ -90,10 +90,14 @@ class CountdownViewController: UIViewController {
         //this is a regular interval
         if !timerIsOn && !self.store.userIsOnBreak {
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(regularTimerRunning), userInfo: nil, repeats: true)
+            timerIsOn = true
+            playBtn.isEnabled = false
         }
         //this is a break interval
         if !timerIsOn && self.store.userIsOnBreak {
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(breakTimerRunning), userInfo: nil, repeats: true)
+            timerIsOn = true
+            playBtn.isEnabled = false
         }
     }
     
@@ -102,7 +106,12 @@ class CountdownViewController: UIViewController {
         if seconds == 0 && !self.store.userIsOnBreak {
             timer.invalidate()
             timerIsOn = false
-            showPopUp()
+            self.performSegue(withIdentifier: "toPopUp", sender: self)
+        }
+        if seconds == 0 && self.store.userIsOnBreak {
+            timer.invalidate()
+            timerIsOn = false
+            self.performSegue(withIdentifier: "toTaskCheck", sender: self)
         }
     }
 
@@ -116,13 +125,26 @@ class CountdownViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         //here is when you play a break or not
         actionAfterPopUp()
+        actionAfterCheckTask()
     }
     
     func actionAfterPopUp() {
+        //formats the view to show "break mode"
         if self.store.userIsOnBreak {
             breakTimeLabel.isHidden = false
             timeLabel.isHidden = true
             progressView.trackTintColor = Constants.aqua
+            playBtn.isEnabled = true
+
+        }
+    }
+    
+    func actionAfterCheckTask() {
+        if !self.store.userIsOnBreak {
+            breakTimeLabel.isHidden = true
+            timeLabel.text = "25:00"
+            timeLabel.isHidden = false
+            progressView.trackTintColor = Constants.red
             playBtn.isEnabled = true
             
         }
@@ -167,15 +189,13 @@ class CountdownViewController: UIViewController {
         timeLabel.isHidden = true
         progressView.trackTintColor = Constants.aqua
     }
-    
-    func showPopUp() {
-        self.performSegue(withIdentifier: "toPopUp", sender: self)
+        
 //        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbPopUpID") as! PopUpViewController
 //        self.addChildViewController(popOverVC)
 //        popOverVC.view.frame = self.view.frame
 //        self.view.addSubview(popOverVC.view)
 //        popOverVC.didMove(toParentViewController: self)
-    }
+
     
 
     
