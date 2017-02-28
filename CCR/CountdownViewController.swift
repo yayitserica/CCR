@@ -39,7 +39,8 @@ class CountdownViewController: UIViewController {
     @IBOutlet weak var resetBtn: UIButton!
     
     @IBAction func resetButtonTapped(_ sender: Any) {
-        if !isOnBreak {
+        
+        if !self.store.userIsOnBreak {
             timer.invalidate()
             //uncomment these 1500
 //            timeRemaining = 1500
@@ -49,7 +50,7 @@ class CountdownViewController: UIViewController {
             timeLabel.text = "25:00"
             timerIsOn = false
             playBtn.isEnabled = true
-        } else if isOnBreak {
+        } else if self.store.userIsOnBreak {
             timer.invalidate()
             breakTimeRemaining = 300
             totalBreakTime = 300
@@ -72,21 +73,7 @@ class CountdownViewController: UIViewController {
     }
     
     @IBAction func playButtonTapped(_ sender: Any) {
-        //regular interval
-//        if !timerIsOn && !isOnBreak {
-//            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerRunning), userInfo: nil, repeats: true)
-//            timerIsOn = true
-//            playBtn.isEnabled = false
-//            //5 minute break interval
-//        } else if !timerIsOn && isOnBreak {
-//            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(breakTimerRunning), userInfo: nil, repeats: true)
-//            playBtn.isEnabled = false
-//            //20 minute break interval
-//        } else if !timerIsOn {
-//            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(longBreakTimerRunning), userInfo: nil, repeats: true)
-//            playBtn.isEnabled = false
-//        }
-        
+    
         //this is a regular interval
         if !timerIsOn && !self.store.userIsOnBreak {
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(regularTimerRunning), userInfo: nil, repeats: true)
@@ -135,7 +122,6 @@ class CountdownViewController: UIViewController {
             timeLabel.isHidden = true
             progressView.trackTintColor = Constants.aqua
             playBtn.isEnabled = true
-
         }
     }
     
