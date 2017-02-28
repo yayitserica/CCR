@@ -26,7 +26,6 @@ class CountdownViewController: UIViewController {
     var timerIsOn = false
     var timer = Timer()
     var buttonSound = AVAudioPlayer()
-    var isOnBreak = false
     
     let store = DataStore.sharedInstance
     

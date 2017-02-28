@@ -28,7 +28,7 @@ class TaskCheckViewController: UIViewController {
         print("the array now has \(self.store.tasks.count)")
         dump(self.store.tasks)
 
-                    self.store.userIsOnBreak = false
+        self.store.userIsOnBreak = false
 //        self.dismiss(animated: true, completion: nil)
         self.navigationController?.popViewController(animated: true)
         
@@ -37,6 +37,7 @@ class TaskCheckViewController: UIViewController {
     @IBAction func noButtonTapped(_ sender: Any) {
         print("no button tapped")
         self.showSetGoalVC()
+        self.store.userIsOnBreak = false
         self.performSegue(withIdentifier: "toBrandNewTask", sender: self)
     }
     
