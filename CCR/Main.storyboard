@@ -301,6 +301,7 @@
                         <outlet property="resetBtn" destination="uu0-KP-Kty" id="lJb-d6-rZ6"/>
                         <outlet property="timeLabel" destination="sOt-kN-qa6" id="SDP-MN-fKT"/>
                         <segue destination="4fK-Qv-HSu" kind="show" identifier="toTaskCheck" id="d6y-Wg-kHN"/>
+                        <segue destination="7Pa-oR-hlb" kind="show" identifier="toPopUp" id="oSq-RG-Tvi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bbq-mN-4xH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -383,7 +384,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="NOY-FD-1W4" firstAttribute="centerX" secondItem="Tb7-5l-m3g" secondAttribute="centerX" id="Wa3-BN-4r5"/>
                             <constraint firstItem="NOY-FD-1W4" firstAttribute="centerY" secondItem="Tb7-5l-m3g" secondAttribute="centerY" id="ohJ-3b-dBD"/>

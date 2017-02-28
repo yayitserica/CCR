@@ -21,7 +21,7 @@ class PopUpViewController: UIViewController {
         takeBreakLabel.layer.borderColor = Constants.red.cgColor
         takeBreakLabel.layer.borderWidth = 1
         takeBreakLabel.layer.cornerRadius = 8
-        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
+       // self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
         showAnimate()
         
         
@@ -65,14 +65,14 @@ class PopUpViewController: UIViewController {
         UIView.animate(withDuration: 0.25, animations: {
             //makes it go from smaller to bigger
             self.view.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
-            self.view.alpha = 0.0
+           self.view.alpha = 0.0
         }) { (success) in
             if success {
                 //once finishes, it removes from view
                 
-                self.dismiss(animated: true, completion: nil)
+//                self.dismiss(animated: true, completion: nil)
                 //see if this does anything
-//                self.performSegue(withIdentifier: "showTabBar", sender: self)
+                self.performSegue(withIdentifier: "showTabBar", sender: self)
                 
             }
         }

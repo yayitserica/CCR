@@ -28,8 +28,8 @@ class TaskCheckViewController: UIViewController {
         print("the array now has \(self.store.tasks.count)")
         dump(self.store.tasks)
 
-        self.dismiss(animated: true, completion: nil)
-//        self.navigationController?.popViewController(animated: true)
+//        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
         
     }
     

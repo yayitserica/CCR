@@ -168,15 +168,15 @@ class CountdownViewController: UIViewController {
             timer.invalidate()
             timerIsOn = false
             timeLabel.text = "25:00"
+            progressView.trackTintColor = Constants.red
             self.performSegue(withIdentifier: "toTaskCheck", sender: self)
 //            showTaskCheckVC()
             playBtn.isEnabled = true
             buttonSound.play()
             breakTimeLabel.isHidden = true
             timeLabel.isHidden = false
-            resetBtn.tintColor = Constants.fuschia
-            playBtn.tintColor = Constants.fuschia
-            pauseBtn.tintColor = Constants.fuschia
+    
+            
             //change these times
             timeRemaining = 5.0
             totalTime = 5.0
@@ -194,17 +194,16 @@ class CountdownViewController: UIViewController {
         progressView.layer.cornerRadius = 3
     }
     
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        _ = segue.destination as! TaskCheckViewController
-    }
+
     
     func showPopUp() {
-        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbPopUpID") as! PopUpViewController
-        self.addChildViewController(popOverVC)
-        popOverVC.view.frame = self.view.frame
-        self.view.addSubview(popOverVC.view)
-        popOverVC.didMove(toParentViewController: self)
+        
+        self.performSegue(withIdentifier: "toPopUp", sender: self)
+//        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbPopUpID") as! PopUpViewController
+//        self.addChildViewController(popOverVC)
+//        popOverVC.view.frame = self.view.frame
+//        self.view.addSubview(popOverVC.view)
+//        popOverVC.didMove(toParentViewController: self)
     }
     
 
