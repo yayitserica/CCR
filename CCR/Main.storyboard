@@ -456,35 +456,37 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xij-wc-Z5C">
-                                                    <rect key="frame" x="8" y="0.0" width="289" height="47"/>
+                                                    <rect key="frame" x="8" y="0.0" width="151.5" height="47"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIi-8S-0GW">
-                                                            <rect key="frame" x="0.0" y="0.0" width="289" height="23.5"/>
-                                                            <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="dIi-8S-0GW">
+                                                            <rect key="frame" x="0.0" y="0.0" width="151.5" height="23.5"/>
+                                                            <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qNK-lf-V7a">
-                                                            <rect key="frame" x="0.0" y="23.5" width="289" height="23.5"/>
-                                                            <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="17"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="qNK-lf-V7a">
+                                                            <rect key="frame" x="0.0" y="23.5" width="151.5" height="23.5"/>
+                                                            <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4/5 🌟" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VfG-8l-NZH">
-                                                    <rect key="frame" x="306" y="12" width="59" height="27.5"/>
-                                                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4/5 🌟" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="VfG-8l-NZH">
+                                                    <rect key="frame" x="162.5" y="12" width="44.5" height="19.5"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="14"/>
                                                     <color key="textColor" red="1" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="xij-wc-Z5C" firstAttribute="width" secondItem="z5i-d5-cWA" secondAttribute="width" multiplier="0.77" id="32T-1d-V7K"/>
+                                                <constraint firstItem="xij-wc-Z5C" firstAttribute="width" secondItem="z5i-d5-cWA" secondAttribute="width" multiplier="0.75" id="32T-1d-V7K"/>
+                                                <constraint firstItem="VfG-8l-NZH" firstAttribute="width" secondItem="z5i-d5-cWA" secondAttribute="width" multiplier="0.22" id="BTm-dO-XHX"/>
                                                 <constraint firstAttribute="leadingMargin" secondItem="xij-wc-Z5C" secondAttribute="leading" id="FSK-8a-bTF"/>
                                                 <constraint firstItem="xij-wc-Z5C" firstAttribute="top" secondItem="z5i-d5-cWA" secondAttribute="topMargin" constant="-8" id="oKV-I3-sDJ"/>
-                                                <constraint firstItem="VfG-8l-NZH" firstAttribute="leading" secondItem="xij-wc-Z5C" secondAttribute="trailing" constant="9" id="s4g-TK-kHn"/>
+                                                <constraint firstItem="VfG-8l-NZH" firstAttribute="leading" secondItem="xij-wc-Z5C" secondAttribute="trailing" constant="3" id="s4g-TK-kHn"/>
                                                 <constraint firstItem="VfG-8l-NZH" firstAttribute="top" secondItem="z5i-d5-cWA" secondAttribute="topMargin" constant="4" id="v2s-aG-Vbf"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="VfG-8l-NZH" secondAttribute="trailing" id="zHU-kH-tN5"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -513,6 +515,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Goals" image="To Do-25" selectedImage="To Do Filled-25" id="zrb-G2-Lfj"/>
+                    <connections>
+                        <outlet property="tableView" destination="awi-5I-M9O" id="xjq-RJ-ddv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -703,6 +708,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="uol-6N-ygq"/>
-        <segue reference="HeJ-rs-jG5"/>
+        <segue reference="egs-bo-ag8"/>
     </inferredMetricsTieBreakers>
 </document>

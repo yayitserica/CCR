@@ -18,7 +18,21 @@ class TaskCheckViewController: UIViewController {
     
     @IBAction func yesButtonTapped(_ sender: Any) {
         print("yes button tapped")
+        //take the current task and duplicate it in the array
+        let oldTaskDescription = self.store.tasks.last?.description ?? ""
+        print(oldTaskDescription)
+        let anotherNewTask = Task()
+        anotherNewTask.description = "\(oldTaskDescription)"
+        anotherNewTask.rating = "no rating"
+        self.store.tasks.append(anotherNewTask)
+        print("the array now has \(self.store.tasks.count)")
+        dump(self.store.tasks)
+//        if let newCopyOfCurrentTask = self.store.tasks.last {
+//            self.store.tasks.append(newCopyOfCurrentTask)
+//            self.store.tasks.last?.rating = "no rating"
+//        }
         self.navigationController?.popViewController(animated: true)
+        
     }
     
     @IBAction func noButtonTapped(_ sender: Any) {

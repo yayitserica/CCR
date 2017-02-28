@@ -12,8 +12,14 @@ class TaskTableViewController: UIViewController, UITableViewDelegate, UITableVie
     
     let store = DataStore.sharedInstance
     
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -23,8 +29,9 @@ class TaskTableViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath) as! TaskCell
         cell.goalLabel.text = self.store.goals.last?.description
-        cell.taskLabel.text = self.store.tasks.last?.description
-        cell.starLabel.text = "\(self.store.tasks.last?.rating)/5 🌟"
+        cell.taskLabel.text = self.store.tasks[indexPath.row].description
+        cell.starLabel.text = self.store.tasks[indexPath.row].rating
+        
         return cell
     }
 

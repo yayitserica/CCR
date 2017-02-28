@@ -9,7 +9,7 @@
 import Foundation
 
 class Task {
-    var rating: Int?
+    var rating: String?
     var description: String?
     
 }
