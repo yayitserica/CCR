@@ -17,4 +17,7 @@ class DataStore {
     
     var intervalCount = 0
     
+    var userIsOnBreak = false
+    
+    
 }

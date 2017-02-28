@@ -27,16 +27,13 @@ class CountdownViewController: UIViewController {
     var timer = Timer()
     var buttonSound = AVAudioPlayer()
     var isOnBreak = false
-    var isOnLongBreak = false
     
     let store = DataStore.sharedInstance
     
     @IBOutlet weak var goalLabel: UILabel!
-    @IBOutlet weak var quoteLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var breakTimeLabel: UILabel!
     @IBOutlet weak var progressView: UIProgressView!
-    
     @IBOutlet weak var playBtn: UIButton!
     @IBOutlet weak var pauseBtn: UIButton!
     @IBOutlet weak var resetBtn: UIButton!
@@ -85,7 +82,7 @@ class CountdownViewController: UIViewController {
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(breakTimerRunning), userInfo: nil, repeats: true)
             playBtn.isEnabled = false
             //20 minute break interval
-        } else if !timerIsOn && isOnLongBreak {
+        } else if !timerIsOn {
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(longBreakTimerRunning), userInfo: nil, repeats: true)
             playBtn.isEnabled = false
         }
@@ -115,7 +112,7 @@ class CountdownViewController: UIViewController {
         let secondsLeft = Int(breakTimeRemaining) % 60
         breakTimeLabel.text = "\(minutesLeft):\(secondsLeft)"
         timerIsOn = false
-        manageTimerEnd(seconds: breakTimeRemaining)
+        manageTimerEnd(seconds: breakTimeRemaining) //delete this
     }
     
     func longBreakTimerRunning() {
@@ -125,12 +122,15 @@ class CountdownViewController: UIViewController {
         let secondsLeft = Int(longBreakTimeRemaining) % 60
         breakTimeLabel.text = "\(minutesLeft):\(secondsLeft)"
         timerIsOn = false
-        manageTimerEnd(seconds: longBreakTimeRemaining)
+        manageTimerEnd(seconds: longBreakTimeRemaining) //delete this
     }
+    
+
     
     func manageTimerEnd(seconds: Double) {
         // a break for the first, second and third intervals: 0 seconds, not on a break and the interval is 1 or 2
-        if seconds == 0 && !isOnBreak && self.store.intervalCount < 4 {
+//        if seconds == 0 && !isOnBreak && self.store.intervalCount < 4 {
+        if seconds == 0 && !isOnBreak && !self.store.userIsOnBreak {
             timer.invalidate() //turn off the timer
             timerIsOn = false //set the timer to off
             timeLabel.text = "Time to take a break!" //update the label
@@ -146,7 +146,7 @@ class CountdownViewController: UIViewController {
             self.store.intervalCount += 1 //counts up to the next interval
             print("interval count is less than or equal to 4: \(self.store.intervalCount)")
         // a long break for the 4th interval; 0 seconds, not on a LONG break, and the interval count is exactly 4
-        } else if seconds == 0 && !isOnLongBreak && self.store.intervalCount == 4 {
+        } else if seconds == 0 && self.store.intervalCount == 4 {
             self.store.intervalCount = 0
             print("interval count has been reset to 0")
             timer.invalidate()
@@ -157,14 +157,12 @@ class CountdownViewController: UIViewController {
             setupBreakTimer()
             breakTimeLabel.text = "20:00"
             isOnBreak = true
-            isOnLongBreak = true
             playBtn.isEnabled = true
             //change these times
             breakTimeRemaining = 10.00
             totalBreakTime = 10.00
-        } else if seconds == 0 && (isOnBreak || isOnLongBreak) {
+        } else if seconds == 0 && (isOnBreak) {
             isOnBreak = false
-            isOnLongBreak = false
             timer.invalidate()
             timerIsOn = false
             timeLabel.text = "25:00"
@@ -194,10 +192,7 @@ class CountdownViewController: UIViewController {
         progressView.layer.cornerRadius = 3
     }
     
-
-    
     func showPopUp() {
-        
         self.performSegue(withIdentifier: "toPopUp", sender: self)
 //        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbPopUpID") as! PopUpViewController
 //        self.addChildViewController(popOverVC)
@@ -226,16 +221,5 @@ class CountdownViewController: UIViewController {
         resetBtn.layer.borderWidth = 1
         progressView.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI_2) * 2)
     }
-
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

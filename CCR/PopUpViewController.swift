@@ -72,6 +72,7 @@ class PopUpViewController: UIViewController {
                 
 //                self.dismiss(animated: true, completion: nil)
                 //see if this does anything
+                self.store.userIsOnBreak = true
                 self.performSegue(withIdentifier: "showTabBar", sender: self)
                 
             }
