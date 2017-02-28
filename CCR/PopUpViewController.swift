@@ -70,10 +70,9 @@ class PopUpViewController: UIViewController {
             if success {
                 //once finishes, it removes from view
                 
-//                self.dismiss(animated: true, completion: nil)
+                self.dismiss(animated: true, completion: nil)
                 //see if this does anything
-                
-//                self.navigationController?.popViewController(animated: true)
+//                self.performSegue(withIdentifier: "showTabBar", sender: self)
                 
             }
         }

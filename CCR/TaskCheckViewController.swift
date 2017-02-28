@@ -27,11 +27,9 @@ class TaskCheckViewController: UIViewController {
         self.store.tasks.append(anotherNewTask)
         print("the array now has \(self.store.tasks.count)")
         dump(self.store.tasks)
-//        if let newCopyOfCurrentTask = self.store.tasks.last {
-//            self.store.tasks.append(newCopyOfCurrentTask)
-//            self.store.tasks.last?.rating = "no rating"
-//        }
-        self.navigationController?.popViewController(animated: true)
+
+        self.dismiss(animated: true, completion: nil)
+//        self.navigationController?.popViewController(animated: true)
         
     }
     

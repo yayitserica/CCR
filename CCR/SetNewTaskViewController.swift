@@ -38,6 +38,7 @@ class SetNewTaskViewController: UIViewController {
             print("a brand new task was added")
             
             self.performSegue(withIdentifier: "toTabBarController", sender: self)
+            
         }
     }
 

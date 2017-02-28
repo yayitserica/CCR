@@ -363,7 +363,7 @@
                                         <rect key="frame" x="21" y="112" width="199" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="16"/>
-                                        <state key="normal" title="Submit">
+                                        <state key="normal" title="Take a Break">
                                             <color key="titleColor" red="1" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
@@ -392,6 +392,7 @@
                     <connections>
                         <outlet property="starringView" destination="xQh-5P-QFW" id="2q9-hF-ZT9"/>
                         <outlet property="takeBreakLabel" destination="YJo-fc-TRn" id="t1U-E3-CEx"/>
+                        <segue destination="1q4-hl-mjE" kind="show" identifier="showTabBar" id="iKz-ol-OGj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dZa-nn-rnN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -707,7 +708,7 @@
         <image name="To Do-25" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="iKz-ol-OGj"/>
         <segue reference="uol-6N-ygq"/>
-        <segue reference="egs-bo-ag8"/>
     </inferredMetricsTieBreakers>
 </document>
