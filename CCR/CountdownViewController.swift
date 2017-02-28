@@ -61,11 +61,11 @@ class CountdownViewController: UIViewController {
     }
     
     @IBAction func pauseButtonTapped(_ sender: Any) {
-        if !isOnBreak {
+        if !self.store.userIsOnBreak{
             timer.invalidate()
             timerIsOn = false
             playBtn.isEnabled = true
-        } else if isOnBreak {
+        } else if self.store.userIsOnBreak {
             timer.invalidate()
             timerIsOn = false
             playBtn.isEnabled = true
