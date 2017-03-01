@@ -8,6 +8,8 @@ target 'CCR' do
   # Pods for CCR
 
   pod 'Cosmos', '~> 8.0'
+  pod 'Charts', '~> 3.0.1'
+  pod 'RealmSwift', '~> 2.0.2'
   
 end
 
