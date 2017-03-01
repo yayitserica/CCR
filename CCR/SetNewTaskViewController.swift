@@ -18,7 +18,6 @@ class SetNewTaskViewController: UIViewController {
     @IBAction func addNewTaskTapped(_ sender: Any) {
         
         if newTaskTextField.text == "" {
-            
             let noGoalAlert = UIAlertController(title: "Missing a Task", message: "", preferredStyle: .alert)
             let titleFont:[String : AnyObject] = [ NSFontAttributeName : UIFont(name: "OpenSans-Semibold", size: 18)! ]
             let attributedTitle = NSMutableAttributedString(string: "You Must Enter a Task", attributes: titleFont)
@@ -36,18 +35,13 @@ class SetNewTaskViewController: UIViewController {
             }
             self.store.tasks.append(newTask)
             print("a brand new task was added")
-            
             self.performSegue(withIdentifier: "toTabBarController", sender: self)
-            
         }
     }
 
-
     @IBAction func addNewGoalTapped(_ sender: Any) {
          self.performSegue(withIdentifier: "toNewGoal", sender: self)
-        
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,17 +49,5 @@ class SetNewTaskViewController: UIViewController {
         addNewTaskButton.layer.borderColor = UIColor.white.cgColor
         addNewTaskButton.layer.borderWidth = 2
     }
-    
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -27,11 +27,8 @@ class TaskCheckViewController: UIViewController {
         self.store.tasks.append(anotherNewTask)
         print("the array now has \(self.store.tasks.count)")
         dump(self.store.tasks)
-
         self.store.userIsOnBreak = false
-//        self.dismiss(animated: true, completion: nil)
         self.navigationController?.popViewController(animated: true)
-        
     }
     
     @IBAction func noButtonTapped(_ sender: Any) {
@@ -52,7 +49,6 @@ class TaskCheckViewController: UIViewController {
         print("Hey I am being called")
     }
     
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,15 +61,5 @@ class TaskCheckViewController: UIViewController {
         currentGoalLabel.layer.cornerRadius = 3
         
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

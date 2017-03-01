@@ -21,9 +21,7 @@ class PopUpViewController: UIViewController {
         takeBreakLabel.layer.borderColor = Constants.red.cgColor
         takeBreakLabel.layer.borderWidth = 1
         takeBreakLabel.layer.cornerRadius = 8
-       // self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
         showAnimate()
-        
         
         starringView.didFinishTouchingCosmos = { rating in
             switch rating {
@@ -41,13 +39,11 @@ class PopUpViewController: UIViewController {
                 self.store.tasks.last?.rating = "no rating yet"
             }
             print("array count of rated tasks is \(self.store.tasks.count)\n")
-        
         }
     }
     
     @IBAction func doneButtonTapped(_ sender: Any) {
         removeAnimate()
-        
     }
 
     func showAnimate() {
@@ -69,26 +65,10 @@ class PopUpViewController: UIViewController {
         }) { (success) in
             if success {
                 //once finishes, it removes from view
-                
-//                self.dismiss(animated: true, completion: nil)
-                //see if this does anything
                 self.store.userIsOnBreak = true
                 self.performSegue(withIdentifier: "showTabBar", sender: self)
-                
             }
         }
     }
-    
-    // MARK: - Navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        
-//        removeAnimate()
-//        if segue.identifier == "goToGoalCheck" {
-//            if let destinationVC = segue.destination as? SetGoalViewController {
-////                print("Have segued to creating a new goal VC")
-//            }
-//        }
-//    }
-    
 
 }

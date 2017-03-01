@@ -36,23 +36,17 @@ class SetGoalViewController: UIViewController {
             noGoalAlert.view.tintColor = Constants.red
             
         } else {
-            
-            //TODO: - write in perform segue here
-            
             let newGoal = Goal()
             if let unwrappedText = goalTextField.text {
                 newGoal.description = unwrappedText
             }
             self.store.goals.append(newGoal)
-            
             self.performSegue(withIdentifier: "toSetTask", sender: self)
         }
     }
     
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         _ = segue.destination as! SetTaskViewController
-        
     }
     
    func showNewTaskVC() {

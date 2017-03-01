@@ -11,18 +11,14 @@ import AVFoundation
 
 class CountdownViewController: UIViewController {
     
-//    var timeRemaining = 1500.0
-//    var totalTime = 1500.0
-    var timeRemaining = 5.0
-    var totalTime = 5.0
-//    var breakTimeRemaining = 300.0
-//    var totalBreakTime = 300.0
-    var breakTimeRemaining = 5.0
-    var totalBreakTime = 5.0
-//    var longBreakTimeRemaining = 1200.0
-//    var totalLongBreakTime = 1200.0
-    var longBreakTimeRemaining = 10.00
-    var totalLongBreakTime = 10.0
+    var timeRemaining = 1500.0
+    var totalTime = 1500.0
+//    var timeRemaining = 5.0
+//    var totalTime = 5.0
+    var breakTimeRemaining = 300.0
+    var totalBreakTime = 300.0
+//    var breakTimeRemaining = 5.0
+//    var totalBreakTime = 5.0
     var timerIsOn = false
     var timer = Timer()
     var buttonSound = AVAudioPlayer()
@@ -41,11 +37,8 @@ class CountdownViewController: UIViewController {
         
         if !self.store.userIsOnBreak {
             timer.invalidate()
-            //uncomment these 1500
-//            timeRemaining = 1500
-//            totalTime = 1500
-            timeRemaining = 5.0
-            totalTime = 5.0
+            timeRemaining = 1500
+            totalTime = 1500
             timeLabel.text = "25:00"
             timerIsOn = false
             playBtn.isEnabled = true
@@ -131,7 +124,6 @@ class CountdownViewController: UIViewController {
             timeLabel.isHidden = false
             progressView.trackTintColor = Constants.red
             playBtn.isEnabled = true
-            
         }
     }
     
@@ -152,37 +144,8 @@ class CountdownViewController: UIViewController {
         let secondsLeft = Int(breakTimeRemaining) % 60
         breakTimeLabel.text = "\(minutesLeft):\(secondsLeft)"
         timerIsOn = false
-        manageTimerEnd(seconds: breakTimeRemaining) //delete this
+        manageTimerEnd(seconds: breakTimeRemaining)
     }
-    
-    func longBreakTimerRunning() {
-        longBreakTimeRemaining -= 1
-        progressView.setProgress(Float(longBreakTimeRemaining)/Float(totalLongBreakTime), animated: false)
-        let minutesLeft = Int(longBreakTimeRemaining) / 60 % 60
-        let secondsLeft = Int(longBreakTimeRemaining) % 60
-        breakTimeLabel.text = "\(minutesLeft):\(secondsLeft)"
-        timerIsOn = false
-        manageTimerEnd(seconds: longBreakTimeRemaining) //delete this
-    }
-    
-
-    
-    
-    //delete this function!
-    func setupBreakTimer() {
-        breakTimeLabel.isHidden = false
-        timeLabel.isHidden = true
-        progressView.trackTintColor = Constants.aqua
-    }
-        
-//        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbPopUpID") as! PopUpViewController
-//        self.addChildViewController(popOverVC)
-//        popOverVC.view.frame = self.view.frame
-//        self.view.addSubview(popOverVC.view)
-//        popOverVC.didMove(toParentViewController: self)
-
-    
-
     
     func setupTimerBell() {
         do {

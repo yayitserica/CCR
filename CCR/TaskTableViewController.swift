@@ -31,7 +31,6 @@ class TaskTableViewController: UIViewController, UITableViewDelegate, UITableVie
         cell.goalLabel.text = self.store.goals.last?.description
         cell.taskLabel.text = self.store.tasks[indexPath.row].description
         cell.starLabel.text = self.store.tasks[indexPath.row].rating
-        
         return cell
     }
 
