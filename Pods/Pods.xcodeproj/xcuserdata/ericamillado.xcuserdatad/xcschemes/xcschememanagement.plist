@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>paper-onboarding.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -27,12 +32,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>61D35567A97DCB9EA378A0AB8F30ECD6</key>
+		<key>A995787462BC8557FFBE51B108953BE2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A995787462BC8557FFBE51B108953BE2</key>
+		<key>C47A99E408D82A3E80B59041116EF5B6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ECEF58261CE28107B53ECAE7205CE3DA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C47A99E408D82A3E80B59041116EF5B6"
-               BuildableName = "Pods_CCR.framework"
-               BlueprintName = "Pods-CCR"
+               BlueprintIdentifier = "ECEF58261CE28107B53ECAE7205CE3DA"
+               BuildableName = "paper_onboarding.framework"
+               BlueprintName = "paper-onboarding"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C47A99E408D82A3E80B59041116EF5B6"
-            BuildableName = "Pods_CCR.framework"
-            BlueprintName = "Pods-CCR"
+            BlueprintIdentifier = "ECEF58261CE28107B53ECAE7205CE3DA"
+            BuildableName = "paper_onboarding.framework"
+            BlueprintName = "paper-onboarding"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

@@ -3,15 +3,18 @@ PODS:
     - Charts/Core (= 3.0.1)
   - Charts/Core (3.0.1)
   - Cosmos (8.0.2)
+  - paper-onboarding (2.0.1)
 
 DEPENDENCIES:
   - Charts (~> 3.0.1)
   - Cosmos (~> 8.0)
+  - paper-onboarding (~> 2.0.1)
 
 SPEC CHECKSUMS:
   Charts: 0e84f4418e87dad6a9edde221fba37ebb51d3ba7
   Cosmos: 007c0b8e33a85e5363911bdd933571bbe221f7ef
+  paper-onboarding: a8e001214d9ce9decf78e160b3823f396dbd51ac
 
-PODFILE CHECKSUM: f448cdd13ca3fe026ffda6af9c441c1c7ef9be79
+PODFILE CHECKSUM: 1615d16e550be0a7d57f0d081d721155fdaeb0b2
 
 COCOAPODS: 1.1.1

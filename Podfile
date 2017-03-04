@@ -9,6 +9,7 @@ target 'CCR' do
 
   pod 'Cosmos', '~> 8.0'
   pod 'Charts', '~> 3.0.1'
+  pod 'paper-onboarding', '~> 2.0.1'
   
 end
 
