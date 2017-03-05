@@ -11,6 +11,7 @@ import UIKit
 class TaskTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let store = DataStore.sharedInstance
+    var deleteTaskIndexPath: IndexPath? = nil
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -34,6 +35,45 @@ class TaskTableViewController: UIViewController, UITableViewDelegate, UITableVie
         return cell
     }
 
+    //this delegate method causes the buttons to appear on swipe (when I swipe left to delete the cell)
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        //1 - we evaluate the editing style from the method's parameter list and compare it to the .delete editing style to know that the delete button was tapped
+        if editingStyle == .delete {
+            //2 - store the index path in a class-viewable variable so we can use it later on when we handle the deletion
+            deleteTaskIndexPath = indexPath
+            let taskToDelete = self.store.tasks[indexPath.row]
+            //3 - call the confirmeDelete function
+            confirmDelete(task: taskToDelete)
+        }
+    }
+    
+    //4 - this method confirms that the user really wants to delete a particular task they've initiated the delete action on
+    func confirmDelete(task: Task) {
+        let alert = UIAlertController(title: "Delete Task", message: "Are you sure you want to permanently delete \(task.description)?", preferredStyle: .actionSheet)
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: handleDeleteTask)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: cancelDeleteTask)
+        alert.addAction(deleteAction)
+        alert.addAction(cancelAction)
+        
+        //support display in ipad
+        alert.popoverPresentationController?.sourceView = self.view
+        alert.popoverPresentationController?.sourceRect = CGRect(x: (self.view.bounds.size.width/2.0), y: (self.view.bounds.size.height)/2.0, width: 1.0, height: 1.0)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func handleDeleteTask(alertAction: UIAlertAction!) {
+        if let indexPath = deleteTaskIndexPath {
+            tableView.beginUpdates()
+            
+            self.store.tasks.remove(at: indexPath.row)
+            
+            //note that indexPath is wrapped in an array: [indexPath]
+        }
+    }
+    
+    func cancelDeleteTask(alertAction: UIAlertAction!) {
+        
+    }
 
 }
 

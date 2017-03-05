@@ -1,41 +1,41 @@
+////
+////  OnboardingViewController.swift
+////  CCR
+////
+////  Created by Erica Millado on 3/3/17.
+////  Copyright © 2017 Erica Millado. All rights reserved.
+////
 //
-//  OnboardingViewController.swift
-//  CCR
+//import UIKit
 //
-//  Created by Erica Millado on 3/3/17.
-//  Copyright © 2017 Erica Millado. All rights reserved.
+//class OnboardingViewController: UIViewController, PaperOnboardingDataSource {
 //
-
-import UIKit
-
-class OnboardingViewController: UIViewController, PaperOnboardingDataSource {
-
-    @IBOutlet weak var onboardingView: OnboardingView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        configureOnboardingView()
-    }
-    
-    func configureOnboardingView() {
-        //add data source to our onboardingdata view
-        onboardingView.dataSource = self
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
+//    @IBOutlet weak var onboardingView: OnboardingView!
+//    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        configureOnboardingView()
+//    }
+//    
+//    func configureOnboardingView() {
+//        //add data source to our onboardingdata view
+//        onboardingView.dataSource = self
+//    }
+//
+//    override func didReceiveMemoryWarning() {
+//        super.didReceiveMemoryWarning()
+//        // Dispose of any resources that can be recreated.
+//    }
+//    
+//
+//    /*
+//    // MARK: - Navigation
+//
+//    // In a storyboard-based application, you will often want to do a little preparation before navigation
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        // Get the new view controller using segue.destinationViewController.
+//        // Pass the selected object to the new view controller.
+//    }
+//    */
+//
+//}
