@@ -49,7 +49,8 @@ class TaskTableViewController: UIViewController, UITableViewDelegate, UITableVie
     
     //4 - this method confirms that the user really wants to delete a particular task they've initiated the delete action on
     func confirmDelete(task: Task) {
-        let alert = UIAlertController(title: "Delete Task", message: "Are you sure you want to permanently delete \(task.description)?", preferredStyle: .actionSheet)
+        guard let unwrappedTask = task else { return }
+        let alert = UIAlertController(title: "Delete Task", message: "Are you sure you want to permanently delete \(unwrappedTask.description)?", preferredStyle: .actionSheet)
         let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: handleDeleteTask)
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: cancelDeleteTask)
         alert.addAction(deleteAction)
@@ -62,17 +63,25 @@ class TaskTableViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func handleDeleteTask(alertAction: UIAlertAction!) {
+        
         if let indexPath = deleteTaskIndexPath {
+            //.beginUpdates signals the start of UI updates to the tableview
             tableView.beginUpdates()
-            
+            //removes the task from the data source using the deleteTaskIndexPath we set in the alert controller step
             self.store.tasks.remove(at: indexPath.row)
             
             //note that indexPath is wrapped in an array: [indexPath]
+            //removes the task from the UI
+            tableView.deleteRows(at: [indexPath], with: .automatic) //you can delete several rows at a time
+            //resets the deletePlanetIndexPath variable to nil
+            deleteTaskIndexPath = nil
+            //this completes the UI updates
+            tableView.endUpdates()
         }
     }
     
     func cancelDeleteTask(alertAction: UIAlertAction!) {
-        
+        deleteTaskIndexPath = nil
     }
 
 }
