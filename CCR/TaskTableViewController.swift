@@ -35,6 +35,15 @@ class TaskTableViewController: UIViewController, UITableViewDelegate, UITableVie
         return cell
     }
 
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        var deleteButton = UITableViewRowAction(style: .default, title: "🗑") { (action, indexPath) in
+            self.tableView.dataSource?.tableView?(self.tableView, commit: .delete, forRowAt: indexPath)
+            return
+        }
+        deleteButton.backgroundColor = Constants.grey
+        return [deleteButton]
+    }
+    
     //this delegate method causes the buttons to appear on swipe (when I swipe left to delete the cell)
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         //1 - we evaluate the editing style from the method's parameter list and compare it to the .delete editing style to know that the delete button was tapped
@@ -50,11 +59,15 @@ class TaskTableViewController: UIViewController, UITableViewDelegate, UITableVie
     //4 - this method confirms that the user really wants to delete a particular task they've initiated the delete action on
     func confirmDelete(task: Task) {
         guard let taskDescription = task.description else { return }
-        let alert = UIAlertController(title: "Delete Task", message: "Are you sure you want to permanently delete '\(taskDescription)'?", preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: "Delete Task", message: "", preferredStyle: .actionSheet)
         let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: handleDeleteTask)
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: cancelDeleteTask)
         alert.addAction(deleteAction)
         alert.addAction(cancelAction)
+        
+        let titleFont:[String : AnyObject] = [ NSFontAttributeName : UIFont(name: "OpenSans-Semibold", size: 18)! ]
+        let attributedTitle = NSMutableAttributedString(string: "Are you sure you want to permanently delete '\(taskDescription)'?", attributes: titleFont)
+        alert.setValue(attributedTitle, forKey: "attributedTitle")
         
         //support display in ipad
         alert.popoverPresentationController?.sourceView = self.view
