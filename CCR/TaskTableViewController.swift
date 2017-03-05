@@ -49,8 +49,8 @@ class TaskTableViewController: UIViewController, UITableViewDelegate, UITableVie
     
     //4 - this method confirms that the user really wants to delete a particular task they've initiated the delete action on
     func confirmDelete(task: Task) {
-        guard let unwrappedTask = task else { return }
-        let alert = UIAlertController(title: "Delete Task", message: "Are you sure you want to permanently delete \(unwrappedTask.description)?", preferredStyle: .actionSheet)
+        guard let taskDescription = task.description else { return }
+        let alert = UIAlertController(title: "Delete Task", message: "Are you sure you want to permanently delete '\(taskDescription)'?", preferredStyle: .actionSheet)
         let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: handleDeleteTask)
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: cancelDeleteTask)
         alert.addAction(deleteAction)
