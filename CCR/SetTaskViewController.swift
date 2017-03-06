@@ -28,7 +28,7 @@ class SetTaskViewController: UIViewController {
             noGoalAlert.view.tintColor = Constants.red
         } else {
             let newTask = Task()
-            newTask.description = taskTextField.text //captures the task description
+            newTask.description = taskTextField.text! //captures the task description
 //            self.store.goals.last?.Task = newTask //associates this task with a goal
             self.store.goals.last?.tasks.append(newTask) //WONDERING IF THIS WILL WORK
             print("the number of tasks for this given goal is \(self.store.goals.last?.tasks.count)")

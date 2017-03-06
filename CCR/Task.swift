@@ -10,6 +10,7 @@ import Foundation
 
 class Task {
     var rating: String?
-    var description: String?
+//    var description: String? 
+    var description: String = ""
     
 }

@@ -64,7 +64,7 @@ class TaskTableViewController: UIViewController, UITableViewDelegate, UITableVie
     
     //4 - this method confirms that the user really wants to delete a particular task they've initiated the delete action on
     func confirmDelete(task: Task) {
-        guard let taskDescription = task.description else { return }
+//        guard let taskDescription = task.description else { return }
         let alert = UIAlertController(title: "Delete Task", message: "", preferredStyle: .actionSheet)
         let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: handleDeleteTask)
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: cancelDeleteTask)
@@ -72,7 +72,8 @@ class TaskTableViewController: UIViewController, UITableViewDelegate, UITableVie
         alert.addAction(cancelAction)
         
         let titleFont:[String : AnyObject] = [ NSFontAttributeName : UIFont(name: "OpenSans-Semibold", size: 18)! ]
-        let attributedTitle = NSMutableAttributedString(string: "Are you sure you want to permanently delete '\(taskDescription)'?", attributes: titleFont)
+//        let attributedTitle = NSMutableAttributedString(string: "Are you sure you want to permanently delete '\(taskDescription)'?", attributes: titleFont)
+        let attributedTitle = NSMutableAttributedString(string: "Are you sure you want to permanently delete '\(task.description)'?", attributes: titleFont)
         alert.setValue(attributedTitle, forKey: "attributedTitle")
         
         //support display in ipad
