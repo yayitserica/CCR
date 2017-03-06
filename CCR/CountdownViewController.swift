@@ -158,7 +158,8 @@ class CountdownViewController: UIViewController {
     
     func formatInitialViews() {
         navigationController?.isNavigationBarHidden = true
-        goalLabel.text = self.store.tasks.last?.description
+//        goalLabel.text = self.store.tasks.last?.description
+        goalLabel.text = self.store.goals.last?.tasks.last?.description
         breakTimeLabel.isHidden = true
         resetBtn.layer.borderColor = Constants.red.cgColor
         resetBtn.layer.cornerRadius = 8

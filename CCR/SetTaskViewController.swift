@@ -29,8 +29,10 @@ class SetTaskViewController: UIViewController {
         } else {
             let newTask = Task()
             newTask.description = taskTextField.text //captures the task description
-            self.store.goals.last?.Task = newTask //associates this task with a goal
-            self.store.tasks.append(newTask) //adds it to the task array
+//            self.store.goals.last?.Task = newTask //associates this task with a goal
+            self.store.goals.last?.tasks.append(newTask) //WONDERING IF THIS WILL WORK
+//            self.store.tasks.append(newTask) //adds it to the task array
+            self.store.goals.last?.tasks.append(newTask)
             self.performSegue(withIdentifier: "toTabBar", sender: self)
         }
     }
