@@ -8,7 +8,12 @@
 
 import Foundation
 
+//class Goal {
+//    var description: String = ""
+//    var Task: Task? = nil
+//}
+
 class Goal {
     var description: String = ""
-    var Task: Task? = nil
+    var tasks: [Task] = []
 }
