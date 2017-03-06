@@ -89,7 +89,7 @@ class TaskTableViewController: UIViewController, UITableViewDelegate, UITableVie
             //removes the task from the data source using the deleteTaskIndexPath we set in the alert controller step
 //            self.store.tasks.remove(at: indexPath.row)
             self.store.goals.last?.tasks.remove(at: indexPath.row)
-            
+            print("The task array count for this current goal is now \(self.store.goals.last?.tasks.count)")
             //note that indexPath is wrapped in an array: [indexPath]
             //removes the task from the UI
             tableView.deleteRows(at: [indexPath], with: .automatic) //you can delete several rows at a time

@@ -41,6 +41,7 @@ class SetGoalViewController: UIViewController {
                 newGoal.description = unwrappedText
             }
             self.store.goals.append(newGoal)
+            print("the number of goals is \(self.store.goals.count)")
             self.performSegue(withIdentifier: "toSetTask", sender: self)
         }
     }

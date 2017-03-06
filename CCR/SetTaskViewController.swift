@@ -31,8 +31,8 @@ class SetTaskViewController: UIViewController {
             newTask.description = taskTextField.text //captures the task description
 //            self.store.goals.last?.Task = newTask //associates this task with a goal
             self.store.goals.last?.tasks.append(newTask) //WONDERING IF THIS WILL WORK
+            print("the number of tasks for this given goal is \(self.store.goals.last?.tasks.count)")
 //            self.store.tasks.append(newTask) //adds it to the task array
-            self.store.goals.last?.tasks.append(newTask)
             self.performSegue(withIdentifier: "toTabBar", sender: self)
         }
     }
