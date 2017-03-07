@@ -179,11 +179,12 @@
                         <outlet property="noButton" destination="efB-6l-jw4" id="Rwf-zX-0gj"/>
                         <outlet property="yesButton" destination="RKv-xN-obA" id="wf2-p6-BGj"/>
                         <segue destination="CdQ-zQ-UnB" kind="show" identifier="toBrandNewTask" id="fyN-kp-gjh"/>
+                        <segue destination="1q4-hl-mjE" kind="show" identifier="toCountDownVC" id="0X2-1l-amE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KfY-mJ-hHg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1167" y="466"/>
+            <point key="canvasLocation" x="1022" y="597"/>
         </scene>
         <!--Timer-->
         <scene sceneID="5zO-yU-AIP">
@@ -270,7 +271,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QdR-SA-TgD">
-                                <rect key="frame" x="-374.5" y="233.5" width="324" height="200"/>
+                                <rect key="frame" x="-375" y="233.5" width="324" height="200"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flK-0P-8GU">
                                         <rect key="frame" x="100" y="8" width="124" height="38.5"/>
@@ -397,7 +398,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bbq-mN-4xH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="456.80000000000001" y="465.51724137931041"/>
+            <point key="canvasLocation" x="148" y="597"/>
         </scene>
         <!--Pop Up View Controller-->
         <scene sceneID="N6o-E1-8or">
@@ -800,7 +801,7 @@
         <image name="To Do-25" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="HeJ-rs-jG5"/>
+        <segue reference="0X2-1l-amE"/>
         <segue reference="mqc-AQ-jjb"/>
     </inferredMetricsTieBreakers>
 </document>

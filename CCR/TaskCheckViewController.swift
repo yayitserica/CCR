@@ -31,7 +31,9 @@ class TaskCheckViewController: UIViewController {
         print("the array now has \(self.store.goals.last?.tasks.count)")
 //        dump(self.store.tasks)
         self.store.userIsOnBreak = false
-        self.navigationController?.popViewController(animated: true)
+        //delete this
+//        self.navigationController?.popViewController(animated: true)
+        self.performSegue(withIdentifier: "toCountDownVC", sender: self)
     }
     
     @IBAction func noButtonTapped(_ sender: Any) {
@@ -47,11 +49,12 @@ class TaskCheckViewController: UIViewController {
         self.present(goalCheckVC, animated: true, completion: nil)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        _ = segue.destination as! SetNewTaskViewController
-        print("Hey I am being called")
-    }
-    
+    //delete this
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        _ = segue.destination as! SetNewTaskViewController
+//        print("Hey I am being called")
+//    }
+//    
 
     override func viewDidLoad() {
         super.viewDidLoad()
