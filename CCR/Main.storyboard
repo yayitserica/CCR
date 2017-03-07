@@ -225,8 +225,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal text goes here" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="0SO-xC-Ark">
-                                <rect key="frame" x="26" y="80" width="270.5" height="100"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task text goes here" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="0SO-xC-Ark">
+                                <rect key="frame" x="26" y="80" width="267" height="100"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="30"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -265,7 +265,83 @@
                                 <state key="normal" title="Edit">
                                     <color key="titleColor" red="1" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="showEditTaskPopUp:" destination="axF-ZI-INX" eventType="touchUpInside" id="Xca-h6-gne"/>
+                                </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QdR-SA-TgD">
+                                <rect key="frame" x="-374.5" y="233.5" width="324" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flK-0P-8GU">
+                                        <rect key="frame" x="100" y="8" width="124" height="38.5"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter New Goal" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="65C-Ey-An8">
+                                        <rect key="frame" x="10" y="76.5" width="304" height="50"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ud7-pA-KgZ">
+                                        <rect key="frame" x="120" y="146.5" width="84" height="36"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="17"/>
+                                        <state key="normal" title="Submit">
+                                            <color key="titleColor" red="1" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                <color key="value" red="1" green="0.31764705882352939" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="closeEditTaskPopUp:" destination="axF-ZI-INX" eventType="touchUpInside" id="BFz-d8-nZt"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.70588235290000001" green="0.70588235290000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="65C-Ey-An8" secondAttribute="trailing" constant="10" id="6Id-QV-HM9"/>
+                                    <constraint firstAttribute="trailing" secondItem="flK-0P-8GU" secondAttribute="trailing" constant="100" id="C8t-4z-5T2"/>
+                                    <constraint firstAttribute="trailing" secondItem="ud7-pA-KgZ" secondAttribute="trailing" constant="120" id="IRw-I0-56P"/>
+                                    <constraint firstItem="65C-Ey-An8" firstAttribute="leading" secondItem="QdR-SA-TgD" secondAttribute="leading" constant="10" id="UdU-Fg-vFy"/>
+                                    <constraint firstItem="65C-Ey-An8" firstAttribute="top" secondItem="flK-0P-8GU" secondAttribute="bottom" constant="30" id="gkP-gw-THe"/>
+                                    <constraint firstItem="flK-0P-8GU" firstAttribute="top" secondItem="QdR-SA-TgD" secondAttribute="top" constant="8" id="iZ3-dC-5Pf"/>
+                                    <constraint firstItem="65C-Ey-An8" firstAttribute="height" secondItem="QdR-SA-TgD" secondAttribute="height" multiplier="0.25" constant="0.14999999999999999" id="itR-yc-dcz"/>
+                                    <constraint firstItem="ud7-pA-KgZ" firstAttribute="leading" secondItem="QdR-SA-TgD" secondAttribute="leading" constant="120" id="shX-R2-a3r"/>
+                                    <constraint firstItem="ud7-pA-KgZ" firstAttribute="top" secondItem="65C-Ey-An8" secondAttribute="bottom" constant="20" id="wey-8c-KjZ"/>
+                                    <constraint firstItem="flK-0P-8GU" firstAttribute="leading" secondItem="QdR-SA-TgD" secondAttribute="leading" constant="100" id="yBb-r3-Wk5"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -278,6 +354,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="1RI-tL-2zu" secondAttribute="trailing" id="9Ra-bD-VkT"/>
                             <constraint firstItem="qov-Yk-fMm" firstAttribute="top" secondItem="CqV-vS-ug2" secondAttribute="bottom" constant="95" id="9ZZ-iJ-Yqn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="sOt-kN-qa6" secondAttribute="trailing" id="9va-8y-lj1"/>
+                            <constraint firstItem="QdR-SA-TgD" firstAttribute="centerX" secondItem="4fL-l7-wh4" secondAttribute="centerX" constant="-400" id="AZG-DB-Daw"/>
                             <constraint firstItem="4wC-Zh-QeS" firstAttribute="height" secondItem="4fL-l7-wh4" secondAttribute="height" multiplier="0.1" id="ClP-2R-FK8"/>
                             <constraint firstItem="sOt-kN-qa6" firstAttribute="baseline" secondItem="1RI-tL-2zu" secondAttribute="baseline" id="FA5-QM-VOU"/>
                             <constraint firstItem="qg2-EH-SRa" firstAttribute="centerX" secondItem="4fL-l7-wh4" secondAttribute="centerX" id="Hxe-Cu-QWW"/>
@@ -292,6 +369,8 @@
                             <constraint firstAttribute="trailingMargin" secondItem="SGb-TY-Ixa" secondAttribute="trailing" constant="20" id="eNk-zD-js8"/>
                             <constraint firstItem="0SO-xC-Ark" firstAttribute="height" secondItem="4fL-l7-wh4" secondAttribute="height" multiplier="0.15" id="f8T-CC-Tor"/>
                             <constraint firstAttribute="leadingMargin" secondItem="sOt-kN-qa6" secondAttribute="leading" id="gER-f7-IAf"/>
+                            <constraint firstItem="QdR-SA-TgD" firstAttribute="height" secondItem="4fL-l7-wh4" secondAttribute="height" multiplier="0.3" id="oCI-cP-F8O"/>
+                            <constraint firstItem="QdR-SA-TgD" firstAttribute="centerY" secondItem="4fL-l7-wh4" secondAttribute="centerY" id="sD5-Rt-cSF"/>
                             <constraint firstItem="uu0-KP-Kty" firstAttribute="width" secondItem="4fL-l7-wh4" secondAttribute="width" multiplier="0.4" id="tV0-ix-AAB"/>
                             <constraint firstItem="4wC-Zh-QeS" firstAttribute="top" secondItem="CqV-vS-ug2" secondAttribute="bottom" constant="-20" id="w2N-ST-nQO"/>
                             <constraint firstItem="0SO-xC-Ark" firstAttribute="leading" secondItem="4fL-l7-wh4" secondAttribute="leadingMargin" constant="10" id="x4T-fy-GX8"/>
@@ -302,6 +381,10 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="breakTimeLabel" destination="1RI-tL-2zu" id="sfu-nB-3nS"/>
+                        <outlet property="editTaskConstraint" destination="AZG-DB-Daw" id="iXI-Wl-7vy"/>
+                        <outlet property="editTaskPopUp" destination="QdR-SA-TgD" id="4kC-GZ-ThH"/>
+                        <outlet property="editTaskSubmitBtn" destination="ud7-pA-KgZ" id="ZUw-Br-aOX"/>
+                        <outlet property="editTaskTextField" destination="65C-Ey-An8" id="hBE-QB-e6B"/>
                         <outlet property="goalLabel" destination="0SO-xC-Ark" id="zPg-ui-Scu"/>
                         <outlet property="pauseBtn" destination="W9f-y2-ncU" id="ohT-w2-CAl"/>
                         <outlet property="playBtn" destination="ews-9v-NoD" id="shs-lj-11Y"/>
@@ -314,7 +397,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bbq-mN-4xH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="458" y="466"/>
+            <point key="canvasLocation" x="456.80000000000001" y="465.51724137931041"/>
         </scene>
         <!--Pop Up View Controller-->
         <scene sceneID="N6o-E1-8or">
@@ -531,7 +614,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-242.40000000000001" y="465.51724137931041"/>
+            <point key="canvasLocation" x="-1015" y="466"/>
         </scene>
         <!--Set New Task View Controller-->
         <scene sceneID="pLh-Dv-D1M">
@@ -689,39 +772,6 @@
             </objects>
             <point key="canvasLocation" x="-1292" y="-300"/>
         </scene>
-        <!--Onboarding View Controller-->
-        <scene sceneID="gc7-cl-gNm">
-            <objects>
-                <viewController id="RP7-Re-YSo" customClass="OnboardingViewController" customModule="CCR" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="gsl-dj-fcW"/>
-                        <viewControllerLayoutGuide type="bottom" id="0tW-vI-4KK"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ags-hI-yRe">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jEK-Xa-zkh" customClass="OnboardingView" customModule="CCR" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="jEK-Xa-zkh" firstAttribute="leading" secondItem="ags-hI-yRe" secondAttribute="leadingMargin" constant="-16" id="Jqf-KU-xd9"/>
-                            <constraint firstItem="jEK-Xa-zkh" firstAttribute="top" secondItem="gsl-dj-fcW" secondAttribute="bottom" constant="-20" id="Jsj-AG-s1K"/>
-                            <constraint firstItem="0tW-vI-4KK" firstAttribute="top" secondItem="jEK-Xa-zkh" secondAttribute="bottom" id="ZPx-Wo-SiH"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="jEK-Xa-zkh" secondAttribute="trailing" constant="-16" id="xS7-Cw-NA4"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="onboardingView" destination="jEK-Xa-zkh" id="FU3-hq-ceM"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wwZ-H0-F5p" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2908.5" y="-297.5"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qm7-ey-EG0">
             <objects>
@@ -750,7 +800,7 @@
         <image name="To Do-25" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="HeJ-rs-jG5"/>
         <segue reference="mqc-AQ-jjb"/>
-        <segue reference="iKz-ol-OGj"/>
     </inferredMetricsTieBreakers>
 </document>

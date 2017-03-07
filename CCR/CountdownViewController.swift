@@ -32,6 +32,10 @@ class CountdownViewController: UIViewController {
     @IBOutlet weak var playBtn: UIButton!
     @IBOutlet weak var pauseBtn: UIButton!
     @IBOutlet weak var resetBtn: UIButton!
+    @IBOutlet weak var editTaskTextField: UITextField!
+    @IBOutlet weak var editTaskSubmitBtn: UIButton!
+    @IBOutlet weak var editTaskConstraint: NSLayoutConstraint!
+    @IBOutlet weak var editTaskPopUp: UIView!
     
     @IBAction func resetButtonTapped(_ sender: Any) {
         
@@ -165,6 +169,28 @@ class CountdownViewController: UIViewController {
         resetBtn.layer.cornerRadius = 8
         resetBtn.layer.borderWidth = 1
         progressView.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI_2) * 2)
+        editTaskPopUp.layer.borderColor = Constants.red.cgColor
+        editTaskSubmitBtn.layer.borderColor = Constants.red.cgColor
     }
 
+    @IBAction func showEditTaskPopUp(_ sender: Any) {
+        editTaskConstraint.constant = 0
+        
+        UIView.animate(withDuration: 0.3) { 
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    @IBAction func closeEditTaskPopUp(_ sender: Any) {
+        //animates the view back off the screen
+        editTaskConstraint.constant = -400
+        if editTaskTextField.text != "" {
+            guard let unwrappedEditedTask = editTaskTextField.text else { return }
+            self.store.goals.last?.tasks.last?.description = unwrappedEditedTask
+            goalLabel.text = unwrappedEditedTask
+        }
+        UIView.animate(withDuration: 0.1) {
+            self.view.layoutIfNeeded()
+        }
+    }
 }
