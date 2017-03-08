@@ -39,9 +39,9 @@ class OnboardingViewController: UIViewController, PaperOnboardingDataSource {
         
         // (imageName: String, title: String, description: String, iconName: String, color: UIColor, titleColor: UIColor, descriptionColor: UIColor, titleFont: UIFont, descriptionFont: UIFont)
         
-//        return [("Goal Filled-100", "Timer Filled-100", "Todo List-100")]
         return [("Goal Filled-100red", "Set a Goal", "Think of major project you want to work on.  It can be a new app idea or a side project.  Example: MAKE A PERSONAL WEBSITE.", "", backgroundColor1, UIColor.black, UIColor.black, titleFont, descriptionFont)][index]
         
+        [("Timer Filled-100", "Do a 25 Min. Sprint", "For your goal, decide on ONE task you need to work on to accomplish your goal.  Example: CREATE WIREFRAMES FOR WEBSITE.", "", backgroundColor2, UIColor.white, UIColor.white, titleFont, descriptionFont)]
         
     }
 
