@@ -24,16 +24,13 @@ class TaskTableViewController: UIViewController, UITableViewDelegate, UITableVie
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return store.tasks.count
         return (store.goals.last?.tasks.count)!
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath) as! TaskCell
         cell.goalLabel.text = self.store.goals.last?.description
-//        cell.taskLabel.text = self.store.tasks[indexPath.row].description
         cell.taskLabel.text = self.store.goals.last?.tasks[indexPath.row].description
-//        cell.starLabel.text = self.store.tasks[indexPath.row].rating
         cell.starLabel.text = self.store.goals.last?.tasks[indexPath.row].rating
         return cell
     }
@@ -53,7 +50,6 @@ class TaskTableViewController: UIViewController, UITableViewDelegate, UITableVie
         if editingStyle == .delete {
             //2 - store the index path in a class-viewable variable so we can use it later on when we handle the deletion
             deleteTaskIndexPath = indexPath
-//            let taskToDelete = self.store.tasks[indexPath.row]
             if let taskToDelete = self.store.goals.last?.tasks[indexPath.row] {
                 //3 - call the confirmeDelete function
                 confirmDelete(task: taskToDelete)
@@ -72,7 +68,6 @@ class TaskTableViewController: UIViewController, UITableViewDelegate, UITableVie
         alert.addAction(cancelAction)
         
         let titleFont:[String : AnyObject] = [ NSFontAttributeName : UIFont(name: "OpenSans-Semibold", size: 18)! ]
-//        let attributedTitle = NSMutableAttributedString(string: "Are you sure you want to permanently delete '\(taskDescription)'?", attributes: titleFont)
         let attributedTitle = NSMutableAttributedString(string: "Are you sure you want to permanently delete '\(task.description)'?", attributes: titleFont)
         alert.setValue(attributedTitle, forKey: "attributedTitle")
         
@@ -88,7 +83,6 @@ class TaskTableViewController: UIViewController, UITableViewDelegate, UITableVie
             //.beginUpdates signals the start of UI updates to the tableview
             tableView.beginUpdates()
             //removes the task from the data source using the deleteTaskIndexPath we set in the alert controller step
-//            self.store.tasks.remove(at: indexPath.row)
             self.store.goals.last?.tasks.remove(at: indexPath.row)
             print("The task array count for this current goal is now \(self.store.goals.last?.tasks.count)")
             //note that indexPath is wrapped in an array: [indexPath]

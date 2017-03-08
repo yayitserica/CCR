@@ -162,7 +162,6 @@ class CountdownViewController: UIViewController {
     
     func formatInitialViews() {
         navigationController?.isNavigationBarHidden = true
-//        goalLabel.text = self.store.tasks.last?.description
         goalLabel.text = self.store.goals.last?.tasks.last?.description
         breakTimeLabel.isHidden = true
         resetBtn.layer.borderColor = Constants.red.cgColor
@@ -175,7 +174,6 @@ class CountdownViewController: UIViewController {
 
     @IBAction func showEditTaskPopUp(_ sender: Any) {
         editTaskConstraint.constant = 0
-        
         UIView.animate(withDuration: 0.3) { 
             self.view.layoutIfNeeded()
         }

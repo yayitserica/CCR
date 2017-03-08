@@ -232,17 +232,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="qg2-EH-SRa">
-                                <rect key="frame" x="125" y="307" width="125" height="50"/>
+                                <rect key="frame" x="150" y="307" width="75" height="25"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ews-9v-NoD">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
                                         <state key="normal" image="Play Filled-50"/>
                                         <connections>
                                             <action selector="playButtonTapped:" destination="axF-ZI-INX" eventType="touchUpInside" id="kar-ep-nbb"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9f-y2-ncU">
-                                        <rect key="frame" x="75" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="50" y="0.0" width="25" height="25"/>
                                         <state key="normal" image="Pause Filled-50"/>
                                         <connections>
                                             <action selector="pauseButtonTapped:" destination="axF-ZI-INX" eventType="touchUpInside" id="UCV-5y-8kM"/>
@@ -251,7 +251,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uu0-KP-Kty">
-                                <rect key="frame" x="113" y="407" width="150" height="47"/>
+                                <rect key="frame" x="113" y="382" width="150" height="47"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="13"/>
                                 <state key="normal" title="RESET TIMER">
                                     <color key="titleColor" red="1" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -271,7 +271,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QdR-SA-TgD">
-                                <rect key="frame" x="-375" y="233.5" width="324" height="200"/>
+                                <rect key="frame" x="-374.5" y="234" width="324" height="200"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flK-0P-8GU">
                                         <rect key="frame" x="100" y="8" width="124" height="38.5"/>
@@ -700,7 +700,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WKJ-4u-j7D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1881" y="466"/>
+            <point key="canvasLocation" x="1782" y="597"/>
         </scene>
         <!--Set Goal View Controller-->
         <scene sceneID="Av1-d6-X0q">
@@ -773,6 +773,40 @@
             </objects>
             <point key="canvasLocation" x="-1292" y="-300"/>
         </scene>
+        <!--Onboarding View Controller-->
+        <scene sceneID="Geq-Uj-pSd">
+            <objects>
+                <viewController id="2Pm-oF-QtE" customClass="OnboardingViewController" customModule="CCR" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wY2-LE-Dfz"/>
+                        <viewControllerLayoutGuide type="bottom" id="2CA-lC-PQu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a88-vh-zeA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nqz-Xb-rYG" customClass="OnboardingView" customModule="CCR" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Nqz-Xb-rYG" firstAttribute="top" secondItem="a88-vh-zeA" secondAttribute="top" id="0rp-Jy-AaY"/>
+                            <constraint firstAttribute="trailing" secondItem="Nqz-Xb-rYG" secondAttribute="trailing" id="B3n-Ur-1kO"/>
+                            <constraint firstItem="2CA-lC-PQu" firstAttribute="top" secondItem="Nqz-Xb-rYG" secondAttribute="bottom" id="m0e-5d-8gu"/>
+                            <constraint firstItem="Nqz-Xb-rYG" firstAttribute="leading" secondItem="a88-vh-zeA" secondAttribute="leading" id="yHM-US-waC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="oEx-uz-e6n"/>
+                    <connections>
+                        <outlet property="onboardingView" destination="Nqz-Xb-rYG" id="Pig-L9-cM6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oeh-sf-lrI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1996" y="-300"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qm7-ey-EG0">
             <objects>
@@ -784,24 +818,23 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="JmS-DX-pNH" kind="relationship" relationship="rootViewController" id="uol-6N-ygq"/>
+                        <segue destination="2Pm-oF-QtE" kind="relationship" relationship="rootViewController" id="zFg-WO-lAH"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sat-wp-ndz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2006" y="-300"/>
+            <point key="canvasLocation" x="-2730" y="-300"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Pause Filled-50" width="50" height="50"/>
-        <image name="Play Filled-50" width="50" height="50"/>
-        <image name="Timer Filled-25" width="25" height="25"/>
-        <image name="Timer-25" width="25" height="25"/>
-        <image name="To Do Filled-25" width="25" height="25"/>
-        <image name="To Do-25" width="25" height="25"/>
+        <image name="Pause Filled-50" width="25" height="25"/>
+        <image name="Play Filled-50" width="25" height="25"/>
+        <image name="Timer Filled-25" width="12" height="12"/>
+        <image name="Timer-25" width="12" height="12"/>
+        <image name="To Do Filled-25" width="12" height="12"/>
+        <image name="To Do-25" width="12" height="12"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0X2-1l-amE"/>
-        <segue reference="mqc-AQ-jjb"/>
+        <segue reference="egs-bo-ag8"/>
     </inferredMetricsTieBreakers>
 </document>
