@@ -35,7 +35,7 @@ class OnboardingViewController: UIViewController, PaperOnboardingDataSource {
         let backgroundColor2 = Constants.aqua
         let backgroundColor3 = Constants.red
         let titleFont = UIFont(name: "OpenSans-Bold", size: 30)!
-        let descriptionFont = UIFont(name: "OpenSans-SemiBold", size: 16)!
+        let descriptionFont = UIFont(name: "OpenSans-SemiBold", size: 18)!
         
         // (imageName: String, title: String, description: String, iconName: String, color: UIColor, titleColor: UIColor, descriptionColor: UIColor, titleFont: UIFont, descriptionFont: UIFont)
         
