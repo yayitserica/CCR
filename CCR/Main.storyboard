@@ -785,10 +785,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPC-yk-3do">
-                                <rect key="frame" x="120" y="500" width="126" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="25"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nqz-Xb-rYG" customClass="OnboardingView" customModule="CCR" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPC-yk-3do">
+                                <rect key="frame" x="113" y="547" width="150" height="37"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="18"/>
                                 <state key="normal" title="Get Started">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -796,16 +799,15 @@
                                     <segue destination="JmS-DX-pNH" kind="show" id="KYb-Lb-bJ3"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nqz-Xb-rYG" customClass="OnboardingView" customModule="CCR" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Nqz-Xb-rYG" firstAttribute="top" secondItem="a88-vh-zeA" secondAttribute="top" id="0rp-Jy-AaY"/>
                             <constraint firstAttribute="trailing" secondItem="Nqz-Xb-rYG" secondAttribute="trailing" id="B3n-Ur-1kO"/>
+                            <constraint firstItem="WPC-yk-3do" firstAttribute="top" secondItem="Nqz-Xb-rYG" secondAttribute="bottom" constant="-120" id="Kxv-no-5em"/>
                             <constraint firstItem="2CA-lC-PQu" firstAttribute="top" secondItem="Nqz-Xb-rYG" secondAttribute="bottom" id="m0e-5d-8gu"/>
+                            <constraint firstItem="WPC-yk-3do" firstAttribute="width" secondItem="a88-vh-zeA" secondAttribute="width" multiplier="0.4" id="trW-Yd-TgG"/>
+                            <constraint firstItem="WPC-yk-3do" firstAttribute="centerX" secondItem="a88-vh-zeA" secondAttribute="centerX" id="uhw-c7-eWu"/>
                             <constraint firstItem="Nqz-Xb-rYG" firstAttribute="leading" secondItem="a88-vh-zeA" secondAttribute="leading" id="yHM-US-waC"/>
                         </constraints>
                     </view>

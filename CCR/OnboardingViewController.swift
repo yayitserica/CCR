@@ -17,6 +17,9 @@ class OnboardingViewController: UIViewController, PaperOnboardingDataSource, Pap
     override func viewDidLoad() {
         super.viewDidLoad()
         configureOnboardingView()
+        getStartedButton.layer.cornerRadius = 5
+        getStartedButton.layer.borderColor = UIColor.white.cgColor
+        getStartedButton.layer.borderWidth = 2
     }
     
     func configureOnboardingView() {
@@ -57,11 +60,14 @@ class OnboardingViewController: UIViewController, PaperOnboardingDataSource, Pap
         
     }
     
+    //
     func onboardingWillTransitonToIndex(_ index: Int) {
         if index == 1 {
-            UIView.animate(withDuration: 0.2, animations: {
-                self.getStartedButton.alpha = 0
-            })
+            if self.getStartedButton.alpha == 1 {
+                UIView.animate(withDuration: 0.2, animations: {
+                    self.getStartedButton.alpha = 0
+                })
+            }
         }
     }
     
