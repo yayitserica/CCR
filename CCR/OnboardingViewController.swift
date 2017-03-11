@@ -81,4 +81,10 @@ class OnboardingViewController: UIViewController, PaperOnboardingDataSource, Pap
             })
         }
     }
+    
+    @IBAction func getStartedBtnTapped(_ sender: Any) {
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(true, forKey: "onboardingComplete")
+        userDefaults.synchronize()
+    }
 }
