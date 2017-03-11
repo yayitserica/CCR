@@ -36,7 +36,7 @@ class TaskTableViewController: UIViewController, UITableViewDelegate, UITableVie
     }
 
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        var deleteButton = UITableViewRowAction(style: .default, title: "🗑") { (action, indexPath) in
+        let deleteButton = UITableViewRowAction(style: .default, title: "🗑") { (action, indexPath) in
             self.tableView.dataSource?.tableView?(self.tableView, commit: .delete, forRowAt: indexPath)
             return
         }

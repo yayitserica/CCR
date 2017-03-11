@@ -785,6 +785,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPC-yk-3do">
+                                <rect key="frame" x="120" y="500" width="126" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="25"/>
+                                <state key="normal" title="Get Started">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="JmS-DX-pNH" kind="show" id="KYb-Lb-bJ3"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nqz-Xb-rYG" customClass="OnboardingView" customModule="CCR" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -800,6 +811,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="oEx-uz-e6n"/>
                     <connections>
+                        <outlet property="getStartedButton" destination="WPC-yk-3do" id="VGA-0S-C3w"/>
                         <outlet property="onboardingView" destination="Nqz-Xb-rYG" id="Pig-L9-cM6"/>
                     </connections>
                 </viewController>
@@ -835,6 +847,7 @@
         <image name="To Do-25" width="12" height="12"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="KYb-Lb-bJ3"/>
         <segue reference="egs-bo-ag8"/>
     </inferredMetricsTieBreakers>
 </document>
