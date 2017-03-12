@@ -43,8 +43,7 @@ class TaskTableViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath) as! TaskCell
-//        cell.goalLabel.text = self.store.ta.last?.description
-        cell.taskLabel.text = self.store.tasks[indexPath.row].description
+        cell.goalLabel.text = self.store.tasks[indexPath.row].description
         cell.starLabel.text = self.store.tasks[indexPath.row].rating
         return cell
     }
