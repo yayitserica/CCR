@@ -34,7 +34,7 @@ class SetNewTaskViewController: UIViewController {
                 newTask.description = unwrappedText
             }
 //            self.store.tasks.append(newTask)
-            self.store.goals.last?.tasks.append(newTask)
+            self.store.tasks.append(newTask)
             print("a brand new task was added")
             self.performSegue(withIdentifier: "toTabBarController", sender: self)
         }

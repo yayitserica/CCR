@@ -19,19 +19,33 @@ class TaskTableViewController: UIViewController, UITableViewDelegate, UITableVie
         super.viewDidLoad()
     }
     
+    //creates a path to where we are storing our data
+    var filePath: String {
+        let manager = FileManager.default //FileManager manages file and folders in your app
+        //documentDirectory is the recommended place to store things
+        let url = manager.urls(for: .documentDirectory, in: .userDomainMask).first //this returns an array of urls and we get the first url 
+        return url!.appendingPathComponent("Data").path //this returns a url path component (create a new path component and put our data on this path)
+    }
+    
+    private func saveData(task: Task) {
+        self.store.tasks.append(task)
+        //this finds our encode (saves) function, passes this to our goals class and finds the "encode" function, then encodes the values for the keys and it will save it to our filepath
+        NSKeyedArchiver.archiveRootObject(self.store.tasks, toFile: filePath)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (store.goals.last?.tasks.count)!
+        return (store.tasks.count)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath) as! TaskCell
-        cell.goalLabel.text = self.store.goals.last?.description
-        cell.taskLabel.text = self.store.goals.last?.tasks[indexPath.row].description
-        cell.starLabel.text = self.store.goals.last?.tasks[indexPath.row].rating
+//        cell.goalLabel.text = self.store.ta.last?.description
+        cell.taskLabel.text = self.store.tasks[indexPath.row].description
+        cell.starLabel.text = self.store.tasks[indexPath.row].rating
         return cell
     }
 
@@ -50,10 +64,13 @@ class TaskTableViewController: UIViewController, UITableViewDelegate, UITableVie
         if editingStyle == .delete {
             //2 - store the index path in a class-viewable variable so we can use it later on when we handle the deletion
             deleteTaskIndexPath = indexPath
-            if let taskToDelete = self.store.goals.last?.tasks[indexPath.row] {
-                //3 - call the confirmeDelete function
-                confirmDelete(task: taskToDelete)
-            }
+            
+            let taskToDelete = self.store.tasks[indexPath.row]
+            confirmDelete(task: taskToDelete)
+//            if let taskToDelete = self.store.tasks[indexPath.row] {
+//                //3 - call the confirmeDelete function
+//                confirmDelete(task: taskToDelete)
+//            }
             
         }
     }
@@ -83,8 +100,8 @@ class TaskTableViewController: UIViewController, UITableViewDelegate, UITableVie
             //.beginUpdates signals the start of UI updates to the tableview
             tableView.beginUpdates()
             //removes the task from the data source using the deleteTaskIndexPath we set in the alert controller step
-            self.store.goals.last?.tasks.remove(at: indexPath.row)
-            print("The task array count for this current goal is now \(self.store.goals.last?.tasks.count)")
+            self.store.tasks.remove(at: indexPath.row)
+            print("The task array count for this current goal is now \(self.store.tasks.count)")
             //note that indexPath is wrapped in an array: [indexPath]
             //removes the task from the UI
             tableView.deleteRows(at: [indexPath], with: .automatic) //you can delete several rows at a time

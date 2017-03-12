@@ -26,19 +26,19 @@ class PopUpViewController: UIViewController {
         starringView.didFinishTouchingCosmos = { rating in
             switch rating {
             case 5:
-                self.store.goals.last?.tasks.last?.rating = "🌟🌟🌟🌟🌟"
+                self.store.tasks.last?.rating = "🌟🌟🌟🌟🌟"
             case 2:
-                self.store.goals.last?.tasks.last?.rating = "🌟🌟"
+                self.store.tasks.last?.rating = "🌟🌟"
             case 3:
-                self.store.goals.last?.tasks.last?.rating = "🌟🌟🌟"
+                self.store.tasks.last?.rating = "🌟🌟🌟"
             case 4:
-                self.store.goals.last?.tasks.last?.rating = "🌟🌟🌟🌟"
+                self.store.tasks.last?.rating = "🌟🌟🌟🌟"
             case 1:
-                self.store.goals.last?.tasks.last?.rating = "🌟"
+                self.store.tasks.last?.rating = "🌟"
             default:
-                self.store.goals.last?.tasks.last?.rating = "no rating yet"
+                self.store.tasks.last?.rating = "no rating yet"
             }
-            print("array count of rated tasks for this current goal is \(self.store.goals.last?.tasks.count)\n")
+            print("array count of rated tasks for this current goal is \(self.store.tasks.count)\n")
         }
     }
     

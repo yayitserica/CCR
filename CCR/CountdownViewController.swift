@@ -162,7 +162,7 @@ class CountdownViewController: UIViewController {
     
     func formatInitialViews() {
        // navigationController?.isNavigationBarHidden = true
-        goalLabel.text = self.store.goals.last?.tasks.last?.description
+        goalLabel.text = self.store.tasks.last?.description
         breakTimeLabel.isHidden = true
         resetBtn.layer.borderColor = Constants.red.cgColor
         resetBtn.layer.cornerRadius = 8
@@ -184,7 +184,7 @@ class CountdownViewController: UIViewController {
         editTaskConstraint.constant = -400
         if editTaskTextField.text != "" {
             guard let unwrappedEditedTask = editTaskTextField.text else { return }
-            self.store.goals.last?.tasks.last?.description = unwrappedEditedTask
+            self.store.tasks.last?.description = unwrappedEditedTask
             goalLabel.text = unwrappedEditedTask
         }
         UIView.animate(withDuration: 0.1) {

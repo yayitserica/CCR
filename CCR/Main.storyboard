@@ -657,36 +657,22 @@
                                     <action selector="addNewTaskTapped:" destination="CdQ-zQ-UnB" eventType="touchUpInside" id="PlJ-vf-5vU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkf-5d-AUT">
-                                <rect key="frame" x="26" y="446.5" width="323" height="100"/>
-                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="15"/>
-                                <state key="normal" title="Finished this goal?  Set a new goal.">
-                                    <color key="titleColor" red="1" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="addNewGoalTapped:" destination="CdQ-zQ-UnB" eventType="touchUpInside" id="OUf-9c-mDJ"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="gkf-5d-AUT" firstAttribute="leading" secondItem="8Yb-2h-AJD" secondAttribute="leadingMargin" constant="10" id="0TG-ue-BbF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xQy-cx-vKs" secondAttribute="trailing" constant="20" id="9Sw-gl-HtJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="v7T-BX-8ue" secondAttribute="trailing" constant="20" id="Aos-Mb-tbc"/>
                             <constraint firstItem="e2N-9N-UYd" firstAttribute="top" secondItem="YXd-bg-zQ7" secondAttribute="bottom" constant="40" id="GXT-lQ-zOZ"/>
                             <constraint firstItem="YXd-bg-zQ7" firstAttribute="leading" secondItem="8Yb-2h-AJD" secondAttribute="leadingMargin" constant="-20" id="JgF-y9-m0U"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YXd-bg-zQ7" secondAttribute="trailing" constant="-20" id="Jgl-nO-xRs"/>
-                            <constraint firstItem="gkf-5d-AUT" firstAttribute="height" secondItem="8Yb-2h-AJD" secondAttribute="height" multiplier="0.15" id="OXe-9f-z0r"/>
                             <constraint firstItem="xQy-cx-vKs" firstAttribute="height" secondItem="8Yb-2h-AJD" secondAttribute="height" multiplier="0.2" id="ctA-AT-FXU"/>
                             <constraint firstItem="xQy-cx-vKs" firstAttribute="top" secondItem="e2N-9N-UYd" secondAttribute="bottom" constant="15" id="eDw-Ju-bsg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="gkf-5d-AUT" secondAttribute="trailing" constant="10" id="je1-Mf-gck"/>
                             <constraint firstItem="xQy-cx-vKs" firstAttribute="leading" secondItem="8Yb-2h-AJD" secondAttribute="leadingMargin" constant="20" id="kRw-Rg-amU"/>
                             <constraint firstItem="v7T-BX-8ue" firstAttribute="leading" secondItem="8Yb-2h-AJD" secondAttribute="leadingMargin" constant="20" id="mxH-vB-56R"/>
                             <constraint firstAttribute="trailingMargin" secondItem="e2N-9N-UYd" secondAttribute="trailing" constant="30" id="s0q-NG-y21"/>
                             <constraint firstItem="e2N-9N-UYd" firstAttribute="leading" secondItem="8Yb-2h-AJD" secondAttribute="leadingMargin" constant="30" id="vF5-DE-JdB"/>
                             <constraint firstItem="v7T-BX-8ue" firstAttribute="height" secondItem="8Yb-2h-AJD" secondAttribute="height" multiplier="0.08" id="wGH-qZ-aO4"/>
                             <constraint firstItem="YXd-bg-zQ7" firstAttribute="height" secondItem="8Yb-2h-AJD" secondAttribute="height" multiplier="0.1" id="wen-Bh-pIn"/>
-                            <constraint firstItem="gkf-5d-AUT" firstAttribute="top" secondItem="v7T-BX-8ue" secondAttribute="bottom" constant="100" id="wsG-gs-UIo"/>
                             <constraint firstItem="YXd-bg-zQ7" firstAttribute="top" secondItem="ycb-i2-vwj" secondAttribute="bottom" constant="-20" id="xTX-wP-XEG"/>
                             <constraint firstItem="v7T-BX-8ue" firstAttribute="top" secondItem="xQy-cx-vKs" secondAttribute="bottom" constant="10" id="zey-In-BdO"/>
                         </constraints>
@@ -695,7 +681,6 @@
                         <outlet property="addNewTaskButton" destination="v7T-BX-8ue" id="loE-u4-8ab"/>
                         <outlet property="newTaskTextField" destination="xQy-cx-vKs" id="r5J-Dt-5db"/>
                         <segue destination="1q4-hl-mjE" kind="show" identifier="toTabBarController" id="egs-bo-ag8"/>
-                        <segue destination="JmS-DX-pNH" kind="show" identifier="toNewGoal" id="mqc-AQ-jjb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WKJ-4u-j7D" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -766,12 +751,11 @@
                     <connections>
                         <outlet property="goalTextField" destination="wyg-EY-Ba5" id="d0O-Ow-fwA"/>
                         <outlet property="submitButton" destination="Lwp-FV-gXb" id="p4q-SH-K4m"/>
-                        <segue destination="zx4-8F-ifS" kind="show" identifier="toSetTask" id="dNP-mb-UW1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0MX-Fo-3ro" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-352.80000000000001" y="-300"/>
+            <point key="canvasLocation" x="-278" y="-1048"/>
         </scene>
         <!--Onboarding View Controller-->
         <scene sceneID="Geq-Uj-pSd">
@@ -797,7 +781,7 @@
                                 </state>
                                 <connections>
                                     <action selector="getStartedBtnTapped:" destination="2Pm-oF-QtE" eventType="touchUpInside" id="u5t-7K-aQh"/>
-                                    <segue destination="JmS-DX-pNH" kind="show" id="KYb-Lb-bJ3"/>
+                                    <segue destination="zx4-8F-ifS" kind="show" id="7tO-x3-l62"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -820,7 +804,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oeh-sf-lrI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1056.8" y="-300"/>
+            <point key="canvasLocation" x="-417" y="-300"/>
         </scene>
     </scenes>
     <resources>
@@ -832,7 +816,6 @@
         <image name="To Do-25" width="12" height="12"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="KYb-Lb-bJ3"/>
         <segue reference="HeJ-rs-jG5"/>
     </inferredMetricsTieBreakers>
 </document>

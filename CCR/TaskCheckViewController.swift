@@ -19,13 +19,13 @@ class TaskCheckViewController: UIViewController {
     @IBAction func yesButtonTapped(_ sender: Any) {
         print("yes button tapped")
         //take the current task and duplicate it in the array
-        let oldTaskDescription = self.store.goals.last?.tasks.last?.description ?? ""
+        let oldTaskDescription = self.store.tasks.last?.description ?? ""
         print(oldTaskDescription)
         let anotherNewTask = Task()
         anotherNewTask.description = "\(oldTaskDescription)"
         anotherNewTask.rating = "no rating"
-        self.store.goals.last?.tasks.append(anotherNewTask)
-        print("the array now has \(self.store.goals.last?.tasks.count)")
+        self.store.tasks.append(anotherNewTask)
+        print("the array now has \(self.store.tasks.count)")
         self.store.userIsOnBreak = false
         //delete this
         self.performSegue(withIdentifier: "toCountDownVC", sender: self)
@@ -51,7 +51,7 @@ class TaskCheckViewController: UIViewController {
         yesButton.layer.borderColor = Constants.red.cgColor
         yesButton.layer.borderWidth = 1
         yesButton.layer.cornerRadius = 8
-        currentGoalLabel.text = self.store.goals.last?.tasks.last?.description
+        currentGoalLabel.text = self.store.tasks.last?.description
         currentGoalLabel.layer.cornerRadius = 3
     }
 

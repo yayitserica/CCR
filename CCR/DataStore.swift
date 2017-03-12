@@ -13,7 +13,8 @@ class DataStore {
     private init() {}
     
     //delete this task array
-    var goals: [Goal] = []
+    //var goals: [Goal] = []
+    var tasks: [Task] = []
     
     var intervalCount = 0
     
