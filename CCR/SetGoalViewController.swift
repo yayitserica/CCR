@@ -36,12 +36,7 @@ class SetGoalViewController: UIViewController {
             noGoalAlert.view.tintColor = Constants.red
             
         } else {
-//            let newGoal = Goal()
-            if let unwrappedText = goalTextField.text {
-//                newGoal.description = unwrappedText
-            }
-//            self.store.goals.append(newGoal)
-//            print("the number of goals is \(self.store.goals.count)")
+
             self.performSegue(withIdentifier: "toSetTask", sender: self)
         }
     }

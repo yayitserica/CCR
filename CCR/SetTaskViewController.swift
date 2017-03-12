@@ -15,6 +15,27 @@ class SetTaskViewController: UIViewController {
     
     let store = DataStore.sharedInstance
     
+    //creates a path to where we are storing our data
+    var filePath: String {
+        let manager = FileManager.default //FileManager manages file and folders in your app
+        //documentDirectory is the recommended place to store things
+        let url = manager.urls(for: .documentDirectory, in: .userDomainMask).first //this returns an array of urls and we get the first url
+        return url!.appendingPathComponent("Data").path //this returns a url path component (create a new path component and put our data on this path)
+    }
+    
+    private func saveData(task: Task) {
+        self.store.tasks.append(task)
+        //this finds our encode (saves) function, passes this to our goals class and finds the "encode" function, then encodes the values for the keys and it will save it to our filepath
+        NSKeyedArchiver.archiveRootObject(self.store.tasks, toFile: filePath)
+    }
+    
+    private func loadData() {
+        //check if we can get our data as a Task array and if so, we assign it to our tasks array
+        if let ourData = NSKeyedUnarchiver.unarchiveObject(withFile: filePath) as? [Task] {
+            self.store.tasks = ourData
+        }
+    }
+    
     @IBAction func submitButtonTapped(_ sender: Any) {
         if taskTextField.text == "" {
             let noGoalAlert = UIAlertController(title: "Missing a Task", message: "", preferredStyle: .alert)
@@ -29,10 +50,10 @@ class SetTaskViewController: UIViewController {
         } else {
             let newTask = Task()
             newTask.description = taskTextField.text! //captures the task description
-//            self.store.goals.last?.Task = newTask //associates this task with a goal
-            self.store.tasks.append(newTask) //WONDERING IF THIS WILL WORK
+            self.saveData(task: newTask)
+            //delete this maybe
+//            self.store.tasks.append(newTask) //WONDERING IF THIS WILL WORK
             print("the number of tasks for this given goal is \(self.store.tasks.count)")
-//            self.store.tasks.append(newTask) //adds it to the task array
             self.performSegue(withIdentifier: "toTabBar", sender: self)
         }
     }

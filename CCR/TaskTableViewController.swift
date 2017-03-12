@@ -19,19 +19,6 @@ class TaskTableViewController: UIViewController, UITableViewDelegate, UITableVie
         super.viewDidLoad()
     }
     
-    //creates a path to where we are storing our data
-    var filePath: String {
-        let manager = FileManager.default //FileManager manages file and folders in your app
-        //documentDirectory is the recommended place to store things
-        let url = manager.urls(for: .documentDirectory, in: .userDomainMask).first //this returns an array of urls and we get the first url 
-        return url!.appendingPathComponent("Data").path //this returns a url path component (create a new path component and put our data on this path)
-    }
-    
-    private func saveData(task: Task) {
-        self.store.tasks.append(task)
-        //this finds our encode (saves) function, passes this to our goals class and finds the "encode" function, then encodes the values for the keys and it will save it to our filepath
-        NSKeyedArchiver.archiveRootObject(self.store.tasks, toFile: filePath)
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
