@@ -24,7 +24,9 @@ class TaskCheckViewController: UIViewController {
         let anotherNewTask = Task()
         anotherNewTask.description = "\(oldTaskDescription)"
         anotherNewTask.rating = "no rating"
-        self.store.tasks.append(anotherNewTask)
+        //delete line below
+//        self.store.tasks.append(anotherNewTask)
+        self.store.saveData(task: anotherNewTask)
         print("the array now has \(self.store.tasks.count)")
         self.store.userIsOnBreak = false
         //delete this

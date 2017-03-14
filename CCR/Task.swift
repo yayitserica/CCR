@@ -46,9 +46,9 @@ class Task: NSObject, NSCoding {
     }
     
     //this is going to encode (save)
-    func encode(with aCoder: NSCoder) {
-        aCoder.encode(_rating, forKey: Keys.Rating)
-        aCoder.encode(_description, forKey: Keys.Description)
+    func encode(with coder: NSCoder) {
+        coder.encode(_rating, forKey: Keys.Rating)
+        coder.encode(_description, forKey: Keys.Description)
     }
     
     var rating: String {
@@ -60,7 +60,7 @@ class Task: NSObject, NSCoding {
         }
     }
     
-    var description: String {
+    override var description: String {
         get {
             return _description
         }
@@ -70,3 +70,30 @@ class Task: NSObject, NSCoding {
     }
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
