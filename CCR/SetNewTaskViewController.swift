@@ -33,8 +33,6 @@ class SetNewTaskViewController: UIViewController {
             if let unwrappedText = newTaskTextField.text {
                 newTask.description = unwrappedText
             }
-            //delete the line below
-//            self.store.tasks.append(newTask)
             self.store.saveData(task: newTask)
             print("a brand new task was added")
             self.performSegue(withIdentifier: "toTabBarController", sender: self)

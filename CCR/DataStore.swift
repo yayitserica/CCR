@@ -12,8 +12,6 @@ class DataStore {
     static let sharedInstance = DataStore()
     private init() {}
     
-    //delete this task array
-    //var goals: [Goal] = []
     var tasks: [Task] = []
     
     var intervalCount = 0

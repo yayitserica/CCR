@@ -24,12 +24,9 @@ class TaskCheckViewController: UIViewController {
         let anotherNewTask = Task()
         anotherNewTask.description = "\(oldTaskDescription)"
         anotherNewTask.rating = "no rating"
-        //delete line below
-//        self.store.tasks.append(anotherNewTask)
         self.store.saveData(task: anotherNewTask)
         print("the array now has \(self.store.tasks.count)")
         self.store.userIsOnBreak = false
-        //delete this
         self.performSegue(withIdentifier: "toCountDownVC", sender: self)
     }
     
@@ -48,7 +45,6 @@ class TaskCheckViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       // navigationController?.isNavigationBarHidden = true
         noButton.layer.cornerRadius = 8
         yesButton.layer.borderColor = Constants.red.cgColor
         yesButton.layer.borderWidth = 1

@@ -44,13 +44,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="i.e. make GitHub repo" textAlignment="center" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="3bm-1D-afR">
-                                <rect key="frame" x="36" y="149.5" width="303" height="134"/>
+                                <rect key="frame" x="36" y="150" width="303" height="134"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8z-Sw-a8o">
-                                <rect key="frame" x="36" y="293.5" width="303" height="54"/>
+                                <rect key="frame" x="36" y="294" width="303" height="54"/>
                                 <color key="backgroundColor" red="1" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                                 <state key="normal" title="SUBMIT">
@@ -61,7 +61,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your TASK?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="1mM-7N-nRk">
-                                <rect key="frame" x="46" y="107" width="283" height="27.5"/>
+                                <rect key="frame" x="46" y="107" width="283" height="28"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -93,7 +93,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nZ8-JB-FsD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="372" y="-300"/>
+            <point key="canvasLocation" x="-191" y="-895"/>
         </scene>
         <!--Task Check View Controller-->
         <scene sceneID="Ls7-vv-syW">
@@ -184,7 +184,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KfY-mJ-hHg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1022" y="597"/>
+            <point key="canvasLocation" x="-1162" y="1487"/>
         </scene>
         <!--Timer-->
         <scene sceneID="5zO-yU-AIP">
@@ -232,17 +232,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="qg2-EH-SRa">
-                                <rect key="frame" x="150" y="307" width="75" height="25"/>
+                                <rect key="frame" x="125" y="307" width="125" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ews-9v-NoD">
-                                        <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <state key="normal" image="Play Filled-50"/>
                                         <connections>
                                             <action selector="playButtonTapped:" destination="axF-ZI-INX" eventType="touchUpInside" id="kar-ep-nbb"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9f-y2-ncU">
-                                        <rect key="frame" x="50" y="0.0" width="25" height="25"/>
+                                        <rect key="frame" x="75" y="0.0" width="50" height="50"/>
                                         <state key="normal" image="Pause Filled-50"/>
                                         <connections>
                                             <action selector="pauseButtonTapped:" destination="axF-ZI-INX" eventType="touchUpInside" id="UCV-5y-8kM"/>
@@ -251,7 +251,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uu0-KP-Kty">
-                                <rect key="frame" x="113" y="382" width="150" height="47"/>
+                                <rect key="frame" x="113" y="407" width="150" height="47"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="13"/>
                                 <state key="normal" title="RESET TIMER">
                                     <color key="titleColor" red="1" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -271,7 +271,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QdR-SA-TgD">
-                                <rect key="frame" x="-375" y="234" width="324" height="200"/>
+                                <rect key="frame" x="-374.5" y="234" width="324" height="200"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flK-0P-8GU">
                                         <rect key="frame" x="100" y="8" width="124" height="38.5"/>
@@ -398,7 +398,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bbq-mN-4xH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="148" y="597"/>
+            <point key="canvasLocation" x="-2196" y="652"/>
         </scene>
         <!--Pop Up View Controller-->
         <scene sceneID="N6o-E1-8or">
@@ -490,7 +490,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dZa-nn-rnN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1792.8" y="-300"/>
+            <point key="canvasLocation" x="-2196" y="1487"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="iun-r3-eRW">
@@ -513,11 +513,12 @@
                     <connections>
                         <segue destination="axF-ZI-INX" kind="relationship" relationship="viewControllers" id="2m7-cQ-LJQ"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Psf-lA-P1s"/>
+                        <segue destination="eZ1-jA-z7b" kind="relationship" relationship="viewControllers" id="2rP-Da-o0z"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iwc-WH-cmH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1087.2" y="-300"/>
+            <point key="canvasLocation" x="-191" y="-114"/>
         </scene>
         <!--Tasks-->
         <scene sceneID="tne-QT-ifu">
@@ -608,7 +609,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1015" y="466"/>
+            <point key="canvasLocation" x="-191" y="652"/>
         </scene>
         <!--Set New Task View Controller-->
         <scene sceneID="pLh-Dv-D1M">
@@ -678,7 +679,33 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WKJ-4u-j7D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1782" y="597"/>
+            <point key="canvasLocation" x="-191" y="1487"/>
+        </scene>
+        <!--Graph-->
+        <scene sceneID="7Hg-A6-jFp">
+            <objects>
+                <viewController id="eZ1-jA-z7b" customClass="ChartViewController" customModule="CCR" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f9k-Qd-ZA6"/>
+                        <viewControllerLayoutGuide type="bottom" id="9V6-92-jT1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Yhv-sD-gem">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5sn-sx-1xW">
+                                <rect key="frame" x="16" y="28" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Graph" image="Line Chart-25" selectedImage="Line Chart Filled-25" id="LhB-tg-v4L"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QZz-cU-c21" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1279" y="652"/>
         </scene>
         <!--Set Goal View Controller-->
         <scene sceneID="Av1-d6-X0q">
@@ -693,18 +720,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your GOAL?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="lcB-S0-TuQ">
-                                <rect key="frame" x="46" y="107" width="283" height="27.5"/>
+                                <rect key="frame" x="46" y="107" width="283" height="28"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="i.e. create new app" textAlignment="center" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="wyg-EY-Ba5">
-                                <rect key="frame" x="36" y="149.5" width="303" height="134"/>
+                                <rect key="frame" x="36" y="150" width="303" height="134"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lwp-FV-gXb">
-                                <rect key="frame" x="36" y="293.5" width="303" height="53"/>
+                                <rect key="frame" x="36" y="294" width="303" height="53"/>
                                 <color key="backgroundColor" red="1" green="0.31764705882352939" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                                 <state key="normal" title="SUBMIT">
@@ -748,7 +775,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0MX-Fo-3ro" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-278" y="-1048"/>
+            <point key="canvasLocation" x="1782" y="-1218"/>
         </scene>
         <!--Onboarding View Controller-->
         <scene sceneID="Geq-Uj-pSd">
@@ -797,18 +824,20 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oeh-sf-lrI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-417" y="-300"/>
+            <point key="canvasLocation" x="-191" y="-1643"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Pause Filled-50" width="25" height="25"/>
-        <image name="Play Filled-50" width="25" height="25"/>
-        <image name="Timer Filled-25" width="12" height="12"/>
-        <image name="Timer-25" width="12" height="12"/>
-        <image name="To Do Filled-25" width="12" height="12"/>
-        <image name="To Do-25" width="12" height="12"/>
+        <image name="Line Chart Filled-25" width="25" height="25"/>
+        <image name="Line Chart-25" width="25" height="25"/>
+        <image name="Pause Filled-50" width="50" height="50"/>
+        <image name="Play Filled-50" width="50" height="50"/>
+        <image name="Timer Filled-25" width="25" height="25"/>
+        <image name="Timer-25" width="25" height="25"/>
+        <image name="To Do Filled-25" width="25" height="25"/>
+        <image name="To Do-25" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="HeJ-rs-jG5"/>
+        <segue reference="egs-bo-ag8"/>
     </inferredMetricsTieBreakers>
 </document>
