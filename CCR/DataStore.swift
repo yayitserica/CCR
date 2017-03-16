@@ -26,7 +26,7 @@ class DataStore {
         return url!.appendingPathComponent("Data").path //this returns a url path component (create a new path component and put our data on this path)
     }
     
-    func saveData(task: Task) {
+    func addAndSaveData(task: Task) {
         self.tasks.append(task)
         //this finds our encode (saves) function, passes this to our goals class and finds the "encode" function, then encodes the values for the keys and it will save it to our filepath
         NSKeyedArchiver.archiveRootObject(self.tasks, toFile: filePath)

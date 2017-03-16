@@ -23,7 +23,6 @@ class ChartViewController: UIViewController {
         let unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
         setChart(dataPoints: months, values: unitsSold)
     }
-
     
     func setChart(dataPoints: [String], values: [Double]) {
         barChartView.noDataText = "There is no data available for the chart."
@@ -41,9 +40,23 @@ class ChartViewController: UIViewController {
         let chartData = BarChartData(dataSet: chartDataSet)
         barChartView.data = chartData
         //5 - change the default color of the bar chart
-        chartDataSet.colors = [Constants.red, Constants.grey, Constants.mediumGrey]
+        chartDataSet.colors = [Constants.red]
+        //6 - change the position of the x-axis labels
+        barChartView.xAxis.labelPosition = .bottom
+        barChartView.animate(xAxisDuration: 3.0, yAxisDuration: 3.0)
+        
     }
     
 
-
 }
+
+
+
+
+
+
+
+
+
+
+

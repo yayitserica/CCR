@@ -19,7 +19,7 @@ class SetTaskViewController: UIViewController {
         if taskTextField.text != "" {
             let newTask = Task()
             newTask.description = taskTextField.text! //captures the task description
-            self.store.saveData(task: newTask)
+            self.store.addAndSaveData(task: newTask)
             self.performSegue(withIdentifier: "toTabBar", sender: self)
         } else {
             let noGoalAlert = UIAlertController(title: "Missing a Task", message: "", preferredStyle: .alert)
