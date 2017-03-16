@@ -44,13 +44,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="i.e. make GitHub repo" textAlignment="center" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="3bm-1D-afR">
-                                <rect key="frame" x="36" y="150" width="303" height="134"/>
+                                <rect key="frame" x="36" y="149.5" width="303" height="134"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P8z-Sw-a8o">
-                                <rect key="frame" x="36" y="294" width="303" height="54"/>
+                                <rect key="frame" x="36" y="293.5" width="303" height="54"/>
                                 <color key="backgroundColor" red="1" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                                 <state key="normal" title="SUBMIT">
@@ -61,7 +61,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your TASK?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="1mM-7N-nRk">
-                                <rect key="frame" x="46" y="107" width="283" height="28"/>
+                                <rect key="frame" x="46" y="107" width="283" height="27.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -271,7 +271,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QdR-SA-TgD">
-                                <rect key="frame" x="-374.5" y="234" width="324" height="200"/>
+                                <rect key="frame" x="-375.5" y="234" width="324" height="200"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flK-0P-8GU">
                                         <rect key="frame" x="100" y="8" width="124" height="38.5"/>
@@ -547,7 +547,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="znt-I4-zdJ" id="z5i-d5-cWA">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xij-wc-Z5C">
@@ -693,19 +693,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5sn-sx-1xW">
-                                <rect key="frame" x="16" y="28" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5sn-sx-1xW" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="16" y="28" width="343" height="333.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="5sn-sx-1xW" secondAttribute="leading" id="nTv-Ny-2U2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5sn-sx-1xW" secondAttribute="trailing" id="op2-QQ-3T6"/>
+                            <constraint firstItem="5sn-sx-1xW" firstAttribute="top" secondItem="f9k-Qd-ZA6" secondAttribute="bottom" constant="8" id="qHX-Ai-f4r"/>
+                            <constraint firstItem="5sn-sx-1xW" firstAttribute="height" secondItem="Yhv-sD-gem" secondAttribute="height" multiplier="0.5" id="sqM-OK-rne"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Graph" image="Line Chart-25" selectedImage="Line Chart Filled-25" id="LhB-tg-v4L"/>
+                    <connections>
+                        <outlet property="barChartView" destination="5sn-sx-1xW" id="pIX-nf-dFZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QZz-cU-c21" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1279" y="652"/>
+            <point key="canvasLocation" x="1277.5999999999999" y="651.72413793103453"/>
         </scene>
         <!--Set Goal View Controller-->
         <scene sceneID="Av1-d6-X0q">
@@ -720,18 +728,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your GOAL?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="lcB-S0-TuQ">
-                                <rect key="frame" x="46" y="107" width="283" height="28"/>
+                                <rect key="frame" x="46" y="107" width="283" height="27.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="i.e. create new app" textAlignment="center" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="wyg-EY-Ba5">
-                                <rect key="frame" x="36" y="150" width="303" height="134"/>
+                                <rect key="frame" x="36" y="149.5" width="303" height="134"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lwp-FV-gXb">
-                                <rect key="frame" x="36" y="294" width="303" height="53"/>
+                                <rect key="frame" x="36" y="293.5" width="303" height="53"/>
                                 <color key="backgroundColor" red="1" green="0.31764705882352939" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
                                 <state key="normal" title="SUBMIT">
@@ -838,6 +846,6 @@
         <image name="To Do-25" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="egs-bo-ag8"/>
+        <segue reference="HeJ-rs-jG5"/>
     </inferredMetricsTieBreakers>
 </document>
