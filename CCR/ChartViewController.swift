@@ -16,12 +16,23 @@ class ChartViewController: UIViewController {
     @IBOutlet weak var barChartView: BarChartView!
     
     var months: [String]!
+    var taskDataPoints: [String]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
         let unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
         setChart(dataPoints: months, values: unitsSold)
+        getRatedTasks()
+        setChart(dataPoints: taskDataPoints, values: <#T##[Double]#>)
+    }
+    
+    func getRatedTasks() {
+        for task in self.store.tasks {
+            if task.rating != "" {
+                taskDataPoints.append(task.rating)
+            }
+        }
     }
     
     func setChart(dataPoints: [String], values: [Double]) {
@@ -44,7 +55,6 @@ class ChartViewController: UIViewController {
         //6 - change the position of the x-axis labels
         barChartView.xAxis.labelPosition = .bottom
         barChartView.animate(xAxisDuration: 3.0, yAxisDuration: 3.0)
-        
     }
     
 
