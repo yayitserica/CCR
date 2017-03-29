@@ -17,20 +17,24 @@ class ChartViewController: UIViewController {
     
     var months: [String]!
     var taskDataPoints: [String]!
+    var taskDataValues: [Double]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
         let unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
         setChart(dataPoints: months, values: unitsSold)
-        getRatedTasks()
-        setChart(dataPoints: taskDataPoints, values: <#T##[Double]#>)
+//        getRatedTasks()
+//        setChart(dataPoints: taskDataPoints, values: taskDataValues)
     }
     
     func getRatedTasks() {
         for task in self.store.tasks {
-            if task.rating != "" {
-                taskDataPoints.append(task.rating)
+            if task.ratingDouble != 0 {
+                taskDataValues.append(task.ratingDouble)
+                if task.rating != "" || task.rating != nil {
+                    taskDataPoints.append(task.rating)
+                }
             }
         }
     }
@@ -46,7 +50,7 @@ class ChartViewController: UIViewController {
             dataEntries.append(dataEntry)
         }
         //3 - we use our data entries and create a BarChartData object
-        let chartDataSet = BarChartDataSet(values: dataEntries, label: "Units Sold")
+        let chartDataSet = BarChartDataSet(values: dataEntries, label: "Task Rating")
         //4 - we set this data set as our chart view's data
         let chartData = BarChartData(dataSet: chartDataSet)
         barChartView.data = chartData

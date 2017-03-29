@@ -24,6 +24,7 @@ class PopUpViewController: UIViewController {
         showAnimate()
         
         starringView.didFinishTouchingCosmos = { rating in
+            self.store.tasks.last?.ratingDouble = rating
             switch rating {
             case 5:
                 self.store.tasks.last?.rating = "🌟🌟🌟🌟🌟"
@@ -39,6 +40,7 @@ class PopUpViewController: UIViewController {
                 self.store.tasks.last?.rating = "no rating yet"
             }
             print("array count of rated tasks for this current goal is \(self.store.tasks.count)\n")
+            print("array ratingIt is \(self.store.tasks.last?.ratingDouble)")
         }
     }
     
