@@ -31,7 +31,7 @@ class TaskTableViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath) as! TaskCell
         cell.goalLabel.text = self.store.tasks[indexPath.row].description
-        cell.starLabel.text = self.store.tasks[indexPath.row].rating
+        cell.starLabel.text = self.store.tasks[indexPath.row].ratingString
         return cell
     }
 
@@ -87,9 +87,8 @@ class TaskTableViewController: UIViewController, UITableViewDelegate, UITableVie
             tableView.beginUpdates()
             //removes the task from the data source using the deleteTaskIndexPath we set in the alert controller step
             //delete this
-//            self.store.tasks.remove(at: indexPath.row)
             self.store.deleteAndSaveData(at: indexPath.row)
-            print("The task array count for this current goal is now \(self.store.tasks.count)")
+//            print("The task array count for this current goal is now \(self.store.tasks.count)")
             //note that indexPath is wrapped in an array: [indexPath]
             //removes the task from the UI
             tableView.deleteRows(at: [indexPath], with: .automatic) //you can delete several rows at a time

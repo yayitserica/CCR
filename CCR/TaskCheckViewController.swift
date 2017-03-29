@@ -23,7 +23,8 @@ class TaskCheckViewController: UIViewController {
         print(oldTaskDescription)
         let anotherNewTask = Task()
         anotherNewTask.description = "\(oldTaskDescription)"
-        anotherNewTask.rating = "no rating"
+        anotherNewTask.ratingString = "no rating"
+        //TODO: - should I be assigning the rating Double here??
         self.store.addAndSaveData(task: anotherNewTask)
         print("the array now has \(self.store.tasks.count)")
         self.store.userIsOnBreak = false

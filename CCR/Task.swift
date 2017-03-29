@@ -8,31 +8,24 @@
 
 import Foundation
 
-//class Task {
-//    var rating: String?
-////    var description: String? 
-//    var description: String = ""
-//    
-//}
-
 class Task: NSObject, NSCoding {
     
     struct Keys {
         //static variables don't require us to make a Keys object to access these 2 properties below
-        static let Rating = "rating"
+        static let RatingString = "rating"
         static let Description = "description"
         static let RatingDouble = "ratingDouble"
     }
     
-    private var _rating = ""
+    private var _ratingString = ""
     private var _description = ""
-    private var _ratingDouble: Double = 0.0
+    private var _ratingDouble: Double = 1.1
     
     override init() {}
     
     //our own initializer
-    init(rating: String, description: String, ratingDouble: Double) {
-        self._rating = rating
+    init(ratingString: String, description: String, ratingDouble: Double) {
+        self._ratingString = ratingString
         self._description = description
         self._ratingDouble = ratingDouble
     }
@@ -40,8 +33,8 @@ class Task: NSObject, NSCoding {
     //init that takes the nscoder decoder and is going to decode (load) our object
     required init(coder decoder: NSCoder) {
         //if this object exists, cast it as a string
-        if let ratingObj = decoder.decodeObject(forKey: Keys.Rating) as? String {
-            _rating = ratingObj
+        if let ratingObj = decoder.decodeObject(forKey: Keys.RatingString) as? String {
+            _ratingString = ratingObj
         }
         if let descriptionObj = decoder.decodeObject(forKey: Keys.Description) as? String {
             _description = descriptionObj
@@ -53,17 +46,17 @@ class Task: NSObject, NSCoding {
     
     //this is going to encode (save)
     func encode(with coder: NSCoder) {
-        coder.encode(_rating, forKey: Keys.Rating)
+        coder.encode(_ratingString, forKey: Keys.RatingString)
         coder.encode(_description, forKey: Keys.Description)
         coder.encode(_ratingDouble, forKey: Keys.RatingDouble)
     }
     
-    var rating: String {
+    var ratingString: String {
         get {
-            return _rating
+            return _ratingString
         }
         set {
-            _rating = newValue
+            _ratingString = newValue
         }
     }
     

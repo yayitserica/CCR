@@ -24,23 +24,28 @@ class PopUpViewController: UIViewController {
         showAnimate()
         
         starringView.didFinishTouchingCosmos = { rating in
-            self.store.tasks.last?.ratingDouble = rating
+            print("The user chose a \(rating) rating")
+            
             switch rating {
             case 5:
-                self.store.tasks.last?.rating = "🌟🌟🌟🌟🌟"
+                self.store.tasks.last?.ratingDouble = rating
+                self.store.tasks.last?.ratingString = "🌟🌟🌟🌟🌟"
             case 2:
-                self.store.tasks.last?.rating = "🌟🌟"
+                self.store.tasks.last?.ratingDouble = rating
+                self.store.tasks.last?.ratingString = "🌟🌟"
             case 3:
-                self.store.tasks.last?.rating = "🌟🌟🌟"
+                self.store.tasks.last?.ratingDouble = rating
+                self.store.tasks.last?.ratingString = "🌟🌟🌟"
             case 4:
-                self.store.tasks.last?.rating = "🌟🌟🌟🌟"
+                self.store.tasks.last?.ratingDouble = rating
+                self.store.tasks.last?.ratingString = "🌟🌟🌟🌟"
             case 1:
-                self.store.tasks.last?.rating = "🌟"
+                self.store.tasks.last?.ratingDouble = rating
+                self.store.tasks.last?.ratingString = "🌟"
             default:
-                self.store.tasks.last?.rating = "no rating yet"
+                self.store.tasks.last?.ratingString = "no rating yet"
             }
             print("array count of rated tasks for this current goal is \(self.store.tasks.count)\n")
-            print("array ratingIt is \(self.store.tasks.last?.ratingDouble)")
         }
     }
     
