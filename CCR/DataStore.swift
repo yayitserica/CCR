@@ -29,6 +29,10 @@ class DataStore {
     func addAndSaveData(task: Task) {
         self.tasks.append(task)
         //this finds our encode (saves) function, passes this to our goals class and finds the "encode" function, then encodes the values for the keys and it will save it to our filepath
+        saveData()
+    }
+    
+    func saveData() {
         NSKeyedArchiver.archiveRootObject(self.tasks, toFile: filePath)
     }
     

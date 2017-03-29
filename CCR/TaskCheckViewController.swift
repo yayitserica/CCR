@@ -24,7 +24,7 @@ class TaskCheckViewController: UIViewController {
         let anotherNewTask = Task()
         anotherNewTask.description = "\(oldTaskDescription)"
         anotherNewTask.ratingString = "no rating"
-        //TODO: - should I be assigning the rating Double here??
+        //THIRD SAVE OF TASK HERE
         self.store.addAndSaveData(task: anotherNewTask)
         print("the array now has \(self.store.tasks.count)")
         self.store.userIsOnBreak = false

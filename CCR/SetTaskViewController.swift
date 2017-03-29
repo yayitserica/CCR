@@ -18,7 +18,9 @@ class SetTaskViewController: UIViewController {
     @IBAction func submitButtonTapped(_ sender: Any) {
         if taskTextField.text != "" {
             let newTask = Task()
+            //THIS IS WHERE THE TASK DESCRIPTION IS SET
             newTask.description = taskTextField.text! //captures the task description
+            //FIRST SAVE OF TASK HERE
             self.store.addAndSaveData(task: newTask)
             self.performSegue(withIdentifier: "toTabBar", sender: self)
         } else {
