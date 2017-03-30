@@ -29,11 +29,33 @@ class ChartViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        getRatedTasks()
+//        getRatedTasks()
     }
     
     func getRatedTasks() {
-        dump(self.store.tasks)
+        for task in self.store.tasks {
+            
+            if task.ratingString == "🌟🌟🌟🌟🌟" {
+                taskDataValues.append(5)
+                
+            }
+//            switch task.ratingString {
+//                
+//                case "🌟🌟🌟🌟🌟":
+//                taskDataValues.append(5.0)
+//                case "🌟🌟🌟🌟":
+//                taskDataValues.append(4.0)
+//                case "🌟🌟🌟":
+//                taskDataValues.append(3)
+//                case "🌟":
+//                taskDataValues.append(1.0)
+//                case "🌟🌟":
+//                taskDataValues.append(2.0)
+//            default:
+//                taskDataValues.append(0.0)
+//            }
+        }
+        print(taskDataValues)
     }
     
     func setChart(dataPoints: [String], values: [Double]) {

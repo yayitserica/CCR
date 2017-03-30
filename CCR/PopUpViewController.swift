@@ -28,24 +28,24 @@ class PopUpViewController: UIViewController {
 
             switch rating {
             case 5:
-                self.store.tasks.last?.ratingDouble = rating
-                print("this is the last task's ratingDouble: \(self.store.tasks.last?.ratingDouble)")
+//                self.store.tasks.last?.ratingDouble = rating
+//                print("this is the last task's ratingDouble: \(self.store.tasks.last?.ratingDouble)")
                 self.store.tasks.last?.ratingString = "🌟🌟🌟🌟🌟"
                 self.store.saveData()
             case 2:
-                self.store.tasks.last?.ratingDouble = rating
+//                self.store.tasks.last?.ratingDouble = rating
                 self.store.tasks.last?.ratingString = "🌟🌟"
                 self.store.saveData()
             case 3:
-                self.store.tasks.last?.ratingDouble = rating
+//                self.store.tasks.last?.ratingDouble = rating
                 self.store.tasks.last?.ratingString = "🌟🌟🌟"
                 self.store.saveData()
             case 4:
-                self.store.tasks.last?.ratingDouble = rating
+//                self.store.tasks.last?.ratingDouble = rating
                 self.store.tasks.last?.ratingString = "🌟🌟🌟🌟"
                 self.store.saveData()
             case 1:
-                self.store.tasks.last?.ratingDouble = rating
+//                self.store.tasks.last?.ratingDouble = rating
                 self.store.tasks.last?.ratingString = "🌟"
                 self.store.saveData()
             default:

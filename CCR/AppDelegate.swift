@@ -15,19 +15,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 //    var navController: UINavigationController?
 
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         let appearance = UITabBarItem.appearance()
         let attributes: [String: AnyObject] = [NSFontAttributeName:UIFont(name: "OpenSans-semiBold", size: 12)!, NSForegroundColorAttributeName: Constants.red]
         
         appearance.setTitleTextAttributes(attributes, for: .normal)
+
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let sb = UIStoryboard(name: "Main" , bundle: nil)
         
-//        navController = UINavigationController()
-//        window = UIWindow(frame: UIScreen.main.bounds)
-//        
-//        let sb = UIStoryboard(name: "sbGoalID" , bundle: nil)
-//        var initialViewController = sb.instantiateViewController(withIdentifier: "Onboarding")
+        var initialViewController = sb.instantiateViewController(withIdentifier: "Onboarding")
+        window?.rootViewController = initialViewController
+        window?.makeKeyAndVisible()
+        
+        //        navController = UINavigationController()
 //        self.navController?.pushViewController(initialViewController, animated: false)
         
         let userDefaults = UserDefaults.standard
@@ -36,8 +39,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            initialViewController = sb.instantiateViewController(withIdentifier: "sbGoalID")
         }
 //        
-//        window?.rootViewController = navController
-//        window?.makeKeyAndVisible()
+        
+        
         
         return true
     }

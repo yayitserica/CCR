@@ -14,21 +14,25 @@ class Task: NSObject, NSCoding {
         //static variables don't require us to make a Keys object to access these 2 properties below
         static let RatingString = "rating"
         static let Description = "description"
-        static let RatingDouble = "ratingDouble"
+//        static let RatingDouble = "ratingDouble"
     }
     
     private var _ratingString = ""
     private var _description = ""
-    private var _ratingDouble: Double = 1.1
+//    private var _ratingDouble: Double = 1.1
     
     override init() {}
     
     //our own initializer
-    init(ratingString: String, description: String, ratingDouble: Double) {
+    init(ratingString: String, description: String) {
         self._ratingString = ratingString
         self._description = description
-        self._ratingDouble = ratingDouble
     }
+//    init(ratingString: String, description: String, ratingDouble: Double) {
+//        self._ratingString = ratingString
+//        self._description = description
+//        self._ratingDouble = ratingDouble
+//    }
     
     //init that takes the nscoder decoder and is going to decode (load) our object
     required init(coder decoder: NSCoder) {
@@ -39,16 +43,16 @@ class Task: NSObject, NSCoding {
         if let descriptionObj = decoder.decodeObject(forKey: Keys.Description) as? String {
             _description = descriptionObj
         }
-        if let ratingDoubleObj = decoder.decodeObject(forKey: Keys.RatingDouble) as? Double {
-            _ratingDouble = ratingDoubleObj
-        }
+//        if let ratingDoubleObj = decoder.decodeObject(forKey: Keys.RatingDouble) as? Double {
+//            _ratingDouble = ratingDoubleObj
+//        }
     }
     
     //this is going to encode (save)
     func encode(with coder: NSCoder) {
         coder.encode(_ratingString, forKey: Keys.RatingString)
         coder.encode(_description, forKey: Keys.Description)
-        coder.encode(_ratingDouble, forKey: Keys.RatingDouble)
+//        coder.encode(_ratingDouble, forKey: Keys.RatingDouble)
     }
     
     var ratingString: String {
@@ -69,14 +73,14 @@ class Task: NSObject, NSCoding {
         }
     }
     
-    var ratingDouble: Double {
-        get {
-            return _ratingDouble
-        }
-        set {
-            _ratingDouble = newValue
-        }
-    }
+//    var ratingDouble: Double {
+//        get {
+//            return _ratingDouble
+//        }
+//        set {
+//            _ratingDouble = newValue
+//        }
+//    }
     
 }
 
