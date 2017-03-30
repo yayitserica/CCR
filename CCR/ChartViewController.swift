@@ -21,20 +21,17 @@ class ChartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-        let unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
-        setChart(dataPoints: months, values: unitsSold)
+//        months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+//        let unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
+//        setChart(dataPoints: months, values: unitsSold)
         
-//        setChart(dataPoints: taskDataPoints, values: taskDataValues)
     }
     
     override func viewDidAppear(_ animated: Bool) {
-//        getRatedTasks()
+        taskDataPoints = ["Task 1", "Task 2", "Task 3"]
+        setChart(dataPoints: taskDataPoints, values: self.store.ratings)
     }
     
-    func getRatings() {
-    
-    }
     
     func setChart(dataPoints: [String], values: [Double]) {
         barChartView.noDataText = "There is no data available for the chart."
@@ -53,6 +50,7 @@ class ChartViewController: UIViewController {
         barChartView.data = chartData
         //5 - change the default color of the bar chart
         chartDataSet.colors = [Constants.red]
+        chartDataSet.setColor(Constants.red)
         //6 - change the position of the x-axis labels
         barChartView.xAxis.labelPosition = .bottom
         barChartView.animate(xAxisDuration: 3.0, yAxisDuration: 3.0)

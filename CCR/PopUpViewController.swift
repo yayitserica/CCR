@@ -30,17 +30,24 @@ class PopUpViewController: UIViewController {
             switch rating {
             case 5:
                 self.store.tasks.last?.ratingString = "🌟🌟🌟🌟🌟"
+                self.store.saveTaskData()
              case 2:
                  self.store.tasks.last?.ratingString = "🌟🌟"
+                self.store.saveTaskData()
             case 3:
                  self.store.tasks.last?.ratingString = "🌟🌟🌟"
+                self.store.saveTaskData()
              case 4:
                  self.store.tasks.last?.ratingString = "🌟🌟🌟🌟"
+                self.store.saveTaskData()
              case 1:
                  self.store.tasks.last?.ratingString = "🌟"
+                self.store.saveTaskData()
              default:
                 self.store.tasks.last?.ratingString = "no rating yet"
+                self.store.saveTaskData()
              }
+            
         }
     }
     
