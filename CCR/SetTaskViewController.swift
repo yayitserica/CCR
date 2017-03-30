@@ -21,7 +21,7 @@ class SetTaskViewController: UIViewController {
             //THIS IS WHERE THE TASK DESCRIPTION IS SET
             newTask.description = taskTextField.text! //captures the task description
             //FIRST SAVE OF TASK HERE
-            self.store.addAndSaveData(task: newTask)
+            self.store.addAndSaveTaskData(task: newTask)
             self.performSegue(withIdentifier: "toTabBar", sender: self)
         } else {
             let noGoalAlert = UIAlertController(title: "Missing a Task", message: "", preferredStyle: .alert)
@@ -49,7 +49,8 @@ class SetTaskViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         submitButton.layer.cornerRadius = 8
-        self.store.loadData()
+        //I load the data here b/c this is our first view controller
+        self.store.loadTaskData()
     }
 
 }

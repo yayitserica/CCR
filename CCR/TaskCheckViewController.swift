@@ -25,7 +25,7 @@ class TaskCheckViewController: UIViewController {
         anotherNewTask.description = "\(oldTaskDescription)"
         anotherNewTask.ratingString = "no rating"
         //THIRD SAVE OF TASK HERE
-        self.store.addAndSaveData(task: anotherNewTask)
+        self.store.addAndSaveTaskData(task: anotherNewTask)
         print("the array now has \(self.store.tasks.count)")
         self.store.userIsOnBreak = false
         self.performSegue(withIdentifier: "toCountDownVC", sender: self)
