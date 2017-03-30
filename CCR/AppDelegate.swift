@@ -20,18 +20,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         appearance.setTitleTextAttributes(attributes, for: .normal)
 
-        window = UIWindow(frame: UIScreen.main.bounds)
-        let sb = UIStoryboard(name: "Main" , bundle: nil)
-        
-        var initialViewController = sb.instantiateViewController(withIdentifier: "Onboarding")
-        window?.rootViewController = initialViewController
-        window?.makeKeyAndVisible()
-        
-        let userDefaults = UserDefaults.standard
-        
-        if userDefaults.bool(forKey: "onboardingComplete") {
-            initialViewController = sb.instantiateViewController(withIdentifier: "sbTaskID")
-        }
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//        let sb = UIStoryboard(name: "Main" , bundle: nil)
+//        
+//        var initialViewController = sb.instantiateViewController(withIdentifier: "Onboarding")
+//        window?.rootViewController = initialViewController
+//        window?.makeKeyAndVisible()
+//        
+//        let userDefaults = UserDefaults.standard
+//        
+//        if userDefaults.bool(forKey: "onboardingComplete") {
+//            initialViewController = sb.instantiateViewController(withIdentifier: "sbTaskID")
+//        }
         
         return true
     }

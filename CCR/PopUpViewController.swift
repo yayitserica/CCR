@@ -25,7 +25,10 @@ class PopUpViewController: UIViewController {
         
         starringView.didFinishTouchingCosmos = { rating in
             print("The user chose a \(rating) rating")
-
+            
+            self.store.ratings.append(rating)
+            print("The ratings array count is \(self.store.ratings.count)")
+            dump(self.store.ratings)
             switch rating {
             case 5:
                 self.store.tasks.last?.ratingString = "🌟🌟🌟🌟🌟"
@@ -40,7 +43,6 @@ class PopUpViewController: UIViewController {
              default:
                 self.store.tasks.last?.ratingString = "no rating yet"
              }
-            print("array count of rated tasks for this current goal is \(self.store.tasks.count)\n")
         }
     }
     

@@ -13,6 +13,7 @@ class DataStore {
     private init() {}
     
     var tasks: [Task] = []
+    var ratings: [Double] = []
     
     var intervalCount = 0
     
