@@ -66,7 +66,6 @@ class DataStore {
         }
     }
     
-    
     func deleteAndSaveTaskData(at index: Int) {
         self.tasks.remove(at: index)
         NSKeyedArchiver.archiveRootObject(self.tasks, toFile: filePath)
