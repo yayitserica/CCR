@@ -13,9 +13,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-//    var navController: UINavigationController?
-
-    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         let appearance = UITabBarItem.appearance()
@@ -30,17 +27,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = initialViewController
         window?.makeKeyAndVisible()
         
-        //        navController = UINavigationController()
-//        self.navController?.pushViewController(initialViewController, animated: false)
-        
         let userDefaults = UserDefaults.standard
         
         if userDefaults.bool(forKey: "onboardingComplete") {
-//            initialViewController = sb.instantiateViewController(withIdentifier: "sbGoalID")
+            initialViewController = sb.instantiateViewController(withIdentifier: "sbTaskID")
         }
-//        
-        
-        
         
         return true
     }

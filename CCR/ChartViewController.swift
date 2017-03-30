@@ -39,21 +39,7 @@ class ChartViewController: UIViewController {
                 taskDataValues.append(5)
                 
             }
-//            switch task.ratingString {
-//                
-//                case "🌟🌟🌟🌟🌟":
-//                taskDataValues.append(5.0)
-//                case "🌟🌟🌟🌟":
-//                taskDataValues.append(4.0)
-//                case "🌟🌟🌟":
-//                taskDataValues.append(3)
-//                case "🌟":
-//                taskDataValues.append(1.0)
-//                case "🌟🌟":
-//                taskDataValues.append(2.0)
-//            default:
-//                taskDataValues.append(0.0)
-//            }
+
         }
         print(taskDataValues)
     }
