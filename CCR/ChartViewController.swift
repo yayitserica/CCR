@@ -32,8 +32,8 @@ class ChartViewController: UIViewController {
 //        getRatedTasks()
     }
     
-    func getRatedTasks() {
-
+    func getRatings() {
+    
     }
     
     func setChart(dataPoints: [String], values: [Double]) {

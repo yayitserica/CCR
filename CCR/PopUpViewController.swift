@@ -28,30 +28,18 @@ class PopUpViewController: UIViewController {
 
             switch rating {
             case 5:
-//                self.store.tasks.last?.ratingDouble = rating
-//                print("this is the last task's ratingDouble: \(self.store.tasks.last?.ratingDouble)")
                 self.store.tasks.last?.ratingString = "🌟🌟🌟🌟🌟"
-                self.store.saveData()
-            case 2:
-//                self.store.tasks.last?.ratingDouble = rating
-                self.store.tasks.last?.ratingString = "🌟🌟"
-                self.store.saveData()
+             case 2:
+                 self.store.tasks.last?.ratingString = "🌟🌟"
             case 3:
-//                self.store.tasks.last?.ratingDouble = rating
-                self.store.tasks.last?.ratingString = "🌟🌟🌟"
-                self.store.saveData()
-            case 4:
-//                self.store.tasks.last?.ratingDouble = rating
-                self.store.tasks.last?.ratingString = "🌟🌟🌟🌟"
-                self.store.saveData()
-            case 1:
-//                self.store.tasks.last?.ratingDouble = rating
-                self.store.tasks.last?.ratingString = "🌟"
-                self.store.saveData()
-            default:
+                 self.store.tasks.last?.ratingString = "🌟🌟🌟"
+             case 4:
+                 self.store.tasks.last?.ratingString = "🌟🌟🌟🌟"
+             case 1:
+                 self.store.tasks.last?.ratingString = "🌟"
+             default:
                 self.store.tasks.last?.ratingString = "no rating yet"
-                self.store.saveData()
-            }
+             }
             print("array count of rated tasks for this current goal is \(self.store.tasks.count)\n")
         }
     }
