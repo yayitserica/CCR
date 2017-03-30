@@ -261,7 +261,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qov-Yk-fMm">
-                                <rect key="frame" x="328" y="115" width="31" height="36"/>
+                                <rect key="frame" x="303" y="115" width="56" height="36"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                 <state key="normal" title="Edit">
                                     <color key="titleColor" red="1" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -371,6 +371,7 @@
                             <constraint firstItem="0SO-xC-Ark" firstAttribute="height" secondItem="4fL-l7-wh4" secondAttribute="height" multiplier="0.15" id="f8T-CC-Tor"/>
                             <constraint firstAttribute="leadingMargin" secondItem="sOt-kN-qa6" secondAttribute="leading" id="gER-f7-IAf"/>
                             <constraint firstItem="QdR-SA-TgD" firstAttribute="height" secondItem="4fL-l7-wh4" secondAttribute="height" multiplier="0.3" id="oCI-cP-F8O"/>
+                            <constraint firstItem="qov-Yk-fMm" firstAttribute="leading" secondItem="0SO-xC-Ark" secondAttribute="trailing" constant="10" id="r6l-Vy-DEM"/>
                             <constraint firstItem="QdR-SA-TgD" firstAttribute="centerY" secondItem="4fL-l7-wh4" secondAttribute="centerY" id="sD5-Rt-cSF"/>
                             <constraint firstItem="uu0-KP-Kty" firstAttribute="width" secondItem="4fL-l7-wh4" secondAttribute="width" multiplier="0.4" id="tV0-ix-AAB"/>
                             <constraint firstItem="4wC-Zh-QeS" firstAttribute="top" secondItem="CqV-vS-ug2" secondAttribute="bottom" constant="-20" id="w2N-ST-nQO"/>
@@ -694,16 +695,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5sn-sx-1xW" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="16" y="28" width="343" height="333.5"/>
+                                <rect key="frame" x="16" y="140" width="343" height="333.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="theGrind" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jt3-cv-5W9">
+                                <rect key="frame" x="-4" y="0.0" width="383" height="66.5"/>
+                                <color key="backgroundColor" red="0.70588235290000001" green="0.70588235290000001" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Exo2-Bold" family="Exo 2" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ratings Over Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDA-1U-az8">
+                                <rect key="frame" x="16" y="76.5" width="343" height="53.5"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="jt3-cv-5W9" firstAttribute="top" secondItem="f9k-Qd-ZA6" secondAttribute="bottom" constant="-20" id="HiL-md-O79"/>
+                            <constraint firstItem="jt3-cv-5W9" firstAttribute="leading" secondItem="Yhv-sD-gem" secondAttribute="leadingMargin" constant="-20" id="J6b-tN-ani"/>
+                            <constraint firstItem="jt3-cv-5W9" firstAttribute="height" secondItem="Yhv-sD-gem" secondAttribute="height" multiplier="0.1" id="YEd-x9-SKM"/>
+                            <constraint firstItem="5sn-sx-1xW" firstAttribute="top" secondItem="UDA-1U-az8" secondAttribute="bottom" constant="10" id="dkM-xC-gk0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jt3-cv-5W9" secondAttribute="trailing" constant="-20" id="dox-n1-9Kc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UDA-1U-az8" secondAttribute="trailing" id="gDb-KS-tK4"/>
+                            <constraint firstItem="UDA-1U-az8" firstAttribute="height" secondItem="Yhv-sD-gem" secondAttribute="height" multiplier="0.08" id="hS1-Gh-E0f"/>
                             <constraint firstAttribute="leadingMargin" secondItem="5sn-sx-1xW" secondAttribute="leading" id="nTv-Ny-2U2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5sn-sx-1xW" secondAttribute="trailing" id="op2-QQ-3T6"/>
-                            <constraint firstItem="5sn-sx-1xW" firstAttribute="top" secondItem="f9k-Qd-ZA6" secondAttribute="bottom" constant="8" id="qHX-Ai-f4r"/>
+                            <constraint firstItem="UDA-1U-az8" firstAttribute="leading" secondItem="Yhv-sD-gem" secondAttribute="leadingMargin" id="pri-pN-hI4"/>
                             <constraint firstItem="5sn-sx-1xW" firstAttribute="height" secondItem="Yhv-sD-gem" secondAttribute="height" multiplier="0.5" id="sqM-OK-rne"/>
+                            <constraint firstItem="UDA-1U-az8" firstAttribute="top" secondItem="jt3-cv-5W9" secondAttribute="bottom" constant="10" id="yqJ-Dc-gon"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Graph" image="Line Chart-25" selectedImage="Line Chart Filled-25" id="LhB-tg-v4L"/>

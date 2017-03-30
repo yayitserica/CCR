@@ -33,15 +33,7 @@ class ChartViewController: UIViewController {
     }
     
     func getRatedTasks() {
-        for task in self.store.tasks {
-            
-            if task.ratingString == "🌟🌟🌟🌟🌟" {
-                taskDataValues.append(5)
-                
-            }
 
-        }
-        print(taskDataValues)
     }
     
     func setChart(dataPoints: [String], values: [Double]) {
