@@ -21,15 +21,20 @@ class ChartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-//        let unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
-//        setChart(dataPoints: months, values: unitsSold)
+        months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+        let unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
+        setChart(dataPoints: months, values: unitsSold)
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        taskDataPoints = ["Task 1", "Task 2", "Task 3"]
-        setChart(dataPoints: taskDataPoints, values: self.store.ratings)
+        //DELETE THIS
+//        taskDataPoints = ["Task 1", "Task 2", "Task 3"]
+//        setChart(dataPoints: taskDataPoints, values: self.store.ratings)
+    }
+    
+    func getChartData() {
+        
     }
     
     

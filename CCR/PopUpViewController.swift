@@ -25,8 +25,8 @@ class PopUpViewController: UIViewController {
         
         starringView.didFinishTouchingCosmos = { rating in
 
-            self.store.addAndSaveRatingsData(rating: rating)
-            print("Ratings array is \(self.store.ratings)")
+//            self.store.addAndSaveRatingsData(rating: rating)
+//            print("Ratings array is \(self.store.ratings)")
             switch rating {
             case 5:
                 self.store.tasks.last?.ratingString = "🌟🌟🌟🌟🌟"

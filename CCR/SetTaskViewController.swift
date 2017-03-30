@@ -51,7 +51,7 @@ class SetTaskViewController: UIViewController {
         submitButton.layer.cornerRadius = 8
         //I load the data here b/c this is our first view controller
         self.store.loadTaskData()
-        self.store.loadRatingsData()
+//        self.store.loadRatingsData()
     }
 
 }
