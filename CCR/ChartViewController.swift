@@ -25,16 +25,12 @@ class ChartViewController: UIViewController {
 //        let unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
 //        setChart(dataPoints: months, values: unitsSold)
         getChartData()
-        //DELETE THIS
-        //        taskDataPoints = ["Task 1", "Task 2", "Task 3"]
         setChart(dataPoints: taskDataPoints, values: taskDataValues)
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
         getChartData()
-        //DELETE THIS
-//        taskDataPoints = ["Task 1", "Task 2", "Task 3"]
         setChart(dataPoints: taskDataPoints, values: taskDataValues)
     }
     
@@ -51,8 +47,6 @@ class ChartViewController: UIViewController {
                     print("this is the data data y values \(taskDataValues)")
                 }
             }
-            
-            
         }
     }
     

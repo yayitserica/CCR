@@ -24,10 +24,6 @@ class Task: NSObject, NSCoding {
     override init() {}
     
     //our own initializer
-//    init(ratingString: String, description: String) {
-//        self._ratingString = ratingString
-//        self._description = description
-//    }
     init(ratingString: String, description: String, ratingDouble: Double) {
         self._ratingString = ratingString
         self._description = description

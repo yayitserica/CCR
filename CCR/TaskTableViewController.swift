@@ -53,11 +53,6 @@ class TaskTableViewController: UIViewController, UITableViewDelegate, UITableVie
             
             let taskToDelete = self.store.tasks[indexPath.row]
             confirmDelete(task: taskToDelete)
-//            if let taskToDelete = self.store.tasks[indexPath.row] {
-//                //3 - call the confirmeDelete function
-//                confirmDelete(task: taskToDelete)
-//            }
-            
         }
     }
     
@@ -87,9 +82,7 @@ class TaskTableViewController: UIViewController, UITableViewDelegate, UITableVie
             tableView.beginUpdates()
             //removes the task from the data source using the deleteTaskIndexPath we set in the alert controller step
             self.store.deleteAndSaveTaskData(at: indexPath.row)
-//            self.store.deleteAndSaveRatingsData(at: indexPath.row)
             print("the saved task array is now\(self.store.tasks.count)")
-//            print("the saved ratings array is now\(self.store.ratings.count)")
             //note that indexPath is wrapped in an array: [indexPath]
             //removes the task from the UI
             tableView.deleteRows(at: [indexPath], with: .automatic) //you can delete several rows at a time

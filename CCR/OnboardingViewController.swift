@@ -31,7 +31,6 @@ class OnboardingViewController: UIViewController, PaperOnboardingDataSource, Pap
     //tells how many onboarding screens you want; can also indicate this in .plist
     func onboardingItemsCount() -> Int {
         return 3
-//        return 1
     }
     
     //enables us to configure each onboarding item
