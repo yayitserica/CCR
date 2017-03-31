@@ -11,14 +11,14 @@ import AVFoundation
 
 class CountdownViewController: UIViewController {
     
-//    var timeRemaining = 1500.0
-//    var totalTime = 1500.0
-    var timeRemaining = 5.0
-    var totalTime = 5.0
-//    var breakTimeRemaining = 300.0
-//    var totalBreakTime = 300.0
-    var breakTimeRemaining = 5.0
-    var totalBreakTime = 5.0
+    var timeRemaining = 1500.0
+    var totalTime = 1500.0
+//    var timeRemaining = 5.0
+//    var totalTime = 5.0
+    var breakTimeRemaining = 300.0
+    var totalBreakTime = 300.0
+//    var breakTimeRemaining = 5.0
+//    var totalBreakTime = 5.0
     var timerIsOn = false
     var timer = Timer()
     var buttonSound = AVAudioPlayer()
