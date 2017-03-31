@@ -27,6 +27,7 @@ class PopUpViewController: UIViewController {
 
 //            self.store.addAndSaveRatingsData(rating: rating)
 //            print("Ratings array is \(self.store.ratings)")
+            self.store.tasks.last?.ratingDouble = rating
             switch rating {
             case 5:
                 self.store.tasks.last?.ratingString = "🌟🌟🌟🌟🌟"

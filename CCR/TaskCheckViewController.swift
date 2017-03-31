@@ -35,12 +35,13 @@ class TaskCheckViewController: UIViewController {
         print("no button tapped")
         self.showSetGoalVC()
         self.store.userIsOnBreak = false
-        self.performSegue(withIdentifier: "toBrandNewTask", sender: self)
+//        self.performSegue(withIdentifier: "toBrandNewTask", sender: self)
     }
     
     //user clicked "no" and needs to set a new task
     func showSetGoalVC() {
         let goalCheckVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "newTaskID") as! SetNewTaskViewController
+        
         self.present(goalCheckVC, animated: true, completion: nil)
     }
 

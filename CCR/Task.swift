@@ -19,7 +19,7 @@ class Task: NSObject, NSCoding {
     
     private var _ratingString = ""
     private var _description = ""
-    private var _ratingDouble: Double = 1.1
+    private var _ratingDouble: Double?
     
     override init() {}
     
@@ -73,7 +73,7 @@ class Task: NSObject, NSCoding {
         }
     }
     
-    var ratingDouble: Double {
+    var ratingDouble: Double? {
         get {
             return _ratingDouble
         }
