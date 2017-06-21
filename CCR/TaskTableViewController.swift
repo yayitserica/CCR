@@ -19,7 +19,6 @@ class TaskTableViewController: UIViewController, UITableViewDelegate, UITableVie
         super.viewDidLoad()
     }
     
-    
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
     }
@@ -98,4 +97,22 @@ class TaskTableViewController: UIViewController, UITableViewDelegate, UITableVie
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -42,8 +42,6 @@ class OnboardingViewController: UIViewController, PaperOnboardingDataSource, Pap
         let reflectProgressFont = UIFont(name: "OpenSans-Bold", size: 25)!
         let descriptionFont = UIFont(name: "OpenSans-SemiBold", size: 17)!
         
-        // (imageName: String, title: String, description: String, iconName: String, color: UIColor, titleColor: UIColor, descriptionColor: UIColor, titleFont: UIFont, descriptionFont: UIFont)
-        
         return [("Goal Filled-100red", "Set a Goal", "Think of major project you want to work on.  It can be a new app idea or a side project.\nExample: MAKE A PERSONAL WEBSITE.", "", backgroundColor1, UIColor.black, UIColor.black, titleFont, descriptionFont),
                 ("Timer Filled-100", "Do a 25 Min. Sprint", "For your goal, decide on ONE task you need to work on to accomplish your goal.\nExample: CREATE WIREFRAMES FOR WEBSITE.", "", backgroundColor2, UIColor.white, UIColor.white, titleFont, descriptionFont),
                 ("Todo List-100", "Reflect on your Progress", "You'll rate each task interval you complete and be able see your progress over time.", "", backgroundColor3, UIColor.white, UIColor.white, reflectProgressFont
