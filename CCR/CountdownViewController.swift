@@ -167,7 +167,7 @@ class CountdownViewController: UIViewController {
         resetBtn.layer.borderColor = Constants.red.cgColor
         resetBtn.layer.cornerRadius = 8
         resetBtn.layer.borderWidth = 1
-        progressView.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI_2) * 2)
+        progressView.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi/2) * 2)
         editTaskPopUp.layer.borderColor = Constants.red.cgColor
         editTaskSubmitBtn.layer.borderColor = Constants.red.cgColor
     }

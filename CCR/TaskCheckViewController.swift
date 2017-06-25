@@ -35,7 +35,6 @@ class TaskCheckViewController: UIViewController {
         print("no button tapped")
         self.showSetGoalVC()
         self.store.userIsOnBreak = false
-//        self.performSegue(withIdentifier: "toBrandNewTask", sender: self)
     }
     
     //user clicked "no" and needs to set a new task

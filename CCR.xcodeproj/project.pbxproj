@@ -171,7 +171,6 @@
 		453E2AD81E5B3E5300021569 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				45AD21911E69300D00B2508E /* OnboardingView.swift */,
 				45AD21931E69335700B2508E /* OnboardingViewController.swift */,
 				45FA4DE51E5CEF06000AC235 /* SetGoalViewController.swift */,
 				45F4C3031E5F6B80004359B3 /* SetTaskViewController.swift */,
@@ -200,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				45F77BAD1E64938200EBD92F /* TaskCell.swift */,
+				45AD21911E69300D00B2508E /* OnboardingView.swift */,
 				45A67AE51E6E62A600D3AB22 /* Main.storyboard */,
 				450F1A321E4E209D00FAFBB9 /* LaunchScreen.storyboard */,
 			);
