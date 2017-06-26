@@ -188,7 +188,6 @@
 		453E2AD91E5B3E6B00021569 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4544836E1E4ED59A00FA2ECB /* Constants.swift */,
 				45BEB4961E523BA4000554AD /* DataStore.swift */,
 				453E2ADB1E5B5DD900021569 /* Task.swift */,
 			);
@@ -198,6 +197,7 @@
 		453E2ADA1E5B3E7100021569 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4544836E1E4ED59A00FA2ECB /* Constants.swift */,
 				45F77BAD1E64938200EBD92F /* TaskCell.swift */,
 				45AD21911E69300D00B2508E /* OnboardingView.swift */,
 				45A67AE51E6E62A600D3AB22 /* Main.storyboard */,
