@@ -35,7 +35,6 @@ class SetNewTaskViewController: UIViewController {
             }
             //SECOND SAVE OF TASK
             self.store.addAndSaveTaskData(task: newTask)
-            print("a brand new task was added")
             self.performSegue(withIdentifier: "toTabBarController", sender: self)
         }
     }

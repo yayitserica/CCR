@@ -81,7 +81,6 @@ class TaskTableViewController: UIViewController, UITableViewDelegate, UITableVie
             tableView.beginUpdates()
             //removes the task from the data source using the deleteTaskIndexPath we set in the alert controller step
             self.store.deleteAndSaveTaskData(at: indexPath.row)
-            print("the saved task array is now\(self.store.tasks.count)")
             //note that indexPath is wrapped in an array: [indexPath]
             //removes the task from the UI
             tableView.deleteRows(at: [indexPath], with: .automatic) //you can delete several rows at a time

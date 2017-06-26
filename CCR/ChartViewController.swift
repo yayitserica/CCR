@@ -23,7 +23,6 @@ class ChartViewController: UIViewController {
         super.viewDidLoad()
         getChartData()
         setChart(dataPoints: taskDataPoints, values: taskDataValues)
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -40,8 +39,6 @@ class ChartViewController: UIViewController {
                 if let unwrappedRatingDouble = task.ratingDouble {
                     taskDataPoints.append(task.description)
                     taskDataValues.append(unwrappedRatingDouble)
-                    print("this is the task data x values \(taskDataPoints)")
-                    print("this is the data data y values \(taskDataValues)")
                 }
             }
         }

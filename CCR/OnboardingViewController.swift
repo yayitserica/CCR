@@ -17,15 +17,15 @@ class OnboardingViewController: UIViewController, PaperOnboardingDataSource, Pap
     override func viewDidLoad() {
         super.viewDidLoad()
         configureOnboardingView()
-        getStartedButton.layer.cornerRadius = 5
-        getStartedButton.layer.borderColor = UIColor.white.cgColor
-        getStartedButton.layer.borderWidth = 2
     }
     
     func configureOnboardingView() {
         //add data source to our onboardingdata view
         onboardingView.dataSource = self
         onboardingView.delegate = self
+        getStartedButton.layer.cornerRadius = 5
+        getStartedButton.layer.borderColor = UIColor.white.cgColor
+        getStartedButton.layer.borderWidth = 2
     }
     
     //tells how many onboarding screens you want; can also indicate this in .plist

@@ -45,8 +45,7 @@ class PopUpViewController: UIViewController {
              default:
                 self.store.tasks.last?.ratingString = "no rating yet"
                 self.store.saveTaskData()
-             }
-            
+             }   
         }
     }
     

@@ -17,22 +17,18 @@ class TaskCheckViewController: UIViewController {
     let store = DataStore.sharedInstance
     
     @IBAction func yesButtonTapped(_ sender: Any) {
-        print("yes button tapped")
         //take the current task and duplicate it in the array
         let oldTaskDescription = self.store.tasks.last?.description ?? ""
-        print(oldTaskDescription)
         let anotherNewTask = Task()
         anotherNewTask.description = "\(oldTaskDescription)"
         anotherNewTask.ratingString = "no rating"
         //THIRD SAVE OF TASK HERE
         self.store.addAndSaveTaskData(task: anotherNewTask)
-        print("the array now has \(self.store.tasks.count)")
         self.store.userIsOnBreak = false
         self.performSegue(withIdentifier: "toCountDownVC", sender: self)
     }
     
     @IBAction func noButtonTapped(_ sender: Any) {
-        print("no button tapped")
         self.showSetGoalVC()
         self.store.userIsOnBreak = false
     }

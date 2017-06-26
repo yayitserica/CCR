@@ -8,9 +8,10 @@
 
 import Foundation
 
-class DataStore {
+final class DataStore {
+    
     static let sharedInstance = DataStore()
-    private init() {}
+    fileprivate init() {}
     
     var tasks: [Task] = []
     
